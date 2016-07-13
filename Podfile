@@ -10,6 +10,8 @@ target 'LaB-iOS' do
   pod 'Alamofire'
   pod 'SwiftyJSON'
   pod 'FontAwesomeKit'
+  pod 'RAMAnimatedTabBarController'
+  pod 'SCLAlertView'
 
   target 'LaB-iOSTests' do
     inherit! :search_paths

@@ -15,26 +15,32 @@ PODS:
     - FontAwesomeKit/Core
   - FontAwesomeKit/Zocial (2.2.0):
     - FontAwesomeKit/Core
+  - RAMAnimatedTabBarController (1.5.3)
   - Realm (1.0.1):
     - Realm/Headers (= 1.0.1)
   - Realm/Headers (1.0.1)
   - RealmSwift (1.0.1):
     - Realm (= 1.0.1)
+  - SCLAlertView (0.5.9)
   - SwiftyJSON (2.3.2)
 
 DEPENDENCIES:
   - Alamofire
   - FontAwesomeKit
+  - RAMAnimatedTabBarController
   - RealmSwift
+  - SCLAlertView
   - SwiftyJSON
 
 SPEC CHECKSUMS:
   Alamofire: 01a82e2f6c0f860ade35534c8dd88be61bdef40c
   FontAwesomeKit: 025fd4dd1017fe4e3f8d47b03e024deedbb33cd4
+  RAMAnimatedTabBarController: 04b624cf8958a0032bf7fa9c0f2c515f59d30b9c
   Realm: 2e15e39d35b08abb529e212ed5d8af107b5236c8
   RealmSwift: d73ea2af08c3676dbdd5e4b669651a0f492162a4
+  SCLAlertView: d7c6a48c7d340e60206d4ed0e8ebcbff3b9d2a44
   SwiftyJSON: 04ccea08915aa0109039157c7974cf0298da292a
 
-PODFILE CHECKSUM: 42ab29dc181f66c1a294f3493a4c2d9fcffb5c52
+PODFILE CHECKSUM: b88c1be38ec46e5c8e9b40749fa56db8de5a7929
 
 COCOAPODS: 1.0.1
