@@ -8,7 +8,7 @@
         <!--社区-->
         <scene sceneID="AO9-bd-tpN">
             <objects>
-                <viewController id="6bC-Vk-ljG" customClass="SecondViewController" customModule="LaB_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="6bC-Vk-ljG" customClass="ButtonBarExampleViewController" customModule="LaB_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="4Xc-Wg-di1"/>
                         <viewControllerLayoutGuide type="bottom" id="m79-Uc-zyY"/>

@@ -12,6 +12,13 @@ target 'LaB-iOS' do
   pod 'FontAwesomeKit'
   pod 'RAMAnimatedTabBarController'
   pod 'SCLAlertView'
+  pod 'XLPagerTabStrip'
+  pod "SlackTextViewController"
+  pod 'PermissionScope'
+  pod 'SnapKit'
+  pod 'DZNEmptyDataSet'
+  pod 'PullToBounce' 
+  pod 'MWPhotoBrowser'
 
   target 'LaB-iOSTests' do
     inherit! :search_paths
