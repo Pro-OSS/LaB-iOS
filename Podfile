@@ -19,7 +19,9 @@ target 'LaB-iOS' do
   pod 'DZNEmptyDataSet'
   pod 'PullToBounce' 
   pod 'MWPhotoBrowser'
-
+  pod 'Spring'
+  pod 'Starscream'
+  
   target 'LaB-iOSTests' do
     inherit! :search_paths
     # Pods for testing
