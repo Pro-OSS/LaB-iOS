@@ -8,7 +8,7 @@
         <!--社区-->
         <scene sceneID="AO9-bd-tpN">
             <objects>
-                <viewController id="6bC-Vk-ljG" customClass="ButtonBarExampleViewController" customModule="LaB_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="6bC-Vk-ljG" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="4Xc-Wg-di1"/>
                         <viewControllerLayoutGuide type="bottom" id="m79-Uc-zyY"/>
@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="社区" image="second" id="qpY-uq-hTt" customClass="RAMAnimatedTabBarItem" customModule="RAMAnimatedTabBarController">
+                    <tabBarItem key="tabBarItem" title="社区" image="first" id="qpY-uq-hTt" customClass="RAMAnimatedTabBarItem" customModule="RAMAnimatedTabBarController">
                         <connections>
                             <outlet property="animation" destination="2wH-eL-YTU" id="Xj5-fT-job"/>
                         </connections>
@@ -27,9 +27,9 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="roM-Tf-RPD" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <customObject id="2wH-eL-YTU" customClass="RAMBounceAnimation" customModule="RAMAnimatedTabBarController"/>
             </objects>
-            <point key="canvasLocation" x="874" y="-442"/>
+            <point key="canvasLocation" x="-22" y="-1940"/>
         </scene>
-        <!--主页-->
+        <!--First View Controller-->
         <scene sceneID="PJR-9S-AHs">
             <objects>
                 <viewController id="RJz-TE-eXW" customClass="FirstViewController" customModule="LaB_iOS" customModuleProvider="target" sceneMemberID="viewController">
@@ -42,25 +42,40 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G5W-Co-cUv">
-                                <rect key="frame" x="143" y="240" width="46" height="30"/>
+                                <rect key="frame" x="230" y="240" width="46" height="30"/>
                                 <state key="normal" title="Button"/>
                                 <connections>
                                     <action selector="alert:" destination="RJz-TE-eXW" eventType="touchDown" id="jTr-LD-9gz"/>
                                 </connections>
                             </button>
+                            <searchBar contentMode="redraw" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HFI-7a-ESe">
+                                <rect key="frame" x="0.0" y="64" width="600" height="44"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="RJz-TE-eXW" id="qx1-cE-6eh"/>
+                                </connections>
+                            </searchBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="主页" image="first" id="TRC-PV-WbD" customClass="RAMAnimatedTabBarItem" customModule="RAMAnimatedTabBarController">
-                        <connections>
-                            <outlet property="animation" destination="aIh-82-Jp1" id="a1p-JK-Q3t"/>
-                        </connections>
-                    </tabBarItem>
+                    <navigationItem key="navigationItem" id="meD-WD-JUJ"/>
+                    <connections>
+                        <outlet property="searchDisplayController" destination="7Jl-1z-JKF" id="NQc-um-qqh"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nFV-CZ-DM1" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <customObject id="aIh-82-Jp1" customClass="RAMBounceAnimation" customModule="RAMAnimatedTabBarController"/>
+                <searchDisplayController id="7Jl-1z-JKF">
+                    <connections>
+                        <outlet property="delegate" destination="RJz-TE-eXW" id="x3S-RI-FJv"/>
+                        <outlet property="searchBar" destination="HFI-7a-ESe" id="uAN-J5-SmQ"/>
+                        <outlet property="searchContentsController" destination="RJz-TE-eXW" id="SgG-cM-fcp"/>
+                        <outlet property="searchResultsDataSource" destination="RJz-TE-eXW" id="9Nc-tc-qEq"/>
+                        <outlet property="searchResultsDelegate" destination="RJz-TE-eXW" id="Kzo-KX-Grr"/>
+                    </connections>
+                </searchDisplayController>
             </objects>
-            <point key="canvasLocation" x="874" y="-1103"/>
+            <point key="canvasLocation" x="790" y="-2972"/>
         </scene>
         <!--Animated Tab Bar Controller-->
         <scene sceneID="2Cr-kk-axp">
@@ -72,17 +87,93 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
-                        <segue destination="RJz-TE-eXW" kind="relationship" relationship="viewControllers" id="vQz-bW-OIS"/>
+                        <segue destination="q0A-vF-RGE" kind="relationship" relationship="viewControllers" id="vQz-bW-OIS"/>
                         <segue destination="6bC-Vk-ljG" kind="relationship" relationship="viewControllers" id="O3f-WY-SQa"/>
+                        <segue destination="a37-k2-o5s" kind="relationship" relationship="viewControllers" id="hDi-5A-bg0"/>
+                        <segue destination="rLh-Rl-LhG" kind="relationship" relationship="viewControllers" id="Ee2-ZH-0yZ"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2NN-xm-MMs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="54" y="-772"/>
+            <point key="canvasLocation" x="-1258" y="-1940"/>
+        </scene>
+        <!--消息-->
+        <scene sceneID="aHT-aY-LCV">
+            <objects>
+                <viewController id="a37-k2-o5s" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="p6v-aE-Jf1"/>
+                        <viewControllerLayoutGuide type="bottom" id="XTW-oT-neL"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="S3X-lM-dsT">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="消息" image="icon-shape" id="fHg-Du-i3x" customClass="RAMAnimatedTabBarItem" customModule="RAMAnimatedTabBarController">
+                        <connections>
+                            <outlet property="animation" destination="6Ip-3V-XuM" id="6lc-UV-NUJ"/>
+                        </connections>
+                    </tabBarItem>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YvX-80-eXP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <customObject id="6Ip-3V-XuM" customClass="RAMBounceAnimation" customModule="RAMAnimatedTabBarController"/>
+            </objects>
+            <point key="canvasLocation" x="-22" y="-969"/>
+        </scene>
+        <!--我-->
+        <scene sceneID="Dd1-8P-KpN">
+            <objects>
+                <viewController id="rLh-Rl-LhG" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Fqc-He-6Na"/>
+                        <viewControllerLayoutGuide type="bottom" id="akf-2Q-12d"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="DcP-Gh-4JY">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="我" image="second" id="Ael-Lz-W5p" customClass="RAMAnimatedTabBarItem" customModule="RAMAnimatedTabBarController">
+                        <connections>
+                            <outlet property="animation" destination="my6-Es-PFd" id="ns1-6L-b3P"/>
+                        </connections>
+                    </tabBarItem>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pEs-Fm-cKJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <customObject id="my6-Es-PFd" customClass="RAMBounceAnimation" customModule="RAMAnimatedTabBarController"/>
+            </objects>
+            <point key="canvasLocation" x="-1258" y="-969"/>
+        </scene>
+        <!--主页-->
+        <scene sceneID="keG-Sp-gIe">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="q0A-vF-RGE" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="主页" image="first" id="TRC-PV-WbD" customClass="RAMAnimatedTabBarItem" customModule="RAMAnimatedTabBarController">
+                        <connections>
+                            <outlet property="animation" destination="aIh-82-Jp1" id="a1p-JK-Q3t"/>
+                        </connections>
+                    </tabBarItem>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="8Qr-mm-Ywn">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="RJz-TE-eXW" kind="relationship" relationship="rootViewController" id="1Rx-Nt-VnY"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8nQ-mM-2Fm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-22" y="-2972"/>
         </scene>
     </scenes>
     <resources>
         <image name="first" width="30" height="30"/>
+        <image name="icon-shape" width="30" height="13"/>
         <image name="second" width="30" height="30"/>
     </resources>
 </document>

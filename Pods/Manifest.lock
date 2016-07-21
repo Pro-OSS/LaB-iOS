@@ -2,21 +2,7 @@ PODS:
   - Alamofire (3.4.1)
   - DACircularProgress (2.3.1)
   - DZNEmptyDataSet (1.8.1)
-  - FontAwesomeKit (2.2.0):
-    - FontAwesomeKit/Core (= 2.2.0)
-    - FontAwesomeKit/FontAwesome (= 2.2.0)
-    - FontAwesomeKit/FoundationIcons (= 2.2.0)
-    - FontAwesomeKit/IonIcons (= 2.2.0)
-    - FontAwesomeKit/Zocial (= 2.2.0)
-  - FontAwesomeKit/Core (2.2.0)
-  - FontAwesomeKit/FontAwesome (2.2.0):
-    - FontAwesomeKit/Core
-  - FontAwesomeKit/FoundationIcons (2.2.0):
-    - FontAwesomeKit/Core
-  - FontAwesomeKit/IonIcons (2.2.0):
-    - FontAwesomeKit/Core
-  - FontAwesomeKit/Zocial (2.2.0):
-    - FontAwesomeKit/Core
+  - FontAwesome.swift (0.7.3)
   - MBProgressHUD (0.9.2)
   - MWPhotoBrowser (2.1.2):
     - DACircularProgress (~> 2.3)
@@ -25,11 +11,11 @@ PODS:
   - PermissionScope (1.0.2)
   - PullToBounce (0.0.3)
   - RAMAnimatedTabBarController (1.5.3)
-  - Realm (1.0.1):
-    - Realm/Headers (= 1.0.1)
-  - Realm/Headers (1.0.1)
-  - RealmSwift (1.0.1):
-    - Realm (= 1.0.1)
+  - Realm (1.0.2):
+    - Realm/Headers (= 1.0.2)
+  - Realm/Headers (1.0.2)
+  - RealmSwift (1.0.2):
+    - Realm (= 1.0.2)
   - SCLAlertView (0.5.9)
   - SDWebImage (3.8.1):
     - SDWebImage/Core (= 3.8.1)
@@ -44,7 +30,7 @@ PODS:
 DEPENDENCIES:
   - Alamofire
   - DZNEmptyDataSet
-  - FontAwesomeKit
+  - FontAwesome.swift
   - MWPhotoBrowser
   - PermissionScope
   - PullToBounce
@@ -53,23 +39,33 @@ DEPENDENCIES:
   - SCLAlertView
   - SlackTextViewController
   - SnapKit
-  - Spring
+  - Spring (from `https://github.com/MengTo/Spring.git`, branch `swift2`)
   - Starscream
   - SwiftyJSON
   - XLPagerTabStrip
+
+EXTERNAL SOURCES:
+  Spring:
+    :branch: swift2
+    :git: https://github.com/MengTo/Spring.git
+
+CHECKOUT OPTIONS:
+  Spring:
+    :commit: 18d5c7b74489de8044e34767f856d1e574f0820e
+    :git: https://github.com/MengTo/Spring.git
 
 SPEC CHECKSUMS:
   Alamofire: 01a82e2f6c0f860ade35534c8dd88be61bdef40c
   DACircularProgress: 4dd437c0fc3da5161cb289e07ac449493d41db71
   DZNEmptyDataSet: 9525833b9e68ac21c30253e1d3d7076cc828eaa7
-  FontAwesomeKit: 025fd4dd1017fe4e3f8d47b03e024deedbb33cd4
+  FontAwesome.swift: f694fe0f667d6d3390b5919cdb0556a27b75d427
   MBProgressHUD: 1569cf7ace17a8bac47aabfbb8580a49690386d1
   MWPhotoBrowser: 5836d7aa041dc05a13de380c246826578adc5ea5
   PermissionScope: 860828c5516d349b6f49e5491799cfef33c5ccc7
   PullToBounce: d2c6300b92fa124f7133e0ca0088bbf7a7059194
   RAMAnimatedTabBarController: 04b624cf8958a0032bf7fa9c0f2c515f59d30b9c
-  Realm: 2e15e39d35b08abb529e212ed5d8af107b5236c8
-  RealmSwift: d73ea2af08c3676dbdd5e4b669651a0f492162a4
+  Realm: 9d5c46a4d7d27958530a8dfc58f63a99e5c2cba3
+  RealmSwift: 82f3ac5e24530143dddfde2033acc0d308f27d96
   SCLAlertView: d7c6a48c7d340e60206d4ed0e8ebcbff3b9d2a44
   SDWebImage: 35f9627a3e44b4f292a8a8ce6a531fa488239b91
   SlackTextViewController: bd2a34c188d4f7dec93cf42388f38551263fac82
@@ -79,6 +75,6 @@ SPEC CHECKSUMS:
   SwiftyJSON: 04ccea08915aa0109039157c7974cf0298da292a
   XLPagerTabStrip: 87b8b705f9a7178e76a063ffaa2d70045944a965
 
-PODFILE CHECKSUM: 3df0fad91f4b500d261aedc251d11436daa60c2e
+PODFILE CHECKSUM: 15136e427a1677e01900df3976a11a61f9af2940
 
 COCOAPODS: 1.0.1

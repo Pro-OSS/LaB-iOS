@@ -9,17 +9,17 @@ target 'LaB-iOS' do
   pod 'RealmSwift'
   pod 'Alamofire'
   pod 'SwiftyJSON'
-  pod 'FontAwesomeKit'
+  pod 'FontAwesome.swift'
   pod 'RAMAnimatedTabBarController'
   pod 'SCLAlertView'
   pod 'XLPagerTabStrip'
-  pod "SlackTextViewController"
+  pod 'SlackTextViewController'
   pod 'PermissionScope'
   pod 'SnapKit'
   pod 'DZNEmptyDataSet'
   pod 'PullToBounce' 
   pod 'MWPhotoBrowser'
-  pod 'Spring'
+  pod 'Spring', :git => 'https://github.com/MengTo/Spring.git', :branch => 'swift2'
   pod 'Starscream'
   
   target 'LaB-iOSTests' do

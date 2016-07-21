@@ -9,7 +9,7 @@
 import UIKit
 import SCLAlertView
 
-class FirstViewController: UIViewController {
+class HomeViewController: UIViewController {
     
     @IBAction func alert(sender: AnyObject) {
         let alert = SCLAlertView()
