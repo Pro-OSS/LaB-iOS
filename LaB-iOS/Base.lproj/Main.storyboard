@@ -29,10 +29,10 @@
             </objects>
             <point key="canvasLocation" x="-22" y="-1940"/>
         </scene>
-        <!--First View Controller-->
+        <!--Home View Controller-->
         <scene sceneID="PJR-9S-AHs">
             <objects>
-                <viewController id="RJz-TE-eXW" customClass="FirstViewController" customModule="LaB_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="RJz-TE-eXW" customClass="HomeViewController" customModule="LaB_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Mnk-Af-RVX"/>
                         <viewControllerLayoutGuide type="bottom" id="dK6-Ru-8mp"/>
@@ -59,13 +59,9 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="meD-WD-JUJ"/>
-                    <connections>
-                        <outlet property="searchDisplayController" destination="7Jl-1z-JKF" id="NQc-um-qqh"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nFV-CZ-DM1" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <customObject id="aIh-82-Jp1" customClass="RAMBounceAnimation" customModule="RAMAnimatedTabBarController"/>
-                <searchDisplayController id="7Jl-1z-JKF">
+                <searchDisplayController searchResultsTitle="搜索" id="7Jl-1z-JKF">
                     <connections>
                         <outlet property="delegate" destination="RJz-TE-eXW" id="x3S-RI-FJv"/>
                         <outlet property="searchBar" destination="HFI-7a-ESe" id="uAN-J5-SmQ"/>
@@ -75,7 +71,7 @@
                     </connections>
                 </searchDisplayController>
             </objects>
-            <point key="canvasLocation" x="790" y="-2972"/>
+            <point key="canvasLocation" x="726" y="-2972"/>
         </scene>
         <!--Animated Tab Bar Controller-->
         <scene sceneID="2Cr-kk-axp">
@@ -167,6 +163,7 @@
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8nQ-mM-2Fm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <customObject id="aIh-82-Jp1" customClass="RAMBounceAnimation" customModule="RAMAnimatedTabBarController"/>
             </objects>
             <point key="canvasLocation" x="-22" y="-2972"/>
         </scene>

@@ -93,11 +93,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		752AEB661D40D6E7005C3B6B /* Expand */ = {
+		752AEB661D40D6E7005C3B6B /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				752AEB6E1D40D9E4005C3B6B /* Constant */,
+				752AEB6D1D40D9DB005C3B6B /* Network */,
+				752AEB6C1D40D9D0005C3B6B /* DB */,
 			);
-			name = Expand;
+			name = Utils;
 			sourceTree = "<group>";
 		};
 		752AEB671D40D6EF005C3B6B /* Other */ = {
@@ -125,7 +128,10 @@
 		752AEB6A1D40D71D005C3B6B /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				75EA48631D35ECEE000927F5 /* HomeViewController.swift */,
+				752AEB711D40DA3A005C3B6B /* Model */,
+				752AEB6F1D40DA2C005C3B6B /* View */,
+				752AEB701D40DA33005C3B6B /* Controller */,
+				752AEB721D40DA44005C3B6B /* Service */,
 			);
 			name = Home;
 			sourceTree = "<group>";
@@ -135,6 +141,63 @@
 			children = (
 			);
 			name = Message;
+			sourceTree = "<group>";
+		};
+		752AEB6C1D40D9D0005C3B6B /* DB */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = DB;
+			sourceTree = "<group>";
+		};
+		752AEB6D1D40D9DB005C3B6B /* Network */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Network;
+			sourceTree = "<group>";
+		};
+		752AEB6E1D40D9E4005C3B6B /* Constant */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Constant;
+			sourceTree = "<group>";
+		};
+		752AEB6F1D40DA2C005C3B6B /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		752AEB701D40DA33005C3B6B /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				75EA48631D35ECEE000927F5 /* HomeViewController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		752AEB711D40DA3A005C3B6B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		752AEB721D40DA44005C3B6B /* Service */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Service;
+			sourceTree = "<group>";
+		};
+		752AEB731D40DA88005C3B6B /* Base */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Base;
 			sourceTree = "<group>";
 		};
 		75EA48551D35ECEE000927F5 = {
@@ -162,12 +225,13 @@
 		75EA48601D35ECEE000927F5 /* LaB-iOS */ = {
 			isa = PBXGroup;
 			children = (
+				752AEB731D40DA88005C3B6B /* Base */,
 				752AEB6B1D40D723005C3B6B /* Message */,
 				752AEB6A1D40D71D005C3B6B /* Home */,
 				752AEB691D40D717005C3B6B /* Community */,
 				752AEB681D40D712005C3B6B /* Me */,
 				752AEB671D40D6EF005C3B6B /* Other */,
-				752AEB661D40D6E7005C3B6B /* Expand */,
+				752AEB661D40D6E7005C3B6B /* Utils */,
 				75EA48911D35ED0D000927F5 /* Support Files */,
 				75EA48921D35ED16000927F5 /* StoryBoard */,
 				75EA48931D35F6A2000927F5 /* ViewController.swift */,
