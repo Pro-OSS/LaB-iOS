@@ -41,37 +41,46 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G5W-Co-cUv">
-                                <rect key="frame" x="230" y="240" width="46" height="30"/>
-                                <state key="normal" title="Button"/>
+                            <searchBar contentMode="redraw" fixedFrame="YES" placeholder="你想借的东西......" translatesAutoresizingMaskIntoConstraints="NO" id="ANs-iv-QqW">
+                                <rect key="frame" x="140" y="64" width="320" height="44"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="RJz-TE-eXW" id="oY0-i8-vbM"/>
+                                </connections>
+                            </searchBar>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="detailDisclosure" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G5W-Co-cUv">
+                                <rect key="frame" x="242" y="244" width="22" height="22"/>
                                 <connections>
                                     <action selector="alert:" destination="RJz-TE-eXW" eventType="touchDown" id="jTr-LD-9gz"/>
                                 </connections>
                             </button>
-                            <searchBar contentMode="redraw" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HFI-7a-ESe">
-                                <rect key="frame" x="0.0" y="64" width="600" height="44"/>
-                                <textInputTraits key="textInputTraits"/>
-                                <connections>
-                                    <outlet property="delegate" destination="RJz-TE-eXW" id="qx1-cE-6eh"/>
-                                </connections>
-                            </searchBar>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3sI-Nz-skz" customClass="FontAwesomeView" customModule="FontAwesome_swift">
+                                <rect key="frame" x="315" y="298" width="55" height="130"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="iconCode" value="fa-facebook"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="meD-WD-JUJ"/>
+                    <connections>
+                        <outlet property="searchDisplayController" destination="ZBe-28-fVo" id="lID-5M-JA3"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nFV-CZ-DM1" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <searchDisplayController searchResultsTitle="搜索" id="7Jl-1z-JKF">
+                <searchDisplayController id="ZBe-28-fVo">
                     <connections>
-                        <outlet property="delegate" destination="RJz-TE-eXW" id="x3S-RI-FJv"/>
-                        <outlet property="searchBar" destination="HFI-7a-ESe" id="uAN-J5-SmQ"/>
-                        <outlet property="searchContentsController" destination="RJz-TE-eXW" id="SgG-cM-fcp"/>
-                        <outlet property="searchResultsDataSource" destination="RJz-TE-eXW" id="9Nc-tc-qEq"/>
-                        <outlet property="searchResultsDelegate" destination="RJz-TE-eXW" id="Kzo-KX-Grr"/>
+                        <outlet property="delegate" destination="RJz-TE-eXW" id="24q-Se-F5J"/>
+                        <outlet property="searchBar" destination="ANs-iv-QqW" id="wPH-YZ-SKm"/>
+                        <outlet property="searchContentsController" destination="RJz-TE-eXW" id="g0z-Hb-g4b"/>
+                        <outlet property="searchResultsDataSource" destination="RJz-TE-eXW" id="f9H-Nu-wTW"/>
+                        <outlet property="searchResultsDelegate" destination="RJz-TE-eXW" id="Xtd-sR-fik"/>
                     </connections>
                 </searchDisplayController>
             </objects>
-            <point key="canvasLocation" x="726" y="-2972"/>
+            <point key="canvasLocation" x="718" y="-2972"/>
         </scene>
         <!--Animated Tab Bar Controller-->
         <scene sceneID="2Cr-kk-axp">
@@ -106,7 +115,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="消息" image="icon-shape" id="fHg-Du-i3x" customClass="RAMAnimatedTabBarItem" customModule="RAMAnimatedTabBarController">
+                    <tabBarItem key="tabBarItem" title="消息" image="first" id="fHg-Du-i3x" customClass="RAMAnimatedTabBarItem" customModule="RAMAnimatedTabBarController">
                         <connections>
                             <outlet property="animation" destination="6Ip-3V-XuM" id="6lc-UV-NUJ"/>
                         </connections>
@@ -170,7 +179,6 @@
     </scenes>
     <resources>
         <image name="first" width="30" height="30"/>
-        <image name="icon-shape" width="30" height="13"/>
         <image name="second" width="30" height="30"/>
     </resources>
 </document>

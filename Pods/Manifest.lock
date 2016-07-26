@@ -2,7 +2,7 @@ PODS:
   - Alamofire (3.4.1)
   - DACircularProgress (2.3.1)
   - DZNEmptyDataSet (1.8.1)
-  - FontAwesome.swift (0.7.3)
+  - FontAwesome.swift (0.8.0)
   - MBProgressHUD (0.9.2)
   - MWPhotoBrowser (2.1.2):
     - DACircularProgress (~> 2.3)
@@ -58,7 +58,7 @@ SPEC CHECKSUMS:
   Alamofire: 01a82e2f6c0f860ade35534c8dd88be61bdef40c
   DACircularProgress: 4dd437c0fc3da5161cb289e07ac449493d41db71
   DZNEmptyDataSet: 9525833b9e68ac21c30253e1d3d7076cc828eaa7
-  FontAwesome.swift: f694fe0f667d6d3390b5919cdb0556a27b75d427
+  FontAwesome.swift: f8c6cc5c42cbe93bdc04371363bc7b371fb3d3a1
   MBProgressHUD: 1569cf7ace17a8bac47aabfbb8580a49690386d1
   MWPhotoBrowser: 5836d7aa041dc05a13de380c246826578adc5ea5
   PermissionScope: 860828c5516d349b6f49e5491799cfef33c5ccc7

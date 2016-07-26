@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		6D81DBAFFAE86C397DD841B4 /* Pods_LaB_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 883182811A997C9726502FA9 /* Pods_LaB_iOS.framework */; };
 		6D9A6CC6FE5C1DF181747ABB /* Pods_LaB_iOSUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 478802514F831BE043197AF8 /* Pods_LaB_iOSUITests.framework */; };
+		752AEB751D40DB9D005C3B6B /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 752AEB741D40DB9D005C3B6B /* SearchViewController.swift */; };
 		75EA48621D35ECEE000927F5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75EA48611D35ECEE000927F5 /* AppDelegate.swift */; };
 		75EA48641D35ECEE000927F5 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75EA48631D35ECEE000927F5 /* HomeViewController.swift */; };
 		75EA48661D35ECEE000927F5 /* CommunityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75EA48651D35ECEE000927F5 /* CommunityViewController.swift */; };
@@ -44,6 +45,7 @@
 		3330496FC80C5F13CC8ED7B8 /* Pods-LaB-iOSUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LaB-iOSUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-LaB-iOSUITests/Pods-LaB-iOSUITests.release.xcconfig"; sourceTree = "<group>"; };
 		478802514F831BE043197AF8 /* Pods_LaB_iOSUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LaB_iOSUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		588187B8E53308C74A8F17C3 /* Pods_LaB_iOSTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LaB_iOSTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		752AEB741D40DB9D005C3B6B /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		75EA485E1D35ECEE000927F5 /* LaB-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "LaB-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		75EA48611D35ECEE000927F5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		75EA48631D35ECEE000927F5 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -175,6 +177,7 @@
 			isa = PBXGroup;
 			children = (
 				75EA48631D35ECEE000927F5 /* HomeViewController.swift */,
+				752AEB741D40DB9D005C3B6B /* SearchViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -561,6 +564,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				752AEB751D40DB9D005C3B6B /* SearchViewController.swift in Sources */,
 				75EA48661D35ECEE000927F5 /* CommunityViewController.swift in Sources */,
 				75EA48621D35ECEE000927F5 /* AppDelegate.swift in Sources */,
 				75EA48941D35F6A2000927F5 /* ViewController.swift in Sources */,
