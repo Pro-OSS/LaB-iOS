@@ -14,7 +14,6 @@
 		75EA48641D35ECEE000927F5 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75EA48631D35ECEE000927F5 /* HomeViewController.swift */; };
 		75EA48661D35ECEE000927F5 /* CommunityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75EA48651D35ECEE000927F5 /* CommunityViewController.swift */; };
 		75EA48691D35ECEE000927F5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 75EA48671D35ECEE000927F5 /* Main.storyboard */; };
-		75EA486B1D35ECEE000927F5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 75EA486A1D35ECEE000927F5 /* Assets.xcassets */; };
 		75EA486E1D35ECEE000927F5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 75EA486C1D35ECEE000927F5 /* LaunchScreen.storyboard */; };
 		75EA48791D35ECEE000927F5 /* LaB_iOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75EA48781D35ECEE000927F5 /* LaB_iOSTests.swift */; };
 		75EA48841D35ECEE000927F5 /* LaB_iOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75EA48831D35ECEE000927F5 /* LaB_iOSUITests.swift */; };
@@ -51,7 +50,6 @@
 		75EA48631D35ECEE000927F5 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		75EA48651D35ECEE000927F5 /* CommunityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunityViewController.swift; sourceTree = "<group>"; };
 		75EA48681D35ECEE000927F5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		75EA486A1D35ECEE000927F5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		75EA486D1D35ECEE000927F5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		75EA486F1D35ECEE000927F5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		75EA48741D35ECEE000927F5 /* LaB-iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "LaB-iOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -264,7 +262,6 @@
 			isa = PBXGroup;
 			children = (
 				75EA48611D35ECEE000927F5 /* AppDelegate.swift */,
-				75EA486A1D35ECEE000927F5 /* Assets.xcassets */,
 				75EA486F1D35ECEE000927F5 /* Info.plist */,
 			);
 			name = "Support Files";
@@ -415,7 +412,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				75EA486E1D35ECEE000927F5 /* LaunchScreen.storyboard in Resources */,
-				75EA486B1D35ECEE000927F5 /* Assets.xcassets in Resources */,
 				75EA48691D35ECEE000927F5 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
