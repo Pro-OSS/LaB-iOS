@@ -14,9 +14,8 @@
 		756C2C271D6A1FBB00CBD4B8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 756C2C251D6A1FBB00CBD4B8 /* LaunchScreen.storyboard */; };
 		756C2C321D6A1FBB00CBD4B8 /* LaB_iOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 756C2C311D6A1FBB00CBD4B8 /* LaB_iOSTests.swift */; };
 		756C2C3D1D6A1FBB00CBD4B8 /* LaB_iOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 756C2C3C1D6A1FBB00CBD4B8 /* LaB_iOSUITests.swift */; };
-		756C2C561D6A327000CBD4B8 /* Spring.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 756C2C4C1D6A327000CBD4B8 /* Spring.framework */; };
-		756C2C571D6A327000CBD4B8 /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 756C2C4D1D6A327000CBD4B8 /* SnapKit.framework */; };
-		756C2C581D6A327000CBD4B8 /* AlamofireObjectMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 756C2C4E1D6A327000CBD4B8 /* AlamofireObjectMapper.framework */; };
+		756C2C571D6A327000CBD4B8 /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 756C2C4D1D6A327000CBD4B8 /* SnapKit.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		756C2C581D6A327000CBD4B8 /* AlamofireObjectMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 756C2C4E1D6A327000CBD4B8 /* AlamofireObjectMapper.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		756C2C591D6A327000CBD4B8 /* ObjectMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 756C2C4F1D6A327000CBD4B8 /* ObjectMapper.framework */; };
 		756C2C5A1D6A327000CBD4B8 /* Kingfisher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 756C2C501D6A327000CBD4B8 /* Kingfisher.framework */; };
 		756C2C5B1D6A327000CBD4B8 /* IBAnimatable.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 756C2C511D6A327000CBD4B8 /* IBAnimatable.framework */; };
@@ -24,6 +23,7 @@
 		756C2C5D1D6A327000CBD4B8 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 756C2C531D6A327000CBD4B8 /* Alamofire.framework */; };
 		756C2C5E1D6A327000CBD4B8 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 756C2C541D6A327000CBD4B8 /* Realm.framework */; };
 		756C2C5F1D6A327000CBD4B8 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 756C2C551D6A327000CBD4B8 /* RealmSwift.framework */; };
+		756C2C641D6A3BCE00CBD4B8 /* Spring.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 756C2C631D6A3BCE00CBD4B8 /* Spring.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,7 +57,6 @@
 		756C2C381D6A1FBB00CBD4B8 /* LaB-iOSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "LaB-iOSUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		756C2C3C1D6A1FBB00CBD4B8 /* LaB_iOSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaB_iOSUITests.swift; sourceTree = "<group>"; };
 		756C2C3E1D6A1FBB00CBD4B8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		756C2C4C1D6A327000CBD4B8 /* Spring.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Spring.framework; path = Carthage/Build/iOS/Spring.framework; sourceTree = "<group>"; };
 		756C2C4D1D6A327000CBD4B8 /* SnapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SnapKit.framework; path = Carthage/Build/iOS/SnapKit.framework; sourceTree = "<group>"; };
 		756C2C4E1D6A327000CBD4B8 /* AlamofireObjectMapper.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AlamofireObjectMapper.framework; path = Carthage/Build/iOS/AlamofireObjectMapper.framework; sourceTree = "<group>"; };
 		756C2C4F1D6A327000CBD4B8 /* ObjectMapper.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ObjectMapper.framework; path = Carthage/Build/iOS/ObjectMapper.framework; sourceTree = "<group>"; };
@@ -67,6 +66,7 @@
 		756C2C531D6A327000CBD4B8 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 		756C2C541D6A327000CBD4B8 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = Carthage/Build/iOS/Realm.framework; sourceTree = "<group>"; };
 		756C2C551D6A327000CBD4B8 /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = Carthage/Build/iOS/RealmSwift.framework; sourceTree = "<group>"; };
+		756C2C631D6A3BCE00CBD4B8 /* Spring.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Spring.framework; path = Carthage/Build/iOS/Spring.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,7 +74,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				756C2C561D6A327000CBD4B8 /* Spring.framework in Frameworks */,
+				756C2C641D6A3BCE00CBD4B8 /* Spring.framework in Frameworks */,
 				756C2C571D6A327000CBD4B8 /* SnapKit.framework in Frameworks */,
 				756C2C581D6A327000CBD4B8 /* AlamofireObjectMapper.framework in Frameworks */,
 				756C2C591D6A327000CBD4B8 /* ObjectMapper.framework in Frameworks */,
@@ -175,7 +175,7 @@
 		756C2C601D6A327A00CBD4B8 /* Vendor */ = {
 			isa = PBXGroup;
 			children = (
-				756C2C4C1D6A327000CBD4B8 /* Spring.framework */,
+				756C2C631D6A3BCE00CBD4B8 /* Spring.framework */,
 				756C2C4D1D6A327000CBD4B8 /* SnapKit.framework */,
 				756C2C4E1D6A327000CBD4B8 /* AlamofireObjectMapper.framework */,
 				756C2C4F1D6A327000CBD4B8 /* ObjectMapper.framework */,
@@ -199,6 +199,7 @@
 				756C2C151D6A1FBB00CBD4B8 /* Sources */,
 				756C2C161D6A1FBB00CBD4B8 /* Frameworks */,
 				756C2C171D6A1FBB00CBD4B8 /* Resources */,
+				756C2C651D6A3BE300CBD4B8 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -314,6 +315,32 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		756C2C651D6A3BE300CBD4B8 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/Spring.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/SnapKit.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/AlamofireObjectMapper.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/ObjectMapper.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Kingfisher.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/IBAnimatable.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Dollar.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Realm.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/RealmSwift.framework",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		756C2C151D6A1FBB00CBD4B8 /* Sources */ = {
