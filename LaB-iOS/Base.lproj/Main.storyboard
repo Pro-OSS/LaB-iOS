@@ -76,7 +76,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="消息" image="tab_bar_msg" id="QZN-Pn-8dT"/>
+                    <tabBarItem key="tabBarItem" title="消息" image="tab_bar_message" id="QZN-Pn-8dT"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Hvz-9o-1DJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -106,6 +106,6 @@
         <image name="tab_bar_community" width="24" height="25"/>
         <image name="tab_bar_home" width="29" height="26"/>
         <image name="tab_bar_me" width="25" height="25"/>
-        <image name="tab_bar_msg" width="29" height="26"/>
+        <image name="tab_bar_message" width="29" height="26"/>
     </resources>
 </document>
