@@ -6,3 +6,4 @@ github "onevcat/Kingfisher" ~> 2.4
 github "SnapKit/SnapKit" >= 0.15.0
 github "ankurp/Dollar" ~> 5.2.0
 github "MengTo/Spring" "swift2"
+github "MatthewYork/DateTools"

@@ -1,4 +1,5 @@
 github "Alamofire/Alamofire" "3.4.1"
+github "MatthewYork/DateTools" "v1.7.0"
 github "ankurp/Dollar" "5.2.0"
 github "onevcat/Kingfisher" "2.4.3"
 github "Hearst-DD/ObjectMapper" "1.4.0"

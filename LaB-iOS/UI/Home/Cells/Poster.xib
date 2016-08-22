@@ -28,8 +28,8 @@
                             </userDefinedRuntimeAttribute>
                         </userDefinedRuntimeAttributes>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" alpha="0.90000000000000002" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="唐僧肉生产厂厂长" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9b0-AH-PIX" userLabel="用户昵称">
-                        <rect key="frame" x="56" y="8" width="110" height="13.5"/>
+                    <label opaque="NO" userInteractionEnabled="NO" alpha="0.90000000000000002" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="唐僧肉生产厂厂长" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9b0-AH-PIX" userLabel="用户昵称">
+                        <rect key="frame" x="56" y="8" width="88" height="13.5"/>
                         <fontDescription key="fontDescription" type="system" pointSize="11"/>
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                         <nil key="highlightedColor"/>
@@ -221,6 +221,19 @@
                     <constraint firstAttribute="topMargin" secondItem="ckf-w6-Uhl" secondAttribute="top" id="z67-Ye-fYc"/>
                 </constraints>
             </tableViewCellContentView>
+            <connections>
+                <outlet property="collectCount" destination="cxD-Zv-NCI" id="Hdb-AX-3ZG"/>
+                <outlet property="communityName" destination="oM3-RH-Els" id="ZBd-JK-X1j"/>
+                <outlet property="createAt" destination="RaX-WP-whO" id="bNS-dO-wf8"/>
+                <outlet property="periodMode" destination="NW3-Nv-Ict" id="LnU-QF-Lvt"/>
+                <outlet property="posterType" destination="ckf-w6-Uhl" id="Xpd-eF-qMQ"/>
+                <outlet property="region" destination="Lkg-nX-FWU" id="0o8-4v-OHi"/>
+                <outlet property="reviewCount" destination="BFh-A8-dPU" id="rFy-nP-jDV"/>
+                <outlet property="summary" destination="gXS-Qa-qW0" id="qJx-FB-1fI"/>
+                <outlet property="unitPrice" destination="xMm-db-FaG" id="H27-J3-bWJ"/>
+                <outlet property="userAvatar" destination="I4b-tf-qiF" id="kOc-Bn-Zjj"/>
+                <outlet property="userNickname" destination="9b0-AH-PIX" id="ZBu-Za-mCD"/>
+            </connections>
             <point key="canvasLocation" x="182" y="481"/>
         </tableViewCell>
     </objects>

@@ -53,10 +53,10 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
-                        <segue destination="GwG-c3-uDT" kind="relationship" relationship="viewControllers" id="EJD-AZ-Vrz"/>
                         <segue destination="bdq-tI-kvf" kind="relationship" relationship="viewControllers" id="adJ-lg-Gjw"/>
                         <segue destination="AAd-7a-gaC" kind="relationship" relationship="viewControllers" id="Hih-fh-DDw"/>
                         <segue destination="rhe-2O-JUz" kind="relationship" relationship="viewControllers" id="cZp-xO-c3w"/>
+                        <segue destination="GwG-c3-uDT" kind="relationship" relationship="viewControllers" id="GgQ-n2-pw9"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Yge-mt-vZx" userLabel="First Responder" sceneMemberID="firstResponder"/>

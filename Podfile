@@ -4,10 +4,10 @@
 target 'LaB-iOS' do
   # Comment this line if you're not using Swift and don't want to use dynamic frameworks
   use_frameworks!
-  pod 'IBAnimatable'
-  pod 'FontAwesome.swift'
 
   # Pods for LaB-iOS
+  pod 'IBAnimatable'
+  pod 'FontAwesome.swift'
 
   target 'LaB-iOSTests' do
     inherit! :search_paths

@@ -26,6 +26,11 @@
 		756C2C641D6A3BCE00CBD4B8 /* Spring.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 756C2C631D6A3BCE00CBD4B8 /* Spring.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 		756C2C6F1D6AA80C00CBD4B8 /* Poster.swift in Sources */ = {isa = PBXBuildFile; fileRef = 756C2C6D1D6AA80C00CBD4B8 /* Poster.swift */; };
 		756C2C701D6AA80C00CBD4B8 /* Poster.xib in Resources */ = {isa = PBXBuildFile; fileRef = 756C2C6E1D6AA80C00CBD4B8 /* Poster.xib */; };
+		756C2C7B1D6AEE4F00CBD4B8 /* PosterList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 756C2C791D6AEE4F00CBD4B8 /* PosterList.swift */; };
+		756C2C7C1D6AEE4F00CBD4B8 /* PosterList.xib in Resources */ = {isa = PBXBuildFile; fileRef = 756C2C7A1D6AEE4F00CBD4B8 /* PosterList.xib */; };
+		756C2C821D6AFF9700CBD4B8 /* DateTools.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 756C2C811D6AFF9700CBD4B8 /* DateTools.framework */; };
+		756C2C841D6B01F600CBD4B8 /* RegionCode2Name.swift in Sources */ = {isa = PBXBuildFile; fileRef = 756C2C831D6B01F600CBD4B8 /* RegionCode2Name.swift */; };
+		756C2C881D6B06FA00CBD4B8 /* RegionCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 756C2C871D6B06FA00CBD4B8 /* RegionCode.swift */; };
 		777E22946A5B4389282C92E9 /* Pods_LaB_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B80061E2F2C224AA8F22343C /* Pods_LaB_iOS.framework */; };
 		B23229C4D5AA59DFF02695E6 /* Pods_LaB_iOSTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 095A9D2B5477D4069F675B4C /* Pods_LaB_iOSTests.framework */; };
 /* End PBXBuildFile section */
@@ -79,6 +84,12 @@
 		756C2C631D6A3BCE00CBD4B8 /* Spring.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Spring.framework; path = Carthage/Build/iOS/Spring.framework; sourceTree = "<group>"; };
 		756C2C6D1D6AA80C00CBD4B8 /* Poster.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Poster.swift; path = UI/Home/Cells/Poster.swift; sourceTree = "<group>"; };
 		756C2C6E1D6AA80C00CBD4B8 /* Poster.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = Poster.xib; path = UI/Home/Cells/Poster.xib; sourceTree = "<group>"; };
+		756C2C791D6AEE4F00CBD4B8 /* PosterList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PosterList.swift; path = UI/Home/Views/PosterList.swift; sourceTree = "<group>"; };
+		756C2C7A1D6AEE4F00CBD4B8 /* PosterList.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = PosterList.xib; path = UI/Home/Views/PosterList.xib; sourceTree = "<group>"; };
+		756C2C801D6AF4B500CBD4B8 /* Test.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Test.playground; sourceTree = "<group>"; };
+		756C2C811D6AFF9700CBD4B8 /* DateTools.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DateTools.framework; path = Carthage/Build/iOS/DateTools.framework; sourceTree = "<group>"; };
+		756C2C831D6B01F600CBD4B8 /* RegionCode2Name.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RegionCode2Name.swift; path = Helper/Converter/RegionCode2Name.swift; sourceTree = "<group>"; };
+		756C2C871D6B06FA00CBD4B8 /* RegionCode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RegionCode.swift; path = Helper/Constants/RegionCode.swift; sourceTree = "<group>"; };
 		B80061E2F2C224AA8F22343C /* Pods_LaB_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LaB_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B92564FE24F61EF6933AF2CB /* Pods-LaB-iOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LaB-iOSTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-LaB-iOSTests/Pods-LaB-iOSTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -88,6 +99,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				756C2C821D6AFF9700CBD4B8 /* DateTools.framework in Frameworks */,
 				756C2C641D6A3BCE00CBD4B8 /* Spring.framework in Frameworks */,
 				756C2C571D6A327000CBD4B8 /* SnapKit.framework in Frameworks */,
 				756C2C581D6A327000CBD4B8 /* AlamofireObjectMapper.framework in Frameworks */,
@@ -173,6 +185,7 @@
 				756C2C661D6AA3DA00CBD4B8 /* UI */,
 				756C2C4B1D6A2CCB00CBD4B8 /* Support Files */,
 				756C2C4A1D6A2CB200CBD4B8 /* StoryBoard */,
+				756C2C801D6AF4B500CBD4B8 /* Test.playground */,
 			);
 			path = "LaB-iOS";
 			sourceTree = "<group>";
@@ -218,6 +231,7 @@
 		756C2C601D6A327A00CBD4B8 /* Vendor */ = {
 			isa = PBXGroup;
 			children = (
+				756C2C811D6AFF9700CBD4B8 /* DateTools.framework */,
 				756C2C631D6A3BCE00CBD4B8 /* Spring.framework */,
 				756C2C4D1D6A327000CBD4B8 /* SnapKit.framework */,
 				756C2C4E1D6A327000CBD4B8 /* AlamofireObjectMapper.framework */,
@@ -259,6 +273,8 @@
 		756C2C691D6AA3F600CBD4B8 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				756C2C791D6AEE4F00CBD4B8 /* PosterList.swift */,
+				756C2C7A1D6AEE4F00CBD4B8 /* PosterList.xib */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -275,6 +291,9 @@
 		756C2C6B1D6AA41C00CBD4B8 /* Helper */ = {
 			isa = PBXGroup;
 			children = (
+				756C2C861D6B057500CBD4B8 /* Preferences */,
+				756C2C851D6B055000CBD4B8 /* Constants */,
+				756C2C7D1D6AF19700CBD4B8 /* Converters */,
 				756C2C6C1D6AA42800CBD4B8 /* Data */,
 			);
 			name = Helper;
@@ -285,6 +304,29 @@
 			children = (
 			);
 			name = Data;
+			sourceTree = "<group>";
+		};
+		756C2C7D1D6AF19700CBD4B8 /* Converters */ = {
+			isa = PBXGroup;
+			children = (
+				756C2C831D6B01F600CBD4B8 /* RegionCode2Name.swift */,
+			);
+			name = Converters;
+			sourceTree = "<group>";
+		};
+		756C2C851D6B055000CBD4B8 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				756C2C871D6B06FA00CBD4B8 /* RegionCode.swift */,
+			);
+			name = Constants;
+			sourceTree = "<group>";
+		};
+		756C2C861D6B057500CBD4B8 /* Preferences */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Preferences;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -404,6 +446,7 @@
 				756C2C271D6A1FBB00CBD4B8 /* LaunchScreen.storyboard in Resources */,
 				756C2C241D6A1FBB00CBD4B8 /* Assets.xcassets in Resources */,
 				756C2C221D6A1FBB00CBD4B8 /* Main.storyboard in Resources */,
+				756C2C7C1D6AEE4F00CBD4B8 /* PosterList.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -529,6 +572,7 @@
 				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Realm.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/RealmSwift.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/DateTools.framework",
 			);
 			outputPaths = (
 			);
@@ -573,9 +617,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				756C2C881D6B06FA00CBD4B8 /* RegionCode.swift in Sources */,
+				756C2C7B1D6AEE4F00CBD4B8 /* PosterList.swift in Sources */,
 				756C2C1F1D6A1FBB00CBD4B8 /* ViewController.swift in Sources */,
 				756C2C1D1D6A1FBB00CBD4B8 /* AppDelegate.swift in Sources */,
 				756C2C6F1D6AA80C00CBD4B8 /* Poster.swift in Sources */,
+				756C2C841D6B01F600CBD4B8 /* RegionCode2Name.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
