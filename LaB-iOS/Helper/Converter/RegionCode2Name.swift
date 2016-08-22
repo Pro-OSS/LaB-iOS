@@ -12,6 +12,8 @@ class RegionCode2Name {
     
     var regionCode: String
     
+    private let dict = NSDictionary(contentsOfFile: NSBundle.mainBundle().pathForResource("Region", ofType: "plist")!) as! Dictionary<String, String>
+    
     init(code: String) {
         self.regionCode = code
     }
@@ -20,22 +22,31 @@ class RegionCode2Name {
         let topLayerName = self.getNameOfTopLayer()
         let middleLayerName = self.getNameOfMiddleLayer()
         let bottomLayerName = self.getNameOfBottomLayer()
-        let lengthOfName = (topLayerName + middleLayerName + bottomLayerName).characters.count
+        return handleLongName(topLayerName, middleLayerName: middleLayerName, bottomLayerName: bottomLayerName)
+    }
+    
+    private func handleLongName(topLayerName: String, middleLayerName: String, bottomLayerName: String) -> String {
+        let name = topLayerName + middleLayerName + bottomLayerName
+        let lengthOfName = name.characters.count
         if (lengthOfName > 15) {
             return bottomLayerName
         }
         if (lengthOfName > 9) {
-            return middleLayerName + "·" + bottomLayerName
+            if (middleLayerName == "") {
+                return topLayerName + bottomLayerName
+            } else {
+                return middleLayerName + bottomLayerName
+            }
         }
         if (lengthOfName == 0) {
             return "未知"
         }
-        return topLayerName + "·" + middleLayerName + "·" + bottomLayerName
+        return name
     }
     
     private func getNameOfTopLayer() -> String {
         let layerCode = regionCode.substringWithRange(self.regionCode.startIndex..<self.regionCode.endIndex.advancedBy(-3)) + "000"
-        guard let result = RegionCode[layerCode] else {
+        guard let result =  dict[layerCode] else {
             return ""
         }
         return result
@@ -43,18 +54,21 @@ class RegionCode2Name {
     
     private func getNameOfMiddleLayer() -> String {
         let layerCode = regionCode.substringWithRange(self.regionCode.startIndex..<self.regionCode.endIndex.advancedBy(-2)) + "00"
-        guard let result = RegionCode[layerCode] else {
+        guard let result = dict[layerCode] else {
             return ""
         }
-        return result
+        if (result == "县" || result == "市辖区") {
+            return ""
+        }
+        return "·" + result
     }
     
     private func getNameOfBottomLayer() -> String {
         let layerCode = regionCode.substringWithRange(self.regionCode.startIndex..<self.regionCode.endIndex.advancedBy(-2)) + "00"
-        guard let result = RegionCode[layerCode] else {
+        guard let result = dict[layerCode] else {
             return ""
         }
-        return result
+        return "·" + result
     }
     
 }

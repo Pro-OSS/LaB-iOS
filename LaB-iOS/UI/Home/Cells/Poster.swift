@@ -8,7 +8,7 @@
 
 import UIKit
 
-class Poster: UITableViewCell {
+class PosterCell: UITableViewCell {
 
     @IBOutlet weak var userAvatar: UIImageView!
     @IBOutlet weak var userNickname: UILabel!
