@@ -8,7 +8,7 @@
 
 import Foundation
 
-let RegionCode: NSDictionary = [
+let RegionCode: [String: String] = [
 	"110000": "北京市",
 	"110100": "市辖区",
 	"110101": "东城区",

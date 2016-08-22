@@ -17,19 +17,44 @@ class RegionCode2Name {
     }
     
     func toName() -> String {
-        return regionCode
+        let topLayerName = self.getNameOfTopLayer()
+        let middleLayerName = self.getNameOfMiddleLayer()
+        let bottomLayerName = self.getNameOfBottomLayer()
+        let lengthOfName = (topLayerName + middleLayerName + bottomLayerName).characters.count
+        if (lengthOfName > 15) {
+            return bottomLayerName
+        }
+        if (lengthOfName > 9) {
+            return middleLayerName + "·" + bottomLayerName
+        }
+        if (lengthOfName == 0) {
+            return "未知"
+        }
+        return topLayerName + "·" + middleLayerName + "·" + bottomLayerName
     }
     
-    private func getNameOfTopLayer() {
-        
+    private func getNameOfTopLayer() -> String {
+        let layerCode = regionCode.substringWithRange(self.regionCode.startIndex..<self.regionCode.endIndex.advancedBy(-3)) + "000"
+        guard let result = RegionCode[layerCode] else {
+            return ""
+        }
+        return result
     }
     
-    private func getNameOfMiddleLayer() {
-        
+    private func getNameOfMiddleLayer() -> String {
+        let layerCode = regionCode.substringWithRange(self.regionCode.startIndex..<self.regionCode.endIndex.advancedBy(-2)) + "00"
+        guard let result = RegionCode[layerCode] else {
+            return ""
+        }
+        return result
     }
     
-    private func getNameOfBottomLayer() {
-        
+    private func getNameOfBottomLayer() -> String {
+        let layerCode = regionCode.substringWithRange(self.regionCode.startIndex..<self.regionCode.endIndex.advancedBy(-2)) + "00"
+        guard let result = RegionCode[layerCode] else {
+            return ""
+        }
+        return result
     }
     
 }
