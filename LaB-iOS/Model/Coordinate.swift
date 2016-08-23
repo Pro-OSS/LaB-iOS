@@ -10,9 +10,9 @@ import Foundation
 import ObjectMapper
 
 struct Coordinate: Mappable {
-    
-	var latitude: Double?
-	var longitude: Double?
+
+	var latitude: Double!
+	var longitude: Double!
 
 	init?(_ map: Map) {
 
@@ -22,5 +22,5 @@ struct Coordinate: Mappable {
 		latitude <- map["latitude"]
 		longitude <- map["longitude"]
 	}
-    
+
 }

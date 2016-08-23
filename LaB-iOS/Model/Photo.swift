@@ -11,9 +11,9 @@ import ObjectMapper
 
 class Photo: Mappable {
 
-	var id: Int?
-	var url: Int?
-	var createAt: Int!
+	var id: Int!
+	var url: Int!
+	var createAt: NSDate!
 
 	required init?(_ map: Map) { }
 
@@ -21,7 +21,7 @@ class Photo: Mappable {
 	func mapping(map: Map) {
 		id <- map["id"]
 		url <- map["url"]
-		createAt <- map["createAt"]
+		createAt <- (map["createAt"], DateTransform())
 	}
 
 }

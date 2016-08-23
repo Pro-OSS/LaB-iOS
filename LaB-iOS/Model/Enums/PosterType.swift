@@ -8,6 +8,5 @@
 
 import Foundation
 
-enum ItemType {
-    case <#case#>
+enum PosterType {
 }

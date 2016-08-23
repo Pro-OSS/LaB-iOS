@@ -10,28 +10,20 @@ import Foundation
 import ObjectMapper
 
 class Poster: Mappable {
-    
-    var id: Int?
-    var title: String?
-    var thumbnail: String!
-    var array: [AnyObject]?
-    var dictionary: [String : AnyObject] = [:]
-    var coordinate: Coordinate?                       // Nested User object
-    var friends: [User]?                        // Array of Users
-    var birthday: NSDate?
-    
-    required init?(_ map: Map) {}
-    
-    // Mappable
-    func mapping(map: Map) {
-        username    <- map["username"]
-        age         <- map["age"]
-        weight      <- map["weight"]
-        array       <- map["arr"]
-        dictionary  <- map["dict"]
-        coordinate  <- map["coordinate"]
-        friends     <- map["friends"]
-        birthday    <- (map["birthday"], DateTransform())
-    }
-    
+
+	var id: Int!
+	var title: String!
+	var thumbnail: String?
+	var coordinate: Coordinate!
+
+	required init?(_ map: Map) { }
+
+	// Mappable
+	func mapping(map: Map) {
+		id <- map["id"]
+		title <- map["title"]
+		thumbnail <- map["thumbnail"]
+		coordinate <- map["coordinate"]
+	}
+
 }

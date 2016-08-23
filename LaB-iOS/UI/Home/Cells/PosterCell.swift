@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class PosterCell: UITableViewCell {
 
@@ -32,6 +33,10 @@ class PosterCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
+    }
+    
+    func load(poster: Poster) {
+        userAvatar.kf_setImageWithURL(NSURL(string: poster.thumbnail!)!, placeholderImage: nil)
     }
     
 }
