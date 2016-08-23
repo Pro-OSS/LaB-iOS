@@ -36,6 +36,7 @@
 		756C2C961D6B27FE00CBD4B8 /* PosterType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 756C2C951D6B27FE00CBD4B8 /* PosterType.swift */; };
 		756C2CAB1D6BF9E100CBD4B8 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 756C2CAA1D6BF9E100CBD4B8 /* Home.storyboard */; };
 		756C2CAD1D6C275200CBD4B8 /* User.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 756C2CAC1D6C275200CBD4B8 /* User.storyboard */; };
+		756C2CAF1D6C288C00CBD4B8 /* Me.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 756C2CAE1D6C288C00CBD4B8 /* Me.storyboard */; };
 		777E22946A5B4389282C92E9 /* Pods_LaB_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B80061E2F2C224AA8F22343C /* Pods_LaB_iOS.framework */; };
 		B23229C4D5AA59DFF02695E6 /* Pods_LaB_iOSTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 095A9D2B5477D4069F675B4C /* Pods_LaB_iOSTests.framework */; };
 /* End PBXBuildFile section */
@@ -100,6 +101,7 @@
 		756C2C951D6B27FE00CBD4B8 /* PosterType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PosterType.swift; path = Model/Enums/PosterType.swift; sourceTree = "<group>"; };
 		756C2CAA1D6BF9E100CBD4B8 /* Home.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Home.storyboard; path = UI/Home/Views/Home.storyboard; sourceTree = "<group>"; };
 		756C2CAC1D6C275200CBD4B8 /* User.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = User.storyboard; sourceTree = "<group>"; };
+		756C2CAE1D6C288C00CBD4B8 /* Me.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Me.storyboard; sourceTree = "<group>"; };
 		B80061E2F2C224AA8F22343C /* Pods_LaB_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LaB_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B92564FE24F61EF6933AF2CB /* Pods-LaB-iOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LaB-iOSTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-LaB-iOSTests/Pods-LaB-iOSTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -261,6 +263,7 @@
 			children = (
 				756C2C671D6AA3E300CBD4B8 /* Home */,
 				756C2CAC1D6C275200CBD4B8 /* User.storyboard */,
+				756C2CAE1D6C288C00CBD4B8 /* Me.storyboard */,
 			);
 			name = UI;
 			sourceTree = "<group>";
@@ -479,6 +482,7 @@
 				756C2CAB1D6BF9E100CBD4B8 /* Home.storyboard in Resources */,
 				756C2C241D6A1FBB00CBD4B8 /* Assets.xcassets in Resources */,
 				756C2CAD1D6C275200CBD4B8 /* User.storyboard in Resources */,
+				756C2CAF1D6C288C00CBD4B8 /* Me.storyboard in Resources */,
 				756C2C221D6A1FBB00CBD4B8 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

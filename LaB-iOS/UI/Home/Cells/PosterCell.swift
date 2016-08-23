@@ -8,6 +8,7 @@
 
 import UIKit
 import Kingfisher
+import MapKit
 
 class PosterCell: UITableViewCell {
 
@@ -37,6 +38,7 @@ class PosterCell: UITableViewCell {
     
     func load(poster: Poster) {
         userAvatar.kf_setImageWithURL(NSURL(string: poster.thumbnail!)!, placeholderImage: nil)
+        
     }
     
 }

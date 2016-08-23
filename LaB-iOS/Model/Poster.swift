@@ -15,6 +15,8 @@ class Poster: Mappable {
 	var title: String!
 	var thumbnail: String?
 	var coordinate: Coordinate!
+    var createAt: NSDate!
+    var updateAt: NSDate!
 
 	required init?(_ map: Map) { }
 
@@ -24,6 +26,8 @@ class Poster: Mappable {
 		title <- map["title"]
 		thumbnail <- map["thumbnail"]
 		coordinate <- map["coordinate"]
+        createAt <- (map["createAt"], DateTransform())
+        updateAt <- (map["updateAt"], DateTransform())
 	}
 
 }

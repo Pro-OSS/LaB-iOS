@@ -35,10 +35,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" alpha="0.80000000000000004" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3天前" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RaX-WP-whO" userLabel="创建日期">
-                        <rect key="frame" x="68" y="27" width="80" height="12"/>
-                        <constraints>
-                            <constraint firstAttribute="width" constant="80" id="yra-zS-QQy"/>
-                        </constraints>
+                        <rect key="frame" x="68" y="27" width="26.5" height="12"/>
                         <fontDescription key="fontDescription" type="system" pointSize="10"/>
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                         <nil key="highlightedColor"/>
@@ -176,6 +173,23 @@
                         <fontDescription key="fontDescription" type="system" pointSize="10"/>
                         <state key="normal" title="零号湾创新创业科技园2号楼"/>
                     </button>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="A8C-gk-KRD" userLabel="ic-Distance" customClass="FontAwesomeView" customModule="FontAwesome_swift">
+                        <rect key="frame" x="101" y="28" width="10" height="10"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="10" id="Hcw-Iq-fDw"/>
+                            <constraint firstAttribute="height" constant="10" id="J0j-L3-lY4"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="string" keyPath="iconCode" value="fa-location-arrow"/>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" alpha="0.80000001192092896" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12.7公里" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rqh-UB-wRZ" userLabel="距离">
+                        <rect key="frame" x="113" y="27" width="40" height="12"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
                 <constraints>
                     <constraint firstItem="pvt-u3-G2m" firstAttribute="top" secondItem="NVI-zG-oMb" secondAttribute="bottom" constant="7" id="2Wt-qY-rd3"/>
@@ -199,8 +213,11 @@
                     <constraint firstItem="GCb-FO-aiG" firstAttribute="centerY" secondItem="cxD-Zv-NCI" secondAttribute="centerY" id="Ogm-RH-PZS"/>
                     <constraint firstItem="KpZ-FT-i9X" firstAttribute="centerY" secondItem="BFh-A8-dPU" secondAttribute="centerY" id="TG4-aR-CE0"/>
                     <constraint firstAttribute="leadingMargin" secondItem="gXS-Qa-qW0" secondAttribute="leading" id="VEZ-7k-4y2"/>
+                    <constraint firstItem="Rqh-UB-wRZ" firstAttribute="centerY" secondItem="A8C-gk-KRD" secondAttribute="centerY" id="Wg8-eo-sXu"/>
                     <constraint firstItem="RaX-WP-whO" firstAttribute="top" secondItem="9b0-AH-PIX" secondAttribute="bottom" constant="6" id="XVn-NF-Amf"/>
                     <constraint firstItem="Lkg-nX-FWU" firstAttribute="centerY" secondItem="9TN-q0-DcW" secondAttribute="centerY" id="ZkO-mx-Cir"/>
+                    <constraint firstItem="A8C-gk-KRD" firstAttribute="centerY" secondItem="RaX-WP-whO" secondAttribute="centerY" id="aju-oc-s4W"/>
+                    <constraint firstItem="Rqh-UB-wRZ" firstAttribute="leading" secondItem="A8C-gk-KRD" secondAttribute="trailing" constant="2" id="bQa-rE-9IR"/>
                     <constraint firstAttribute="trailingMargin" secondItem="gXS-Qa-qW0" secondAttribute="trailing" id="cax-8g-1TH"/>
                     <constraint firstItem="KpZ-FT-i9X" firstAttribute="leading" secondItem="cxD-Zv-NCI" secondAttribute="trailing" constant="7" id="cuR-dY-FoS"/>
                     <constraint firstItem="xMm-db-FaG" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="4" id="dNX-7m-Woy"/>
@@ -213,6 +230,7 @@
                     <constraint firstItem="oM3-RH-Els" firstAttribute="centerY" secondItem="pvt-u3-G2m" secondAttribute="centerY" id="j2O-gN-IM7"/>
                     <constraint firstAttribute="trailingMargin" secondItem="BFh-A8-dPU" secondAttribute="trailing" id="n2d-QK-oEr"/>
                     <constraint firstAttribute="trailingMargin" secondItem="NVI-zG-oMb" secondAttribute="trailing" id="oCY-nv-WTg"/>
+                    <constraint firstItem="A8C-gk-KRD" firstAttribute="leading" secondItem="RaX-WP-whO" secondAttribute="trailing" constant="7" id="pX1-mz-Tch"/>
                     <constraint firstItem="I4b-tf-qiF" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="qGZ-8k-C0l"/>
                     <constraint firstItem="BFh-A8-dPU" firstAttribute="top" secondItem="NVI-zG-oMb" secondAttribute="bottom" constant="7" id="qKX-Zh-dPi"/>
                     <constraint firstItem="I4b-tf-qiF" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="qSB-zB-AcW"/>
