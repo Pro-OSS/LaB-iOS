@@ -9,7 +9,7 @@
 import Foundation
 import ObjectMapper
 
-struct Coordinate: Mappable {
+struct Coordinate : Mappable {
 
 	var latitude: Double!
 	var longitude: Double!

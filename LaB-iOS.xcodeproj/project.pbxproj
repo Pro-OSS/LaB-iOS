@@ -37,6 +37,7 @@
 		756C2CAB1D6BF9E100CBD4B8 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 756C2CAA1D6BF9E100CBD4B8 /* Home.storyboard */; };
 		756C2CAD1D6C275200CBD4B8 /* User.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 756C2CAC1D6C275200CBD4B8 /* User.storyboard */; };
 		756C2CAF1D6C288C00CBD4B8 /* Me.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 756C2CAE1D6C288C00CBD4B8 /* Me.storyboard */; };
+		756C2CB11D6C2D7500CBD4B8 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 756C2CB01D6C2D7500CBD4B8 /* User.swift */; };
 		777E22946A5B4389282C92E9 /* Pods_LaB_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B80061E2F2C224AA8F22343C /* Pods_LaB_iOS.framework */; };
 		B23229C4D5AA59DFF02695E6 /* Pods_LaB_iOSTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 095A9D2B5477D4069F675B4C /* Pods_LaB_iOSTests.framework */; };
 /* End PBXBuildFile section */
@@ -102,6 +103,7 @@
 		756C2CAA1D6BF9E100CBD4B8 /* Home.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Home.storyboard; path = UI/Home/Views/Home.storyboard; sourceTree = "<group>"; };
 		756C2CAC1D6C275200CBD4B8 /* User.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = User.storyboard; sourceTree = "<group>"; };
 		756C2CAE1D6C288C00CBD4B8 /* Me.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Me.storyboard; sourceTree = "<group>"; };
+		756C2CB01D6C2D7500CBD4B8 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = User.swift; path = Model/User.swift; sourceTree = "<group>"; };
 		B80061E2F2C224AA8F22343C /* Pods_LaB_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LaB_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B92564FE24F61EF6933AF2CB /* Pods-LaB-iOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LaB-iOSTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-LaB-iOSTests/Pods-LaB-iOSTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -351,6 +353,7 @@
 				756C2C8E1D6B250500CBD4B8 /* Poster.swift */,
 				756C2C901D6B25DB00CBD4B8 /* Coordinate.swift */,
 				756C2C921D6B275B00CBD4B8 /* Photo.swift */,
+				756C2CB01D6C2D7500CBD4B8 /* User.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -662,6 +665,7 @@
 				756C2C1D1D6A1FBB00CBD4B8 /* AppDelegate.swift in Sources */,
 				756C2C8F1D6B250500CBD4B8 /* Poster.swift in Sources */,
 				756C2C6F1D6AA80C00CBD4B8 /* PosterCell.swift in Sources */,
+				756C2CB11D6C2D7500CBD4B8 /* User.swift in Sources */,
 				756C2C841D6B01F600CBD4B8 /* RegionCode2Name.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

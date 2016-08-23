@@ -9,7 +9,7 @@
 import Foundation
 import ObjectMapper
 
-class Poster: Mappable {
+class Poster : Mappable {
 
 	var id: Int!
 	var title: String!
@@ -17,6 +17,7 @@ class Poster: Mappable {
 	var coordinate: Coordinate!
     var createAt: NSDate!
     var updateAt: NSDate!
+    var creator: User!
 
 	required init?(_ map: Map) { }
 
@@ -28,6 +29,7 @@ class Poster: Mappable {
 		coordinate <- map["coordinate"]
         createAt <- (map["createAt"], DateTransform())
         updateAt <- (map["updateAt"], DateTransform())
+        creator <- map["creator"]
 	}
 
 }

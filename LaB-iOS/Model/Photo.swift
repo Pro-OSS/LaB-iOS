@@ -9,7 +9,7 @@
 import Foundation
 import ObjectMapper
 
-class Photo: Mappable {
+class Photo : Mappable {
 
 	var id: Int!
 	var url: Int!
