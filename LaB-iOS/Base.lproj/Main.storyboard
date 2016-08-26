@@ -23,7 +23,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Yge-mt-vZx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-350" y="341"/>
+            <point key="canvasLocation" x="-234" y="119"/>
         </scene>
         <!--社区-->
         <scene sceneID="uKq-5f-Qd1">
@@ -42,7 +42,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7ET-ht-FSZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1919" y="1629"/>
+            <point key="canvasLocation" x="-733" y="2245"/>
         </scene>
         <!--消息-->
         <scene sceneID="VyW-aE-2UN">
@@ -61,7 +61,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EEj-cu-eZ1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="462" y="1629"/>
+            <point key="canvasLocation" x="262" y="2245"/>
         </scene>
         <!--我-->
         <scene sceneID="j1W-IU-lLG">
@@ -80,7 +80,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3Fh-5X-Ev2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1413" y="757"/>
+            <point key="canvasLocation" x="1257" y="2245"/>
         </scene>
         <!--主页-->
         <scene sceneID="2DC-U1-Brn">
@@ -99,22 +99,21 @@
                     </connections>
                 </navigationController>
             </objects>
-            <point key="canvasLocation" x="837" y="-117"/>
+            <point key="canvasLocation" x="-1619" y="1301"/>
         </scene>
         <!--Home-->
         <scene sceneID="aA1-qd-Yb3">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="c1g-oI-mg3" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewControllerPlaceholder storyboardIdentifier="Home" storyboardName="Home" id="FCA-X4-kpJ" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="7ke-Xe-4Jk"/>
                 </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="c1g-oI-mg3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1335.5" y="-29"/>
+            <point key="canvasLocation" x="-1619" y="1959"/>
         </scene>
         <!--我-->
         <scene sceneID="wEx-ky-hAU">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="UDO-js-zXR" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="RiD-5j-IyY" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="我" image="tab_bar_me" id="OMj-Me-EFd"/>
                     <toolbarItems/>
@@ -127,13 +126,13 @@
                         <segue destination="DwU-0a-Rat" kind="relationship" relationship="rootViewController" id="LVR-7l-1Xf"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UDO-js-zXR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="601" y="757"/>
+            <point key="canvasLocation" x="1257" y="1301"/>
         </scene>
         <!--消息-->
         <scene sceneID="qav-dV-uIp">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="VzG-Iw-PqY" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="3Di-bG-Vi9" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="消息" image="tab_bar_message" id="1JQ-lM-gzl"/>
                     <toolbarItems/>
@@ -146,8 +145,9 @@
                         <segue destination="dQK-Ya-HPH" kind="relationship" relationship="rootViewController" id="hLx-P3-39C"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VzG-Iw-PqY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-350" y="1629"/>
+            <point key="canvasLocation" x="262" y="1301"/>
         </scene>
         <!--社区-->
         <scene sceneID="abO-Am-tw4">
@@ -166,7 +166,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CFY-lM-Ng0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1107" y="1629"/>
+            <point key="canvasLocation" x="-733" y="1301"/>
         </scene>
     </scenes>
     <resources>
