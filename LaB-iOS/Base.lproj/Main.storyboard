@@ -85,7 +85,6 @@
         <!--主页-->
         <scene sceneID="2DC-U1-Brn">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="gW1-kN-N9R" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="OyA-A5-wXV" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="主页" image="tab_bar_home" id="lmL-BN-bSA"/>
                     <toolbarItems/>
@@ -98,6 +97,7 @@
                         <segue destination="FCA-X4-kpJ" kind="relationship" relationship="rootViewController" id="fH2-PM-umO"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gW1-kN-N9R" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1619" y="1301"/>
         </scene>
