@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="7Wh-Ad-y0L">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--社区-->
+        <scene sceneID="LBb-L8-uIM">
+            <objects>
+                <viewController id="f0K-eM-DSF" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Z0e-Zp-0Wr"/>
+                        <viewControllerLayoutGuide type="bottom" id="8h0-gc-960"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="uit-ou-lDR">
+                        <rect key="frame" x="0.0" y="64" width="320" height="455"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout"/>
+                    <tabBarItem key="tabBarItem" title="社区" image="tab_bar_community" id="uiA-ap-dFW"/>
+                    <navigationItem key="navigationItem" title="社区" id="xso-4g-FCl"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2pv-Wi-z7P" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="647" y="312"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="vRh-kx-q2i">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="7Wh-Ad-y0L" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Vq2-RL-2GC" customClass="DesignableNavigationBar" customModule="IBAnimatable">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.90196078430000004" green="0.086274509799999996" blue="0.1764705882" alpha="1" colorSpace="calibratedRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="f0K-eM-DSF" kind="relationship" relationship="rootViewController" id="igQ-R2-sis"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JBC-1G-E4i" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="115" y="312"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="tab_bar_community" width="24" height="25"/>
+    </resources>
+</document>

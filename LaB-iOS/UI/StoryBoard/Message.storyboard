@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="0Yp-AS-S2x">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--消息-->
+        <scene sceneID="Hvd-6g-umF">
+            <objects>
+                <viewController id="cZ0-bX-ra5" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Whn-Pk-IM4"/>
+                        <viewControllerLayoutGuide type="bottom" id="5Zf-xk-YJd"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="YfX-UD-1we">
+                        <rect key="frame" x="0.0" y="64" width="320" height="455"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout"/>
+                    <tabBarItem key="tabBarItem" title="消息" image="tab_bar_message" id="6gf-aM-uGO"/>
+                    <navigationItem key="navigationItem" title="消息" id="1ZH-pe-ZW6"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="24Z-o0-yb0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="609" y="287"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="wBj-Ae-Ljx">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="0Yp-AS-S2x" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="MUi-bp-jjK" customClass="DesignableNavigationBar" customModule="IBAnimatable">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.90196078430000004" green="0.086274509799999996" blue="0.1764705882" alpha="1" colorSpace="calibratedRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="cZ0-bX-ra5" kind="relationship" relationship="rootViewController" id="lzV-gL-UpK"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VEs-z5-kou" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="77" y="287"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="tab_bar_message" width="29" height="26"/>
+    </resources>
+</document>
