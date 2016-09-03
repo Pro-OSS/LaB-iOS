@@ -39,33 +39,107 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="i4X-qu-6X5" userLabel="表单">
                                 <rect key="frame" x="0.0" y="151" width="320" height="205"/>
                                 <subviews>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DPj-Ht-aVM" userLabel="用户名" customClass="AnimatableTextField" customModule="IBAnimatable">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="请输入手机号或绑定邮箱" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DPj-Ht-aVM" userLabel="用户名" customClass="AnimatableTextField" customModule="IBAnimatable">
                                         <rect key="frame" x="0.0" y="10" width="320" height="45"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="45" id="SBy-tk-iPE"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                         <textInputTraits key="textInputTraits"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="color" keyPath="fillColor">
                                                 <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                                <color key="value" red="0.66666666666666663" green="0.66666666666666663" blue="0.66666666666666663" alpha="1" colorSpace="calibratedRGB"/>
+                                                <color key="value" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="string" keyPath="borderSide" value="Bottom"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="paddingLeft">
+                                                <real key="value" value="50"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                                <color key="value" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                                <real key="value" value="0.20000000000000001"/>
+                                            </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </textField>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JvZ-BB-pd0" userLabel="密码" customClass="AnimatableTextField" customModule="IBAnimatable">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="请输入密码" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JvZ-BB-pd0" userLabel="密码" customClass="AnimatableTextField" customModule="IBAnimatable">
                                         <rect key="frame" x="0.0" y="55" width="320" height="45"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                         <textInputTraits key="textInputTraits"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="color" keyPath="fillColor">
                                                 <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="paddingLeft">
+                                                <real key="value" value="50"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                                <color key="value" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                                <real key="value" value="0.20000000000000001"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="point" keyPath="shadowOffset">
+                                                <point key="value" x="0.0" y="4"/>
+                                            </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ztw-Mx-41v" userLabel="注册">
+                                        <rect key="frame" x="15" y="175" width="48" height="27"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                        <state key="normal" title="立即注册">
+                                            <color key="titleColor" red="0.90196078430000004" green="0.086274509799999996" blue="0.1764705882" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="uHW-mO-9SC" kind="push" id="w5v-c0-Mj6"/>
+                                        </connections>
+                                    </button>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xkP-5A-gBH" userLabel="快捷箭头" customClass="FontAwesomeView" customModule="FontAwesome_swift">
+                                        <rect key="frame" x="302" y="182" width="13" height="13"/>
+                                        <color key="tintColor" red="0.90196078430000004" green="0.086274509799999996" blue="0.1764705882" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="13" id="ERG-lk-scp"/>
+                                            <constraint firstAttribute="width" constant="13" id="bYN-tx-6Mk"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="iconCode" value="fa-arrow-right"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qt4-h4-gAe" userLabel="快捷登录">
+                                        <rect key="frame" x="216" y="175" width="84" height="27"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                        <state key="normal" title="手机号快捷登录">
+                                            <color key="titleColor" red="0.90196078430000004" green="0.086274509799999996" blue="0.1764705882" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="CK3-1M-J7l" kind="push" id="1aR-X1-Wv4"/>
+                                        </connections>
+                                    </button>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="M0Z-JN-Que" userLabel="ic-Username" customClass="FontAwesomeView" customModule="FontAwesome_swift">
+                                        <rect key="frame" x="0.0" y="19" width="50" height="27"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="tintColor" red="0.90196078430000004" green="0.086274509799999996" blue="0.1764705882" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="50" id="Aw7-pI-YCh"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="iconCode" value="fa-user"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ncj-ZB-h6f" userLabel="ic-Password" customClass="FontAwesomeView" customModule="FontAwesome_swift">
+                                        <rect key="frame" x="0.0" y="64" width="50" height="27"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="tintColor" red="0.90196078430000004" green="0.086274509799999996" blue="0.1764705882" alpha="1" colorSpace="calibratedRGB"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="iconCode" value="fa-check"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vi5-t7-TeK" userLabel="登录" customClass="AnimatableButton" customModule="IBAnimatable">
                                         <rect key="frame" x="32" y="115" width="256" height="45"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
@@ -82,54 +156,45 @@
                                             <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
                                                 <real key="value" value="0.20000000000000001"/>
                                             </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                                <real key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="point" keyPath="shadowOffset">
+                                                <point key="value" x="4" y="4"/>
+                                            </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ztw-Mx-41v" userLabel="注册">
-                                        <rect key="frame" x="15" y="180" width="48" height="27"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                        <state key="normal" title="立即注册">
-                                            <color key="titleColor" red="0.90196078430000004" green="0.086274509799999996" blue="0.1764705882" alpha="1" colorSpace="calibratedRGB"/>
-                                        </state>
-                                    </button>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xkP-5A-gBH" userLabel="快捷箭头" customClass="FontAwesomeView" customModule="FontAwesome_swift">
-                                        <rect key="frame" x="302" y="187" width="13" height="13"/>
-                                        <color key="tintColor" red="0.90196078430000004" green="0.086274509799999996" blue="0.1764705882" alpha="1" colorSpace="calibratedRGB"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="13" id="ERG-lk-scp"/>
-                                            <constraint firstAttribute="width" constant="13" id="bYN-tx-6Mk"/>
-                                        </constraints>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="string" keyPath="iconCode" value="fa-arrow-right"/>
-                                        </userDefinedRuntimeAttributes>
-                                    </view>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qt4-h4-gAe" userLabel="快捷登录">
-                                        <rect key="frame" x="216" y="180" width="84" height="27"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                        <state key="normal" title="手机号快捷登录">
-                                            <color key="titleColor" red="0.90196078430000004" green="0.086274509799999996" blue="0.1764705882" alpha="1" colorSpace="calibratedRGB"/>
-                                        </state>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstItem="Ztw-Mx-41v" firstAttribute="top" secondItem="Vi5-t7-TeK" secondAttribute="bottom" constant="20" id="6LP-u1-dhv"/>
+                                    <constraint firstItem="Ztw-Mx-41v" firstAttribute="top" secondItem="Vi5-t7-TeK" secondAttribute="bottom" constant="15" id="6LP-u1-dhv"/>
                                     <constraint firstItem="Vi5-t7-TeK" firstAttribute="centerX" secondItem="DPj-Ht-aVM" secondAttribute="centerX" id="7Bc-Zp-bSt"/>
                                     <constraint firstItem="Ztw-Mx-41v" firstAttribute="leading" secondItem="i4X-qu-6X5" secondAttribute="leading" constant="15" id="Bsp-0Z-qgR"/>
                                     <constraint firstItem="DPj-Ht-aVM" firstAttribute="top" secondItem="i4X-qu-6X5" secondAttribute="top" constant="10" id="DoL-do-bxN"/>
+                                    <constraint firstItem="ncj-ZB-h6f" firstAttribute="centerY" secondItem="JvZ-BB-pd0" secondAttribute="centerY" id="Ep3-pB-ekk"/>
                                     <constraint firstItem="xkP-5A-gBH" firstAttribute="leading" secondItem="Qt4-h4-gAe" secondAttribute="trailing" constant="2" id="IhL-Xt-H05"/>
                                     <constraint firstAttribute="height" constant="205" id="OAX-xp-vxr"/>
                                     <constraint firstAttribute="trailing" secondItem="xkP-5A-gBH" secondAttribute="trailing" constant="5" id="QfL-Kr-deM"/>
+                                    <constraint firstItem="M0Z-JN-Que" firstAttribute="height" secondItem="DPj-Ht-aVM" secondAttribute="height" multiplier="0.6" id="Rmc-dV-FGJ"/>
                                     <constraint firstItem="DPj-Ht-aVM" firstAttribute="width" secondItem="i4X-qu-6X5" secondAttribute="width" id="U5l-GB-Te0"/>
+                                    <constraint firstItem="ncj-ZB-h6f" firstAttribute="leading" secondItem="JvZ-BB-pd0" secondAttribute="leading" id="Vwd-Lf-bdq"/>
                                     <constraint firstItem="Vi5-t7-TeK" firstAttribute="height" secondItem="DPj-Ht-aVM" secondAttribute="height" id="XOG-Pj-QyJ"/>
+                                    <constraint firstItem="ncj-ZB-h6f" firstAttribute="height" secondItem="M0Z-JN-Que" secondAttribute="height" id="Xmq-Zw-0uU"/>
                                     <constraint firstItem="Qt4-h4-gAe" firstAttribute="centerY" secondItem="Ztw-Mx-41v" secondAttribute="centerY" id="YCB-sl-hA8"/>
                                     <constraint firstItem="JvZ-BB-pd0" firstAttribute="height" secondItem="DPj-Ht-aVM" secondAttribute="height" id="aYW-Ny-ehC"/>
                                     <constraint firstItem="Vi5-t7-TeK" firstAttribute="width" secondItem="DPj-Ht-aVM" secondAttribute="width" multiplier="0.8" id="art-8W-VYh"/>
                                     <constraint firstItem="JvZ-BB-pd0" firstAttribute="top" secondItem="DPj-Ht-aVM" secondAttribute="bottom" id="dW5-Op-X26"/>
+                                    <constraint firstItem="M0Z-JN-Que" firstAttribute="centerY" secondItem="DPj-Ht-aVM" secondAttribute="centerY" id="ehg-8b-Xrb"/>
                                     <constraint firstItem="DPj-Ht-aVM" firstAttribute="centerX" secondItem="i4X-qu-6X5" secondAttribute="centerX" id="eqo-sF-JgZ"/>
                                     <constraint firstItem="JvZ-BB-pd0" firstAttribute="width" secondItem="DPj-Ht-aVM" secondAttribute="width" id="f6P-tv-4Wd"/>
                                     <constraint firstItem="xkP-5A-gBH" firstAttribute="centerY" secondItem="Qt4-h4-gAe" secondAttribute="centerY" id="fOt-7g-1rr"/>
                                     <constraint firstItem="Vi5-t7-TeK" firstAttribute="top" secondItem="JvZ-BB-pd0" secondAttribute="bottom" constant="15" id="ovF-yI-Yfx"/>
                                     <constraint firstItem="JvZ-BB-pd0" firstAttribute="centerX" secondItem="DPj-Ht-aVM" secondAttribute="centerX" id="plx-mX-TzW"/>
+                                    <constraint firstItem="M0Z-JN-Que" firstAttribute="leading" secondItem="DPj-Ht-aVM" secondAttribute="leading" id="tcE-ae-1KO"/>
+                                    <constraint firstItem="ncj-ZB-h6f" firstAttribute="width" secondItem="M0Z-JN-Que" secondAttribute="width" id="yCR-70-oH4"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gl2-ZT-PZJ" userLabel="第三方">
@@ -182,6 +247,9 @@
                                             <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
                                                 <real key="value" value="0.20000000000000001"/>
                                             </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="point" keyPath="shadowOffset">
+                                                <point key="value" x="4" y="4"/>
+                                            </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vde-nn-U2G" userLabel="QQ" customClass="AnimatableView" customModule="IBAnimatable">
@@ -223,6 +291,9 @@
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
                                                 <real key="value" value="0.20000000000000001"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="point" keyPath="shadowOffset">
+                                                <point key="value" x="4" y="4"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </view>
@@ -272,6 +343,9 @@
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
                                                 <real key="value" value="0.20000000000000001"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="point" keyPath="shadowOffset">
+                                                <point key="value" x="4" y="4"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </view>
@@ -337,12 +411,181 @@
                     <navigationItem key="navigationItem" title="登录" id="J1Z-hX-ah3">
                         <barButtonItem key="rightBarButtonItem" title="忘记密码" id="88P-Py-STz">
                             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <segue destination="CVa-fn-ucx" kind="push" id="jR3-wL-4SE"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8Rn-wP-FLI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1158" y="385"/>
+            <point key="canvasLocation" x="644" y="-463"/>
+        </scene>
+        <!--快捷登录-->
+        <scene sceneID="muK-88-8Sy">
+            <objects>
+                <viewController id="CK3-1M-J7l" customClass="PhoneLoginViewController" customModule="LaB_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="CKB-A2-Ja9"/>
+                        <viewControllerLayoutGuide type="bottom" id="buz-Z5-hsO"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="HTO-Wv-NsX">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="请输入新的手机号码" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="06J-CB-6i1" userLabel="手机号" customClass="AnimatableTextField" customModule="IBAnimatable">
+                                <rect key="frame" x="0.0" y="84" width="320" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="pT0-6B-8XX"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="borderSide" value="Bottom"/>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="fillColor">
+                                        <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="paddingLeft">
+                                        <real key="value" value="50"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                        <color key="value" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                        <real key="value" value="0.20000000000000001"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="请输入验证码" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fNx-Tk-0bO" userLabel="验证码" customClass="AnimatableTextField" customModule="IBAnimatable">
+                                <rect key="frame" x="0.0" y="129" width="320" height="45"/>
+                                <color key="tintColor" red="0.90196078430000004" green="0.086274509799999996" blue="0.1764705882" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="fillColor">
+                                        <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="paddingLeft">
+                                        <real key="value" value="50"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                        <color key="value" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                        <real key="value" value="0.20000000000000001"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="point" keyPath="shadowOffset">
+                                        <point key="value" x="0.0" y="4"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y3u-9u-NKe" userLabel="登录" customClass="AnimatableButton" customModule="IBAnimatable">
+                                <rect key="frame" x="32" y="194" width="256" height="45"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="登 录">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                        <color key="value" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                        <real key="value" value="0.20000000000000001"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="fillColor">
+                                        <color key="value" red="0.90196078430000004" green="0.086274509799999996" blue="0.1764705882" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="point" keyPath="shadowOffset">
+                                        <point key="value" x="4" y="4"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tUg-eD-qwN" customClass="AnimatableButton" customModule="IBAnimatable">
+                                <rect key="frame" x="224" y="133" width="91" height="36"/>
+                                <color key="backgroundColor" red="0.90196078430000004" green="0.086274509799999996" blue="0.1764705882" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="  获取验证码  "/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                        <real key="value" value="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                        <real key="value" value="0.20000000000000001"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                        <color key="value" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="point" keyPath="shadowOffset">
+                                        <point key="value" x="3" y="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gwP-xB-NTP" userLabel="ic-Phone" customClass="FontAwesomeView" customModule="FontAwesome_swift">
+                                <rect key="frame" x="0.0" y="93" width="50" height="27"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="tintColor" red="0.90196078430000004" green="0.086274509799999996" blue="0.1764705882" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="BuR-Nd-Tkz"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="iconCode" value="fa-mobile"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aoM-4N-h48" userLabel="ic-Captcha" customClass="FontAwesomeView" customModule="FontAwesome_swift">
+                                <rect key="frame" x="0.0" y="138" width="50" height="27"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="tintColor" red="0.90196078430000004" green="0.086274509799999996" blue="0.1764705882" alpha="1" colorSpace="calibratedRGB"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="iconCode" value="fa-lock"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.93333333333333335" green="0.93333333333333335" blue="0.93333333333333335" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="06J-CB-6i1" firstAttribute="centerX" secondItem="HTO-Wv-NsX" secondAttribute="centerX" id="0vK-9O-luC"/>
+                            <constraint firstItem="06J-CB-6i1" firstAttribute="width" secondItem="HTO-Wv-NsX" secondAttribute="width" id="3hB-2a-0QY"/>
+                            <constraint firstItem="fNx-Tk-0bO" firstAttribute="width" secondItem="06J-CB-6i1" secondAttribute="width" id="6jc-9V-ltZ"/>
+                            <constraint firstItem="fNx-Tk-0bO" firstAttribute="height" secondItem="06J-CB-6i1" secondAttribute="height" id="6mr-3W-YXy"/>
+                            <constraint firstItem="Y3u-9u-NKe" firstAttribute="width" secondItem="fNx-Tk-0bO" secondAttribute="width" multiplier="0.8" id="8AY-bO-BNk"/>
+                            <constraint firstItem="aoM-4N-h48" firstAttribute="height" secondItem="gwP-xB-NTP" secondAttribute="height" id="BVr-rC-qc1"/>
+                            <constraint firstItem="Y3u-9u-NKe" firstAttribute="centerX" secondItem="fNx-Tk-0bO" secondAttribute="centerX" id="Cjk-fR-a9n"/>
+                            <constraint firstItem="Y3u-9u-NKe" firstAttribute="height" secondItem="fNx-Tk-0bO" secondAttribute="height" id="Co0-cV-hPu"/>
+                            <constraint firstItem="aoM-4N-h48" firstAttribute="leading" secondItem="fNx-Tk-0bO" secondAttribute="leading" id="EPf-ld-QT0"/>
+                            <constraint firstItem="fNx-Tk-0bO" firstAttribute="centerX" secondItem="06J-CB-6i1" secondAttribute="centerX" id="FBw-uK-AjF"/>
+                            <constraint firstItem="aoM-4N-h48" firstAttribute="centerY" secondItem="fNx-Tk-0bO" secondAttribute="centerY" id="KZQ-lv-g8C"/>
+                            <constraint firstItem="gwP-xB-NTP" firstAttribute="height" secondItem="06J-CB-6i1" secondAttribute="height" multiplier="0.6" id="OBj-Ju-4ce"/>
+                            <constraint firstItem="gwP-xB-NTP" firstAttribute="centerY" secondItem="06J-CB-6i1" secondAttribute="centerY" id="UtC-iT-k6Y"/>
+                            <constraint firstItem="tUg-eD-qwN" firstAttribute="centerY" secondItem="fNx-Tk-0bO" secondAttribute="centerY" id="Vsn-ug-uLf"/>
+                            <constraint firstItem="aoM-4N-h48" firstAttribute="width" secondItem="gwP-xB-NTP" secondAttribute="width" id="cci-k5-j3L"/>
+                            <constraint firstItem="Y3u-9u-NKe" firstAttribute="top" secondItem="fNx-Tk-0bO" secondAttribute="bottom" constant="20" id="d0W-21-442"/>
+                            <constraint firstItem="gwP-xB-NTP" firstAttribute="leading" secondItem="06J-CB-6i1" secondAttribute="leading" id="fMc-6I-hNH"/>
+                            <constraint firstItem="fNx-Tk-0bO" firstAttribute="trailing" secondItem="tUg-eD-qwN" secondAttribute="trailing" constant="5" id="hn1-FA-Dex"/>
+                            <constraint firstItem="tUg-eD-qwN" firstAttribute="height" secondItem="fNx-Tk-0bO" secondAttribute="height" multiplier="0.8" id="kqj-fD-mn5"/>
+                            <constraint firstItem="fNx-Tk-0bO" firstAttribute="top" secondItem="06J-CB-6i1" secondAttribute="bottom" id="qm3-9I-Jnc"/>
+                            <constraint firstItem="06J-CB-6i1" firstAttribute="top" secondItem="CKB-A2-Ja9" secondAttribute="bottom" constant="20" id="xNN-2g-R4q"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="快捷登录" id="scX-hO-ESI" userLabel="快捷登录"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1dM-BM-fGK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="644" y="258"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Nwo-6i-Jnc">
@@ -352,6 +595,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="yS3-c5-krI" customClass="DesignableNavigationBar" customModule="IBAnimatable">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="barTintColor" red="0.90196078430000004" green="0.086274509799999996" blue="0.1764705882" alpha="1" colorSpace="calibratedRGB"/>
                         <textAttributes key="titleTextAttributes">
                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -364,7 +608,417 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hNH-Cv-oWh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="626" y="385"/>
+            <point key="canvasLocation" x="112" y="-463"/>
+        </scene>
+        <!--快速注册-->
+        <scene sceneID="ob3-Ki-C6F">
+            <objects>
+                <viewController id="uHW-mO-9SC" customClass="RegisterViewController" customModule="LaB_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="6xz-0L-dbm"/>
+                        <viewControllerLayoutGuide type="bottom" id="GGf-r0-tt6"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="AXV-FW-sf4">
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="请输入新的手机号码" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JnL-7t-Tsw" userLabel="手机号" customClass="AnimatableTextField" customModule="IBAnimatable">
+                                <rect key="frame" x="0.0" y="20" width="320" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="6FT-b5-zca"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="borderSide" value="Bottom"/>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="fillColor">
+                                        <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="paddingLeft">
+                                        <real key="value" value="50"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                        <color key="value" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                        <real key="value" value="0.20000000000000001"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="请输入验证码" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bgD-UM-MSX" userLabel="验证码" customClass="AnimatableTextField" customModule="IBAnimatable">
+                                <rect key="frame" x="0.0" y="65" width="320" height="45"/>
+                                <color key="tintColor" red="0.90196078430000004" green="0.086274509799999996" blue="0.1764705882" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="fillColor">
+                                        <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="paddingLeft">
+                                        <real key="value" value="50"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="borderSide" value="Bottom"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="请输入密码" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WI1-km-Nio" userLabel="密码" customClass="AnimatableTextField" customModule="IBAnimatable">
+                                <rect key="frame" x="0.0" y="110" width="320" height="45"/>
+                                <color key="tintColor" red="0.90196078430000004" green="0.086274509799999996" blue="0.1764705882" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="fillColor">
+                                        <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="paddingLeft">
+                                        <real key="value" value="50"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                        <color key="value" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                        <real key="value" value="0.20000000000000001"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="point" keyPath="shadowOffset">
+                                        <point key="value" x="0.0" y="4"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AFF-tu-dCp" userLabel="注册" customClass="AnimatableButton" customModule="IBAnimatable">
+                                <rect key="frame" x="32" y="175" width="256" height="45"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="注 册">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                        <color key="value" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                        <real key="value" value="0.20000000000000001"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="fillColor">
+                                        <color key="value" red="0.90196078430000004" green="0.086274509799999996" blue="0.1764705882" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="point" keyPath="shadowOffset">
+                                        <point key="value" x="4" y="4"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lJA-Gc-mMc" customClass="AnimatableButton" customModule="IBAnimatable">
+                                <rect key="frame" x="224" y="69" width="91" height="36"/>
+                                <color key="backgroundColor" red="0.90196078430000004" green="0.086274509799999996" blue="0.1764705882" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="  获取验证码  "/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                        <real key="value" value="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                        <real key="value" value="0.20000000000000001"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                        <color key="value" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="point" keyPath="shadowOffset">
+                                        <point key="value" x="3" y="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LUQ-hC-PZE" userLabel="ic-Phone" customClass="FontAwesomeView" customModule="FontAwesome_swift">
+                                <rect key="frame" x="0.0" y="29" width="50" height="27"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="tintColor" red="0.90196078430000004" green="0.086274509799999996" blue="0.1764705882" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="gly-gf-sf4"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="iconCode" value="fa-mobile"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GWA-cU-HpW" userLabel="ic-Captcha" customClass="FontAwesomeView" customModule="FontAwesome_swift">
+                                <rect key="frame" x="0.0" y="74" width="50" height="27"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="tintColor" red="0.90196078430000004" green="0.086274509799999996" blue="0.1764705882" alpha="1" colorSpace="calibratedRGB"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="iconCode" value="fa-lock"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bS0-eh-GQp" userLabel="ic-Password" customClass="FontAwesomeView" customModule="FontAwesome_swift">
+                                <rect key="frame" x="0.0" y="119" width="50" height="27"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="tintColor" red="0.90196078430000004" green="0.086274509799999996" blue="0.1764705882" alpha="1" colorSpace="calibratedRGB"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="iconCode" value="fa-check"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.93333333330000001" green="0.93333333330000001" blue="0.93333333330000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="LUQ-hC-PZE" firstAttribute="height" secondItem="JnL-7t-Tsw" secondAttribute="height" multiplier="0.6" id="0ea-g1-mie"/>
+                            <constraint firstItem="bgD-UM-MSX" firstAttribute="top" secondItem="JnL-7t-Tsw" secondAttribute="bottom" id="1Ie-by-pPW"/>
+                            <constraint firstItem="GWA-cU-HpW" firstAttribute="leading" secondItem="bgD-UM-MSX" secondAttribute="leading" id="1kx-qz-VGT"/>
+                            <constraint firstItem="LUQ-hC-PZE" firstAttribute="centerY" secondItem="JnL-7t-Tsw" secondAttribute="centerY" id="6XH-sb-Bb2"/>
+                            <constraint firstItem="GWA-cU-HpW" firstAttribute="width" secondItem="LUQ-hC-PZE" secondAttribute="width" id="78P-dM-H8q"/>
+                            <constraint firstItem="JnL-7t-Tsw" firstAttribute="centerX" secondItem="AXV-FW-sf4" secondAttribute="centerX" id="7Mg-1z-xbg"/>
+                            <constraint firstItem="WI1-km-Nio" firstAttribute="width" secondItem="bgD-UM-MSX" secondAttribute="width" id="7PF-Z0-Bgk"/>
+                            <constraint firstItem="lJA-Gc-mMc" firstAttribute="height" secondItem="bgD-UM-MSX" secondAttribute="height" multiplier="0.8" id="9od-Q8-Ayf"/>
+                            <constraint firstItem="bS0-eh-GQp" firstAttribute="width" secondItem="GWA-cU-HpW" secondAttribute="width" id="AVr-Cx-6pF"/>
+                            <constraint firstItem="AFF-tu-dCp" firstAttribute="centerX" secondItem="bgD-UM-MSX" secondAttribute="centerX" id="CkU-9b-PFa"/>
+                            <constraint firstItem="bgD-UM-MSX" firstAttribute="height" secondItem="JnL-7t-Tsw" secondAttribute="height" id="Dpv-ns-JNH"/>
+                            <constraint firstItem="JnL-7t-Tsw" firstAttribute="width" secondItem="AXV-FW-sf4" secondAttribute="width" id="E5v-wc-8VV"/>
+                            <constraint firstItem="LUQ-hC-PZE" firstAttribute="leading" secondItem="JnL-7t-Tsw" secondAttribute="leading" id="FAr-sc-SCX"/>
+                            <constraint firstItem="bgD-UM-MSX" firstAttribute="width" secondItem="JnL-7t-Tsw" secondAttribute="width" id="GaR-Ko-tj1"/>
+                            <constraint firstItem="GWA-cU-HpW" firstAttribute="centerY" secondItem="bgD-UM-MSX" secondAttribute="centerY" id="HVs-FZ-SH1"/>
+                            <constraint firstItem="GWA-cU-HpW" firstAttribute="height" secondItem="LUQ-hC-PZE" secondAttribute="height" id="IcP-ra-mfH"/>
+                            <constraint firstItem="AFF-tu-dCp" firstAttribute="width" secondItem="bgD-UM-MSX" secondAttribute="width" multiplier="0.8" id="Ved-ms-1kf"/>
+                            <constraint firstItem="bgD-UM-MSX" firstAttribute="centerX" secondItem="JnL-7t-Tsw" secondAttribute="centerX" id="Wvf-GR-S3X"/>
+                            <constraint firstItem="bS0-eh-GQp" firstAttribute="centerY" secondItem="WI1-km-Nio" secondAttribute="centerY" id="YkW-KE-asd"/>
+                            <constraint firstItem="AFF-tu-dCp" firstAttribute="top" secondItem="WI1-km-Nio" secondAttribute="bottom" constant="20" id="cWa-M2-RpZ"/>
+                            <constraint firstItem="JnL-7t-Tsw" firstAttribute="top" secondItem="6xz-0L-dbm" secondAttribute="bottom" constant="20" id="f3V-7P-mOd"/>
+                            <constraint firstItem="WI1-km-Nio" firstAttribute="height" secondItem="bgD-UM-MSX" secondAttribute="height" id="gp7-vl-aLB"/>
+                            <constraint firstItem="AFF-tu-dCp" firstAttribute="height" secondItem="bgD-UM-MSX" secondAttribute="height" id="me6-06-ckP"/>
+                            <constraint firstItem="bgD-UM-MSX" firstAttribute="trailing" secondItem="lJA-Gc-mMc" secondAttribute="trailing" constant="5" id="p29-cg-6zO"/>
+                            <constraint firstItem="bS0-eh-GQp" firstAttribute="height" secondItem="GWA-cU-HpW" secondAttribute="height" id="pKE-iY-fgI"/>
+                            <constraint firstItem="bS0-eh-GQp" firstAttribute="leading" secondItem="WI1-km-Nio" secondAttribute="leading" id="rRr-rO-2cw"/>
+                            <constraint firstItem="WI1-km-Nio" firstAttribute="centerX" secondItem="bgD-UM-MSX" secondAttribute="centerX" id="vF2-Eo-ONL"/>
+                            <constraint firstItem="lJA-Gc-mMc" firstAttribute="centerY" secondItem="bgD-UM-MSX" secondAttribute="centerY" id="wwR-aI-FGG"/>
+                            <constraint firstItem="WI1-km-Nio" firstAttribute="top" secondItem="bgD-UM-MSX" secondAttribute="bottom" id="z9o-bb-6Wn"/>
+                        </constraints>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
+                    <navigationItem key="navigationItem" title="快速注册" id="GvU-Vg-Hre"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eM8-MC-HdF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="112" y="258"/>
+        </scene>
+        <!--修改密码-->
+        <scene sceneID="DD6-RC-vFr">
+            <objects>
+                <viewController id="CVa-fn-ucx" customClass="ResetPasswordViewController" customModule="LaB_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="IAm-wV-2IZ"/>
+                        <viewControllerLayoutGuide type="bottom" id="WnP-1Z-ua2"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="tkC-yg-jY5">
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="请输入新的手机号码" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YM0-s9-Kq3" userLabel="手机号" customClass="AnimatableTextField" customModule="IBAnimatable">
+                                <rect key="frame" x="0.0" y="20" width="320" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="vNj-Hl-9cg"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="borderSide" value="Bottom"/>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="fillColor">
+                                        <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="paddingLeft">
+                                        <real key="value" value="50"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                        <color key="value" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                        <real key="value" value="0.20000000000000001"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="请输入验证码" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DZO-jt-a8z" userLabel="验证码" customClass="AnimatableTextField" customModule="IBAnimatable">
+                                <rect key="frame" x="0.0" y="65" width="320" height="45"/>
+                                <color key="tintColor" red="0.90196078430000004" green="0.086274509799999996" blue="0.1764705882" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="fillColor">
+                                        <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="paddingLeft">
+                                        <real key="value" value="50"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="borderSide" value="Bottom"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="请输入新的密码" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dHp-gf-e2m" userLabel="密码" customClass="AnimatableTextField" customModule="IBAnimatable">
+                                <rect key="frame" x="0.0" y="110" width="320" height="45"/>
+                                <color key="tintColor" red="0.90196078430000004" green="0.086274509799999996" blue="0.1764705882" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="fillColor">
+                                        <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="paddingLeft">
+                                        <real key="value" value="50"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                        <color key="value" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                        <real key="value" value="0.20000000000000001"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="point" keyPath="shadowOffset">
+                                        <point key="value" x="0.0" y="4"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qvQ-OM-ans" userLabel="注册" customClass="AnimatableButton" customModule="IBAnimatable">
+                                <rect key="frame" x="32" y="175" width="256" height="45"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="注 册">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                        <color key="value" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                        <real key="value" value="0.20000000000000001"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="fillColor">
+                                        <color key="value" red="0.90196078430000004" green="0.086274509799999996" blue="0.1764705882" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="point" keyPath="shadowOffset">
+                                        <point key="value" x="4" y="4"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qyz-E0-NW6" customClass="AnimatableButton" customModule="IBAnimatable">
+                                <rect key="frame" x="224" y="69" width="91" height="36"/>
+                                <color key="backgroundColor" red="0.90196078430000004" green="0.086274509799999996" blue="0.1764705882" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="  获取验证码  "/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                        <real key="value" value="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                        <real key="value" value="0.20000000000000001"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                        <color key="value" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="point" keyPath="shadowOffset">
+                                        <point key="value" x="3" y="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wWz-mk-vTa" userLabel="ic-Phone" customClass="FontAwesomeView" customModule="FontAwesome_swift">
+                                <rect key="frame" x="0.0" y="29" width="50" height="27"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="tintColor" red="0.90196078430000004" green="0.086274509799999996" blue="0.1764705882" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="2WG-xK-OyY"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="iconCode" value="fa-mobile"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EcT-1M-xL7" userLabel="ic-Captcha" customClass="FontAwesomeView" customModule="FontAwesome_swift">
+                                <rect key="frame" x="0.0" y="74" width="50" height="27"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="tintColor" red="0.90196078430000004" green="0.086274509799999996" blue="0.1764705882" alpha="1" colorSpace="calibratedRGB"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="iconCode" value="fa-lock"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eJd-mZ-QkE" userLabel="ic-Password" customClass="FontAwesomeView" customModule="FontAwesome_swift">
+                                <rect key="frame" x="0.0" y="119" width="50" height="27"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="tintColor" red="0.90196078430000004" green="0.086274509799999996" blue="0.1764705882" alpha="1" colorSpace="calibratedRGB"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="iconCode" value="fa-check"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.93333333330000001" green="0.93333333330000001" blue="0.93333333330000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="YM0-s9-Kq3" firstAttribute="width" secondItem="tkC-yg-jY5" secondAttribute="width" id="0fn-4c-7oc"/>
+                            <constraint firstItem="YM0-s9-Kq3" firstAttribute="top" secondItem="IAm-wV-2IZ" secondAttribute="bottom" constant="20" id="3Ff-gR-FFi"/>
+                            <constraint firstItem="wWz-mk-vTa" firstAttribute="leading" secondItem="YM0-s9-Kq3" secondAttribute="leading" id="5R4-eV-DS7"/>
+                            <constraint firstItem="DZO-jt-a8z" firstAttribute="centerX" secondItem="YM0-s9-Kq3" secondAttribute="centerX" id="5pu-Uq-5w3"/>
+                            <constraint firstItem="YM0-s9-Kq3" firstAttribute="centerX" secondItem="tkC-yg-jY5" secondAttribute="centerX" id="838-y0-2lh"/>
+                            <constraint firstItem="qvQ-OM-ans" firstAttribute="top" secondItem="dHp-gf-e2m" secondAttribute="bottom" constant="20" id="HrU-nj-fb9"/>
+                            <constraint firstItem="EcT-1M-xL7" firstAttribute="height" secondItem="wWz-mk-vTa" secondAttribute="height" id="KOS-3l-Sqz"/>
+                            <constraint firstItem="EcT-1M-xL7" firstAttribute="centerY" secondItem="DZO-jt-a8z" secondAttribute="centerY" id="Mdn-Ga-X26"/>
+                            <constraint firstItem="eJd-mZ-QkE" firstAttribute="height" secondItem="EcT-1M-xL7" secondAttribute="height" id="Pv8-ew-cf9"/>
+                            <constraint firstItem="wWz-mk-vTa" firstAttribute="centerY" secondItem="YM0-s9-Kq3" secondAttribute="centerY" id="Vow-I6-ZxP"/>
+                            <constraint firstItem="eJd-mZ-QkE" firstAttribute="width" secondItem="EcT-1M-xL7" secondAttribute="width" id="WBx-dY-R3v"/>
+                            <constraint firstItem="DZO-jt-a8z" firstAttribute="height" secondItem="YM0-s9-Kq3" secondAttribute="height" id="XPd-o0-zw3"/>
+                            <constraint firstItem="qvQ-OM-ans" firstAttribute="width" secondItem="DZO-jt-a8z" secondAttribute="width" multiplier="0.8" id="ZCm-OA-MX9"/>
+                            <constraint firstItem="wWz-mk-vTa" firstAttribute="height" secondItem="YM0-s9-Kq3" secondAttribute="height" multiplier="0.6" id="Zhb-uE-eFM"/>
+                            <constraint firstItem="qvQ-OM-ans" firstAttribute="centerX" secondItem="DZO-jt-a8z" secondAttribute="centerX" id="e6r-V2-0ZB"/>
+                            <constraint firstItem="DZO-jt-a8z" firstAttribute="width" secondItem="YM0-s9-Kq3" secondAttribute="width" id="eTx-Xg-8VB"/>
+                            <constraint firstItem="qvQ-OM-ans" firstAttribute="height" secondItem="DZO-jt-a8z" secondAttribute="height" id="fxk-LS-9QM"/>
+                            <constraint firstItem="DZO-jt-a8z" firstAttribute="trailing" secondItem="qyz-E0-NW6" secondAttribute="trailing" constant="5" id="gdz-F8-6V7"/>
+                            <constraint firstItem="eJd-mZ-QkE" firstAttribute="leading" secondItem="dHp-gf-e2m" secondAttribute="leading" id="h5D-p3-3ox"/>
+                            <constraint firstItem="dHp-gf-e2m" firstAttribute="centerX" secondItem="DZO-jt-a8z" secondAttribute="centerX" id="hyl-3B-GMd"/>
+                            <constraint firstItem="eJd-mZ-QkE" firstAttribute="centerY" secondItem="dHp-gf-e2m" secondAttribute="centerY" id="kAO-Kc-Nu5"/>
+                            <constraint firstItem="EcT-1M-xL7" firstAttribute="width" secondItem="wWz-mk-vTa" secondAttribute="width" id="kPE-SD-4AQ"/>
+                            <constraint firstItem="DZO-jt-a8z" firstAttribute="top" secondItem="YM0-s9-Kq3" secondAttribute="bottom" id="lHA-J4-s8o"/>
+                            <constraint firstItem="EcT-1M-xL7" firstAttribute="leading" secondItem="DZO-jt-a8z" secondAttribute="leading" id="oMd-ii-n16"/>
+                            <constraint firstItem="qyz-E0-NW6" firstAttribute="height" secondItem="DZO-jt-a8z" secondAttribute="height" multiplier="0.8" id="ptJ-Vr-8op"/>
+                            <constraint firstItem="qyz-E0-NW6" firstAttribute="centerY" secondItem="DZO-jt-a8z" secondAttribute="centerY" id="rGe-w5-cFh"/>
+                            <constraint firstItem="dHp-gf-e2m" firstAttribute="width" secondItem="DZO-jt-a8z" secondAttribute="width" id="wxF-KT-IG1"/>
+                            <constraint firstItem="dHp-gf-e2m" firstAttribute="top" secondItem="DZO-jt-a8z" secondAttribute="bottom" id="y30-ij-JEg"/>
+                            <constraint firstItem="dHp-gf-e2m" firstAttribute="height" secondItem="DZO-jt-a8z" secondAttribute="height" id="yzQ-4i-0tl"/>
+                        </constraints>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
+                    <navigationItem key="navigationItem" title="修改密码" id="ULc-7J-44r"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="V0h-T7-YDp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1096" y="-463"/>
         </scene>
     </scenes>
     <resources>

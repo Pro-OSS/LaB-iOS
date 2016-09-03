@@ -1,5 +1,5 @@
 //
-//  LoginViewController.swift
+//  PhoneLoginViewController.swift
 //  LaB-iOS
 //
 //  Created by 鲁浩 on 16/9/3.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class LoginViewController: UIViewController {
+class PhoneLoginViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

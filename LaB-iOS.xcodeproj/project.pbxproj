@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		01C82E24DBD9A205A9201B6F /* Pods_LaB_iOSUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F23FA9A9B69407CD5A28FE8 /* Pods_LaB_iOSUITests.framework */; };
+		753613CD1D7AD1F20016A277 /* PhoneLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 753613CC1D7AD1F20016A277 /* PhoneLoginViewController.swift */; };
+		753613CF1D7AF20E0016A277 /* ResetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 753613CE1D7AF20E0016A277 /* ResetPasswordViewController.swift */; };
+		753613D11D7AF22D0016A277 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 753613D01D7AF22D0016A277 /* RegisterViewController.swift */; };
 		756C2C1D1D6A1FBB00CBD4B8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 756C2C1C1D6A1FBB00CBD4B8 /* AppDelegate.swift */; };
 		756C2C1F1D6A1FBB00CBD4B8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 756C2C1E1D6A1FBB00CBD4B8 /* ViewController.swift */; };
 		756C2C221D6A1FBB00CBD4B8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 756C2C201D6A1FBB00CBD4B8 /* Main.storyboard */; };
@@ -36,7 +39,7 @@
 		756C2C961D6B27FE00CBD4B8 /* PosterType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 756C2C951D6B27FE00CBD4B8 /* PosterType.swift */; };
 		756C2CAB1D6BF9E100CBD4B8 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 756C2CAA1D6BF9E100CBD4B8 /* Home.storyboard */; };
 		756C2CB11D6C2D7500CBD4B8 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 756C2CB01D6C2D7500CBD4B8 /* User.swift */; };
-		75A00A001D7A5EE80038614D /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A009FE1D7A5EE80038614D /* LoginViewController.swift */; };
+		75A00A001D7A5EE80038614D /* NormalLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A009FE1D7A5EE80038614D /* NormalLoginViewController.swift */; };
 		75A00A061D7AA63C0038614D /* CommunityCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 75A00A041D7AA63C0038614D /* CommunityCell.xib */; };
 		75A00A071D7AA63C0038614D /* CommunityCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A00A051D7AA63C0038614D /* CommunityCell.swift */; };
 		75A00A091D7AA6760038614D /* AuthStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 75A00A081D7AA6760038614D /* AuthStoryboard.storyboard */; };
@@ -69,6 +72,9 @@
 		4F23FA9A9B69407CD5A28FE8 /* Pods_LaB_iOSUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LaB_iOSUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E04E673ADF90996458B0ECA /* Pods-LaB-iOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LaB-iOSTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LaB-iOSTests/Pods-LaB-iOSTests.debug.xcconfig"; sourceTree = "<group>"; };
 		72651FE8B9878C348C7F3E22 /* Pods-LaB-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LaB-iOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LaB-iOS/Pods-LaB-iOS.debug.xcconfig"; sourceTree = "<group>"; };
+		753613CC1D7AD1F20016A277 /* PhoneLoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PhoneLoginViewController.swift; path = UI/Common/Auth/PhoneLoginViewController.swift; sourceTree = "<group>"; };
+		753613CE1D7AF20E0016A277 /* ResetPasswordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ResetPasswordViewController.swift; path = UI/Common/Auth/ResetPasswordViewController.swift; sourceTree = "<group>"; };
+		753613D01D7AF22D0016A277 /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RegisterViewController.swift; path = UI/Common/Auth/RegisterViewController.swift; sourceTree = "<group>"; };
 		756C2C191D6A1FBB00CBD4B8 /* LaB-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "LaB-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		756C2C1C1D6A1FBB00CBD4B8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		756C2C1E1D6A1FBB00CBD4B8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -104,7 +110,7 @@
 		756C2C951D6B27FE00CBD4B8 /* PosterType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PosterType.swift; path = Model/Enums/PosterType.swift; sourceTree = "<group>"; };
 		756C2CAA1D6BF9E100CBD4B8 /* Home.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Home.storyboard; path = UI/Home/Views/Home.storyboard; sourceTree = "<group>"; };
 		756C2CB01D6C2D7500CBD4B8 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = User.swift; path = Model/User.swift; sourceTree = "<group>"; };
-		75A009FE1D7A5EE80038614D /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = UI/Common/Auth/LoginViewController.swift; sourceTree = "<group>"; };
+		75A009FE1D7A5EE80038614D /* NormalLoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NormalLoginViewController.swift; path = UI/Common/Auth/NormalLoginViewController.swift; sourceTree = "<group>"; };
 		75A00A041D7AA63C0038614D /* CommunityCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CommunityCell.xib; path = UI/Community/Cells/CommunityCell.xib; sourceTree = "<group>"; };
 		75A00A051D7AA63C0038614D /* CommunityCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CommunityCell.swift; path = UI/Community/Cells/CommunityCell.swift; sourceTree = "<group>"; };
 		75A00A081D7AA6760038614D /* AuthStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = AuthStoryboard.storyboard; path = UI/Common/Auth/AuthStoryboard.storyboard; sourceTree = "<group>"; };
@@ -415,7 +421,10 @@
 			isa = PBXGroup;
 			children = (
 				75A00A081D7AA6760038614D /* AuthStoryboard.storyboard */,
-				75A009FE1D7A5EE80038614D /* LoginViewController.swift */,
+				75A009FE1D7A5EE80038614D /* NormalLoginViewController.swift */,
+				753613CC1D7AD1F20016A277 /* PhoneLoginViewController.swift */,
+				753613CE1D7AF20E0016A277 /* ResetPasswordViewController.swift */,
+				753613D01D7AF22D0016A277 /* RegisterViewController.swift */,
 			);
 			name = Auth;
 			sourceTree = "<group>";
@@ -712,11 +721,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				75A00A001D7A5EE80038614D /* LoginViewController.swift in Sources */,
+				75A00A001D7A5EE80038614D /* NormalLoginViewController.swift in Sources */,
 				756C2C8D1D6B1DDB00CBD4B8 /* Mappable.swift in Sources */,
+				753613CD1D7AD1F20016A277 /* PhoneLoginViewController.swift in Sources */,
 				756C2C961D6B27FE00CBD4B8 /* PosterType.swift in Sources */,
 				756C2C1F1D6A1FBB00CBD4B8 /* ViewController.swift in Sources */,
 				756C2C931D6B275B00CBD4B8 /* Photo.swift in Sources */,
+				753613D11D7AF22D0016A277 /* RegisterViewController.swift in Sources */,
 				756C2C911D6B25DB00CBD4B8 /* Coordinate.swift in Sources */,
 				756C2C1D1D6A1FBB00CBD4B8 /* AppDelegate.swift in Sources */,
 				756C2C8F1D6B250500CBD4B8 /* Poster.swift in Sources */,
@@ -724,6 +735,7 @@
 				75A00A071D7AA63C0038614D /* CommunityCell.swift in Sources */,
 				756C2CB11D6C2D7500CBD4B8 /* User.swift in Sources */,
 				756C2C841D6B01F600CBD4B8 /* RegionCode2Name.swift in Sources */,
+				753613CF1D7AF20E0016A277 /* ResetPasswordViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
