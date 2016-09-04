@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="rrA-g3-sLc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="ED7-K4-eI3">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -10,7 +10,7 @@
         <!--登录-->
         <scene sceneID="Z1t-gB-yas">
             <objects>
-                <viewController id="ED7-K4-eI3" customClass="LoginViewController" customModule="LaB_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController hidesBottomBarWhenPushed="YES" id="ED7-K4-eI3" customClass="LoginViewController" customModule="LaB_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="80I-ng-IxC"/>
                         <viewControllerLayoutGuide type="bottom" id="otn-PI-2Yi"/>
@@ -590,6 +590,7 @@
         <!--Navigation Controller-->
         <scene sceneID="Nwo-6i-Jnc">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hNH-Cv-oWh" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="rrA-g3-sLc" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="yS3-c5-krI" customClass="DesignableNavigationBar" customModule="IBAnimatable">
@@ -606,7 +607,6 @@
                         <segue destination="ED7-K4-eI3" kind="relationship" relationship="rootViewController" id="DhD-VS-Vxf"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="hNH-Cv-oWh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="112" y="-463"/>
         </scene>
