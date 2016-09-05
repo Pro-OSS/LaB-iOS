@@ -256,16 +256,17 @@
                                         <rect key="frame" x="135" y="53" width="50" height="50"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="S70-D3-kRY" userLabel="qq-icon" customClass="FontAwesomeView" customModule="FontAwesome_swift">
-                                                <rect key="frame" x="10" y="10" width="30" height="30"/>
+                                                <rect key="frame" x="12.5" y="10" width="25" height="30"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lqQ-T3-EPL" userLabel="qq-button">
-                                                        <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="25" height="30"/>
                                                     </button>
                                                 </subviews>
                                                 <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
                                                     <constraint firstItem="lqQ-T3-EPL" firstAttribute="height" secondItem="S70-D3-kRY" secondAttribute="height" id="6Ba-IQ-PgG"/>
-                                                    <constraint firstAttribute="width" secondItem="S70-D3-kRY" secondAttribute="height" multiplier="1:1" id="NDX-t1-fsM"/>
+                                                    <constraint firstAttribute="width" constant="25" id="YgA-6f-09v"/>
+                                                    <constraint firstAttribute="height" constant="30" id="ete-4A-CJO"/>
                                                     <constraint firstItem="lqQ-T3-EPL" firstAttribute="width" secondItem="S70-D3-kRY" secondAttribute="width" id="q8Z-9E-Rg2"/>
                                                     <constraint firstItem="lqQ-T3-EPL" firstAttribute="centerY" secondItem="S70-D3-kRY" secondAttribute="centerY" id="uVW-Gw-09j"/>
                                                     <constraint firstItem="lqQ-T3-EPL" firstAttribute="centerX" secondItem="S70-D3-kRY" secondAttribute="centerX" id="yyQ-8B-luH"/>
@@ -277,7 +278,7 @@
                                         </subviews>
                                         <color key="backgroundColor" red="0.31764705879999999" green="0.58039215690000001" blue="0.81568627449999997" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
-                                            <constraint firstItem="S70-D3-kRY" firstAttribute="width" secondItem="Vde-nn-U2G" secondAttribute="width" multiplier="3:5" id="Ujh-ML-edC"/>
+                                            <constraint firstAttribute="width" constant="50" id="O3w-RC-8Qb"/>
                                             <constraint firstAttribute="width" secondItem="Vde-nn-U2G" secondAttribute="height" multiplier="1:1" id="iyb-cD-fUl"/>
                                             <constraint firstItem="S70-D3-kRY" firstAttribute="centerY" secondItem="Vde-nn-U2G" secondAttribute="centerY" id="kpW-u5-Yjr"/>
                                             <constraint firstItem="S70-D3-kRY" firstAttribute="centerX" secondItem="Vde-nn-U2G" secondAttribute="centerX" id="z2C-7U-URq"/>
