@@ -960,7 +960,7 @@ class ServerTrustPolicyPinCertificatesTestCase: ServerTrustPolicyTestCase {
 
         // When
         let serverTrustIsValid = serverTrustPolicy.evaluateServerTrust(serverTrust, isValidForHost: host)
-        
+
         // Then
         XCTAssertTrue(serverTrustIsValid, "server trust should pass evaluation")
     }
@@ -1408,13 +1408,13 @@ class ServerTrustPolicyCertificatesInBundleTestCase: ServerTrustPolicyTestCase {
         )
 
         // Then
-        // Expectation: 18 well-formed certificates in the test bundle plus 4 invalid certificates.
+        // Expectation: 19 well-formed certificates in the test bundle plus 4 invalid certificates.
         #if os(OSX)
             // For some reason, OSX is allowing all certificates to be considered valid. Need to file a
             // rdar demonstrating this behavior.
-            XCTAssertEqual(certificates.count, 22, "Expected 22 well-formed certificates")
+            XCTAssertEqual(certificates.count, 23, "Expected 23 well-formed certificates")
         #else
-            XCTAssertEqual(certificates.count, 18, "Expected 18 well-formed certificates")
+            XCTAssertEqual(certificates.count, 19, "Expected 19 well-formed certificates")
         #endif
     }
 }

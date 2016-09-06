@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		01C82E24DBD9A205A9201B6F /* Pods_LaB_iOSUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F23FA9A9B69407CD5A28FE8 /* Pods_LaB_iOSUITests.framework */; };
+		50ACFE671D7F10C30070C623 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50ACFE661D7F10C30070C623 /* ChatViewController.swift */; };
 		753613CD1D7AD1F20016A277 /* PhoneLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 753613CC1D7AD1F20016A277 /* PhoneLoginViewController.swift */; };
 		753613CF1D7AF20E0016A277 /* ResetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 753613CE1D7AF20E0016A277 /* ResetPasswordViewController.swift */; };
 		753613D11D7AF22D0016A277 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 753613D01D7AF22D0016A277 /* RegisterViewController.swift */; };
@@ -76,6 +77,7 @@
 		0E081E1D36BCE8D7373D6D0F /* Pods-LaB-iOSUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LaB-iOSUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-LaB-iOSUITests/Pods-LaB-iOSUITests.release.xcconfig"; sourceTree = "<group>"; };
 		27064518A0F0B59968202D3C /* Pods-LaB-iOSUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LaB-iOSUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LaB-iOSUITests/Pods-LaB-iOSUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		4F23FA9A9B69407CD5A28FE8 /* Pods_LaB_iOSUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LaB_iOSUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		50ACFE661D7F10C30070C623 /* ChatViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ChatViewController.swift; path = UI/Message/Controllers/ChatViewController.swift; sourceTree = "<group>"; };
 		6E04E673ADF90996458B0ECA /* Pods-LaB-iOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LaB-iOSTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LaB-iOSTests/Pods-LaB-iOSTests.debug.xcconfig"; sourceTree = "<group>"; };
 		72651FE8B9878C348C7F3E22 /* Pods-LaB-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LaB-iOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LaB-iOS/Pods-LaB-iOS.debug.xcconfig"; sourceTree = "<group>"; };
 		753613CC1D7AD1F20016A277 /* PhoneLoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PhoneLoginViewController.swift; path = UI/Common/Auth/PhoneLoginViewController.swift; sourceTree = "<group>"; };
@@ -189,6 +191,14 @@
 				0E081E1D36BCE8D7373D6D0F /* Pods-LaB-iOSUITests.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		50ACFE651D7F10A60070C623 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				50ACFE661D7F10C30070C623 /* ChatViewController.swift */,
+			);
+			name = Controllers;
 			sourceTree = "<group>";
 		};
 		753613E31D7BCA6B0016A277 /* Controllers */ = {
@@ -407,6 +417,7 @@
 		75A009F51D7A5DCB0038614D /* Message */ = {
 			isa = PBXGroup;
 			children = (
+				50ACFE651D7F10A60070C623 /* Controllers */,
 			);
 			name = Message;
 			sourceTree = "<group>";
@@ -753,6 +764,7 @@
 				756C2C911D6B25DB00CBD4B8 /* Coordinate.swift in Sources */,
 				756C2C1D1D6A1FBB00CBD4B8 /* AppDelegate.swift in Sources */,
 				756C2C8F1D6B250500CBD4B8 /* Poster.swift in Sources */,
+				50ACFE671D7F10C30070C623 /* ChatViewController.swift in Sources */,
 				753613E01D7B2DD60016A277 /* SearchViewController.swift in Sources */,
 				756C2C6F1D6AA80C00CBD4B8 /* PosterCell.swift in Sources */,
 				75A00A071D7AA63C0038614D /* CommunityCell.swift in Sources */,
