@@ -60,16 +60,11 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Nro-uK-WwS" userLabel="输入框">
                                 <rect key="frame" x="0.0" y="524" width="320" height="44"/>
                                 <subviews>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Dtx-ao-PJY" userLabel="输入栏">
-                                        <rect key="frame" x="10" y="4" width="25" height="35"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hdi-Lw-X2M" userLabel="功能键" customClass="AnimatableButton" customModule="IBAnimatable">
-                                        <rect key="frame" x="278.5" y="7" width="31" height="30.5"/>
+                                        <rect key="frame" x="267" y="7" width="31" height="30.5"/>
                                         <subviews>
-                                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="geA-uA-6LF" userLabel="icon" customClass="FontAwesomeView" customModule="FontAwesome_swift">
-                                                <rect key="frame" x="68" y="2.5" width="21" height="21.5"/>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="geA-uA-6LF" userLabel="icon" customClass="FontAwesomeView" customModule="FontAwesome_swift">
+                                                <rect key="frame" x="3" y="3" width="24" height="24.5"/>
                                                 <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="geA-uA-6LF" secondAttribute="height" multiplier="1:1" id="M53-f4-dSl"/>
@@ -83,33 +78,51 @@
                                         <constraints>
                                             <constraint firstItem="geA-uA-6LF" firstAttribute="centerY" secondItem="hdi-Lw-X2M" secondAttribute="centerY" id="LxV-6j-RIG"/>
                                             <constraint firstItem="geA-uA-6LF" firstAttribute="height" secondItem="hdi-Lw-X2M" secondAttribute="height" multiplier="0.8" id="ebX-qG-Q7p"/>
+                                            <constraint firstItem="geA-uA-6LF" firstAttribute="centerX" secondItem="hdi-Lw-X2M" secondAttribute="centerX" id="lYp-Pp-GT2"/>
                                             <constraint firstAttribute="width" secondItem="hdi-Lw-X2M" secondAttribute="height" id="nHh-ns-sg9"/>
                                         </constraints>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                <real key="value" value="13.199999999999999"/>
+                                                <real key="value" value="15.4"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
                                                 <color key="value" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                                <real key="value" value="1"/>
+                                                <real key="value" value="2"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </view>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Hw-y1-kVg" userLabel="发送键">
-                                        <rect key="frame" x="137" y="7" width="46" height="30"/>
-                                        <state key="normal" title="Button"/>
+                                    <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Hw-y1-kVg" userLabel="发送键" customClass="AnimatableButton" customModule="IBAnimatable">
+                                        <rect key="frame" x="256" y="6" width="54" height="32"/>
+                                        <color key="backgroundColor" red="0.90196078430000004" green="0.086274509799999996" blue="0.1764705882" alpha="1" colorSpace="calibratedRGB"/>
+                                        <inset key="contentEdgeInsets" minX="10" minY="7" maxX="10" maxY="7"/>
+                                        <state key="normal" title="发 送">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                     </button>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Dtx-ao-PJY" userLabel="输入栏">
+                                        <rect key="frame" x="10" y="4" width="236" height="35"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstItem="Dtx-ao-PJY" firstAttribute="height" secondItem="Nro-uK-WwS" secondAttribute="height" multiplier="0.8" id="0ab-FD-kHe"/>
                                     <constraint firstItem="hdi-Lw-X2M" firstAttribute="height" secondItem="Nro-uK-WwS" secondAttribute="height" multiplier="0.7" id="2bX-Up-eKS"/>
                                     <constraint firstItem="hdi-Lw-X2M" firstAttribute="centerY" secondItem="Nro-uK-WwS" secondAttribute="centerY" id="AYe-uG-oUP"/>
-                                    <constraint firstAttribute="trailing" secondItem="hdi-Lw-X2M" secondAttribute="trailing" constant="10" id="CJt-eN-gL9"/>
+                                    <constraint firstItem="hdi-Lw-X2M" firstAttribute="centerX" secondItem="6Hw-y1-kVg" secondAttribute="centerX" id="DPF-2K-0el"/>
+                                    <constraint firstItem="6Hw-y1-kVg" firstAttribute="centerY" secondItem="Nro-uK-WwS" secondAttribute="centerY" id="G3O-Sb-hMe"/>
                                     <constraint firstItem="Dtx-ao-PJY" firstAttribute="leading" secondItem="Nro-uK-WwS" secondAttribute="leading" constant="10" id="M5w-mi-s9O"/>
                                     <constraint firstAttribute="height" constant="44" id="Qhj-Q4-j9I"/>
+                                    <constraint firstItem="6Hw-y1-kVg" firstAttribute="leading" secondItem="Dtx-ao-PJY" secondAttribute="trailing" constant="10" id="V6D-7f-5yy"/>
+                                    <constraint firstAttribute="trailing" secondItem="6Hw-y1-kVg" secondAttribute="trailing" constant="10" id="fgn-jP-LT7"/>
                                     <constraint firstItem="Dtx-ao-PJY" firstAttribute="centerY" secondItem="Nro-uK-WwS" secondAttribute="centerY" id="ifW-sD-T1x"/>
                                 </constraints>
                             </view>
