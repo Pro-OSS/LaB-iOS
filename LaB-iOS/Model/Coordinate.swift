@@ -11,16 +11,16 @@ import ObjectMapper
 
 struct Coordinate : Mappable {
 
-	var latitude: Double!
-	var longitude: Double!
+    var latitude:  Double!
+    var longitude: Double!
 
 	init?(_ map: Map) {
 
 	}
 
 	mutating func mapping(map: Map) {
-		latitude <- map["latitude"]
-		longitude <- map["longitude"]
+        latitude  <- map["latitude"]
+        longitude <- map["longitude"]
 	}
 
 }

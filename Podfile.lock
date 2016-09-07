@@ -1,15 +1,18 @@
 PODS:
   - FontAwesome.swift (0.8.0)
   - IBAnimatable (2.5)
+  - XLPagerTabStrip (5.0.0)
 
 DEPENDENCIES:
   - FontAwesome.swift
   - IBAnimatable
+  - XLPagerTabStrip (~> 5.0)
 
 SPEC CHECKSUMS:
   FontAwesome.swift: f8c6cc5c42cbe93bdc04371363bc7b371fb3d3a1
   IBAnimatable: 5c33ed051b55f5ab988b5b256121158d1b81a333
+  XLPagerTabStrip: 87b8b705f9a7178e76a063ffaa2d70045944a965
 
-PODFILE CHECKSUM: 684d5f82599ba8e9dbbdd61953a1b904f0f5c3c7
+PODFILE CHECKSUM: c04b38678702b8619ed29164a5f9152283f58918
 
 COCOAPODS: 1.0.1
