@@ -10,7 +10,7 @@ import UIKit
 import Kingfisher
 import MapKit
 
-class PosterCell: UITableViewCell {
+class PosterTableViewCell: UITableViewCell {
 
     @IBOutlet weak var userAvatar: UIImageView!
     @IBOutlet weak var userNickname: UILabel!

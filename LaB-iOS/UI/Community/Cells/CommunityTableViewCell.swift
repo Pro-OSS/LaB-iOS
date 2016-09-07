@@ -1,14 +1,14 @@
 //
-//  CommunityCell.swift
+//  CommunityTableViewCell.swift
 //  LaB-iOS
 //
-//  Created by 鲁浩 on 16/9/3.
+//  Created by 鲁浩 on 16/9/7.
 //  Copyright © 2016年 鲁浩. All rights reserved.
 //
 
 import UIKit
 
-class CommunityCell: UITableViewCell {
+class CommunityTableViewCell: UITableViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()
