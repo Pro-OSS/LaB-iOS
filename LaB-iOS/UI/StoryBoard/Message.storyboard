@@ -3,14 +3,12 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
-        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--消息-->
         <scene sceneID="Hvd-6g-umF">
             <objects>
-                <viewController id="cZ0-bX-ra5" sceneMemberID="viewController">
+                <viewController id="cZ0-bX-ra5" customClass="MessageViewController" customModule="LaB_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Whn-Pk-IM4"/>
                         <viewControllerLayoutGuide type="bottom" id="5Zf-xk-YJd"/>
@@ -19,22 +17,9 @@
                         <rect key="frame" x="0.0" y="64" width="320" height="455"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="XyR-hu-jTg">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="80" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="XyR-hu-jTg">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="455"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="GoH-2x-kgm" customClass="AnimatableTableViewCell" customModule="IBAnimatable">
-                                        <rect key="frame" x="0.0" y="28" width="320" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="GoH-2x-kgm" id="sS6-YV-BYg">
-                                            <rect key="frame" x="0.0" y="0.0" width="287" height="43.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </tableViewCellContentView>
-                                        <connections>
-                                            <segue destination="GUt-Mx-quv" kind="push" id="GSL-ae-JXC"/>
-                                        </connections>
-                                    </tableViewCell>
-                                </prototypes>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -49,320 +34,13 @@
                     <tabBarItem key="tabBarItem" title="消息" image="tab_bar_message" id="6gf-aM-uGO"/>
                     <navigationItem key="navigationItem" title="消息" id="1ZH-pe-ZW6"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="tableView" destination="XyR-hu-jTg" id="bhG-70-JGa"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="24Z-o0-yb0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="609" y="287"/>
-        </scene>
-        <!--聊天界面-->
-        <scene sceneID="wl5-za-BPM">
-            <objects>
-                <viewController title="聊天界面" hidesBottomBarWhenPushed="YES" id="GUt-Mx-quv" customClass="ChatViewController" customModule="LaB_iOS" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="Tq5-7e-5uf"/>
-                        <viewControllerLayoutGuide type="bottom" id="woK-BQ-AUR"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="ASU-0g-qrF">
-                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Oq2-z7-Sdc" userLabel="聊天记录">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="389"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </tableView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Nro-uK-WwS" userLabel="输入框">
-                                <rect key="frame" x="0.0" y="411" width="320" height="44"/>
-                                <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hdi-Lw-X2M" userLabel="功能键" customClass="AnimatableButton" customModule="IBAnimatable">
-                                        <rect key="frame" x="267" y="7" width="31" height="30.5"/>
-                                        <subviews>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="geA-uA-6LF" userLabel="icon" customClass="FontAwesomeView" customModule="FontAwesome_swift">
-                                                <rect key="frame" x="3" y="3" width="24" height="24.5"/>
-                                                <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" secondItem="geA-uA-6LF" secondAttribute="height" multiplier="1:1" id="M53-f4-dSl"/>
-                                                </constraints>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="string" keyPath="iconCode" value="fa-plus"/>
-                                                </userDefinedRuntimeAttributes>
-                                            </view>
-                                        </subviews>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <constraints>
-                                            <constraint firstItem="geA-uA-6LF" firstAttribute="centerY" secondItem="hdi-Lw-X2M" secondAttribute="centerY" id="LxV-6j-RIG"/>
-                                            <constraint firstItem="geA-uA-6LF" firstAttribute="height" secondItem="hdi-Lw-X2M" secondAttribute="height" multiplier="0.8" id="ebX-qG-Q7p"/>
-                                            <constraint firstItem="geA-uA-6LF" firstAttribute="centerX" secondItem="hdi-Lw-X2M" secondAttribute="centerX" id="lYp-Pp-GT2"/>
-                                            <constraint firstAttribute="width" secondItem="hdi-Lw-X2M" secondAttribute="height" id="nHh-ns-sg9"/>
-                                        </constraints>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                <real key="value" value="15.4"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                                <color key="value" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                                <real key="value" value="2"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                    </view>
-                                    <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Hw-y1-kVg" userLabel="发送键" customClass="AnimatableButton" customModule="IBAnimatable">
-                                        <rect key="frame" x="256" y="6" width="54" height="32"/>
-                                        <color key="backgroundColor" red="0.90196078430000004" green="0.086274509799999996" blue="0.1764705882" alpha="1" colorSpace="calibratedRGB"/>
-                                        <inset key="contentEdgeInsets" minX="10" minY="7" maxX="10" maxY="7"/>
-                                        <state key="normal" title="发 送">
-                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        </state>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                <real key="value" value="5"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                    </button>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Dtx-ao-PJY" userLabel="输入栏">
-                                        <rect key="frame" x="10" y="4" width="236" height="35"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
-                                </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstItem="Dtx-ao-PJY" firstAttribute="height" secondItem="Nro-uK-WwS" secondAttribute="height" multiplier="0.8" id="0ab-FD-kHe"/>
-                                    <constraint firstItem="hdi-Lw-X2M" firstAttribute="height" secondItem="Nro-uK-WwS" secondAttribute="height" multiplier="0.7" id="2bX-Up-eKS"/>
-                                    <constraint firstItem="hdi-Lw-X2M" firstAttribute="centerY" secondItem="Nro-uK-WwS" secondAttribute="centerY" id="AYe-uG-oUP"/>
-                                    <constraint firstItem="hdi-Lw-X2M" firstAttribute="centerX" secondItem="6Hw-y1-kVg" secondAttribute="centerX" id="DPF-2K-0el"/>
-                                    <constraint firstItem="6Hw-y1-kVg" firstAttribute="centerY" secondItem="Nro-uK-WwS" secondAttribute="centerY" id="G3O-Sb-hMe"/>
-                                    <constraint firstItem="Dtx-ao-PJY" firstAttribute="leading" secondItem="Nro-uK-WwS" secondAttribute="leading" constant="10" id="M5w-mi-s9O"/>
-                                    <constraint firstAttribute="height" constant="44" id="Qhj-Q4-j9I"/>
-                                    <constraint firstItem="6Hw-y1-kVg" firstAttribute="leading" secondItem="Dtx-ao-PJY" secondAttribute="trailing" constant="10" id="V6D-7f-5yy"/>
-                                    <constraint firstAttribute="trailing" secondItem="6Hw-y1-kVg" secondAttribute="trailing" constant="10" id="fgn-jP-LT7"/>
-                                    <constraint firstItem="Dtx-ao-PJY" firstAttribute="centerY" secondItem="Nro-uK-WwS" secondAttribute="centerY" id="ifW-sD-T1x"/>
-                                </constraints>
-                            </view>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="eCi-Qz-RBz" userLabel="多功能">
-                                <rect key="frame" x="0.0" y="655" width="320" height="200"/>
-                                <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="nEM-Si-ru3" userLabel="第一栏">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="100"/>
-                                        <subviews>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gar-ch-9g2" userLabel="最近浏览">
-                                                <rect key="frame" x="0.0" y="0.0" width="80" height="100"/>
-                                                <subviews>
-                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="ye6-GW-LaQ" userLabel="square">
-                                                        <rect key="frame" x="7" y="5" width="65" height="90"/>
-                                                        <subviews>
-                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="j8z-V0-eLY" userLabel="button" customClass="AnimatableButton" customModule="IBAnimatable">
-                                                                <rect key="frame" x="0.0" y="0.0" width="65" height="65"/>
-                                                                <subviews>
-                                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sCS-kl-X7y" userLabel="icon" customClass="FontAwesomeView" customModule="FontAwesome_swift">
-                                                                        <rect key="frame" x="1" y="1" width="62" height="62.5"/>
-                                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                                        <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                                                        <userDefinedRuntimeAttributes>
-                                                                            <userDefinedRuntimeAttribute type="string" keyPath="iconCode" value="fa-history"/>
-                                                                        </userDefinedRuntimeAttributes>
-                                                                    </view>
-                                                                </subviews>
-                                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                                <constraints>
-                                                                    <constraint firstItem="sCS-kl-X7y" firstAttribute="centerY" secondItem="j8z-V0-eLY" secondAttribute="centerY" id="Twb-qW-Tja"/>
-                                                                    <constraint firstItem="sCS-kl-X7y" firstAttribute="height" secondItem="j8z-V0-eLY" secondAttribute="height" constant="-3" id="VED-NL-NNm"/>
-                                                                    <constraint firstItem="sCS-kl-X7y" firstAttribute="centerX" secondItem="j8z-V0-eLY" secondAttribute="centerX" id="YVb-Ym-IFS"/>
-                                                                    <constraint firstAttribute="width" secondItem="j8z-V0-eLY" secondAttribute="height" id="tJZ-Rw-lPV"/>
-                                                                    <constraint firstItem="sCS-kl-X7y" firstAttribute="width" secondItem="j8z-V0-eLY" secondAttribute="width" constant="-3" id="zAL-nZ-tvc"/>
-                                                                </constraints>
-                                                                <userDefinedRuntimeAttributes>
-                                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                                        <real key="value" value="5"/>
-                                                                    </userDefinedRuntimeAttribute>
-                                                                    <userDefinedRuntimeAttribute type="color" keyPath="fillColor">
-                                                                        <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                                    </userDefinedRuntimeAttribute>
-                                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                                                        <color key="value" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                                                    </userDefinedRuntimeAttribute>
-                                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                                                        <real key="value" value="1"/>
-                                                                    </userDefinedRuntimeAttribute>
-                                                                </userDefinedRuntimeAttributes>
-                                                            </view>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="最近浏览" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nEq-d7-KzW" userLabel="label">
-                                                                <rect key="frame" x="8" y="65" width="48" height="25"/>
-                                                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                                <nil key="highlightedColor"/>
-                                                            </label>
-                                                        </subviews>
-                                                    </stackView>
-                                                </subviews>
-                                                <constraints>
-                                                    <constraint firstItem="ye6-GW-LaQ" firstAttribute="height" secondItem="Gar-ch-9g2" secondAttribute="height" multiplier="0.9" id="59a-TO-Al9"/>
-                                                    <constraint firstItem="ye6-GW-LaQ" firstAttribute="centerX" secondItem="Gar-ch-9g2" secondAttribute="centerX" id="Ald-3J-MaB"/>
-                                                    <constraint firstItem="ye6-GW-LaQ" firstAttribute="centerY" secondItem="Gar-ch-9g2" secondAttribute="centerY" id="Vh5-ba-cR6"/>
-                                                    <constraint firstItem="j8z-V0-eLY" firstAttribute="width" secondItem="Gar-ch-9g2" secondAttribute="width" multiplier="0.81" id="hT0-fF-92Y"/>
-                                                </constraints>
-                                            </view>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="idA-rB-JoE" userLabel="图片/视频">
-                                                <rect key="frame" x="80" y="0.0" width="80" height="100"/>
-                                                <subviews>
-                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="4x7-T0-1Vn" userLabel="square">
-                                                        <rect key="frame" x="8" y="5" width="65" height="90"/>
-                                                        <subviews>
-                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NR7-ka-oan" userLabel="button" customClass="AnimatableButton" customModule="IBAnimatable">
-                                                                <rect key="frame" x="0.0" y="0.0" width="65" height="65"/>
-                                                                <subviews>
-                                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="N8Q-GO-L9E" userLabel="icon" customClass="FontAwesomeView" customModule="FontAwesome_swift">
-                                                                        <rect key="frame" x="1" y="6" width="62" height="53"/>
-                                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                                        <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                                                        <userDefinedRuntimeAttributes>
-                                                                            <userDefinedRuntimeAttribute type="string" keyPath="iconCode" value="fa-photo"/>
-                                                                        </userDefinedRuntimeAttributes>
-                                                                    </view>
-                                                                </subviews>
-                                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                                <constraints>
-                                                                    <constraint firstItem="N8Q-GO-L9E" firstAttribute="centerY" secondItem="NR7-ka-oan" secondAttribute="centerY" id="6AE-Ha-pL3"/>
-                                                                    <constraint firstItem="N8Q-GO-L9E" firstAttribute="centerX" secondItem="NR7-ka-oan" secondAttribute="centerX" id="7vS-Zf-QrH"/>
-                                                                    <constraint firstItem="N8Q-GO-L9E" firstAttribute="width" secondItem="NR7-ka-oan" secondAttribute="width" constant="-3" id="esC-pU-poR"/>
-                                                                    <constraint firstAttribute="width" secondItem="NR7-ka-oan" secondAttribute="height" id="gLb-M9-eZR"/>
-                                                                    <constraint firstItem="N8Q-GO-L9E" firstAttribute="height" secondItem="NR7-ka-oan" secondAttribute="height" constant="-12" id="vKO-Uk-D0r"/>
-                                                                </constraints>
-                                                                <userDefinedRuntimeAttributes>
-                                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                                        <real key="value" value="5"/>
-                                                                    </userDefinedRuntimeAttribute>
-                                                                    <userDefinedRuntimeAttribute type="color" keyPath="fillColor">
-                                                                        <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                                    </userDefinedRuntimeAttribute>
-                                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                                                        <color key="value" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                                                    </userDefinedRuntimeAttribute>
-                                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                                                        <real key="value" value="1"/>
-                                                                    </userDefinedRuntimeAttribute>
-                                                                </userDefinedRuntimeAttributes>
-                                                            </view>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="图片" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MFd-Hv-vsD" userLabel="label">
-                                                                <rect key="frame" x="20" y="65" width="24" height="25"/>
-                                                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                                <nil key="highlightedColor"/>
-                                                            </label>
-                                                        </subviews>
-                                                    </stackView>
-                                                </subviews>
-                                                <constraints>
-                                                    <constraint firstItem="4x7-T0-1Vn" firstAttribute="centerY" secondItem="idA-rB-JoE" secondAttribute="centerY" id="BmK-gP-dJ0"/>
-                                                    <constraint firstItem="NR7-ka-oan" firstAttribute="width" secondItem="idA-rB-JoE" secondAttribute="width" multiplier="0.81" id="Soi-XX-Iow"/>
-                                                    <constraint firstItem="4x7-T0-1Vn" firstAttribute="centerX" secondItem="idA-rB-JoE" secondAttribute="centerX" id="YMM-Sa-pdO"/>
-                                                    <constraint firstItem="4x7-T0-1Vn" firstAttribute="height" secondItem="idA-rB-JoE" secondAttribute="height" multiplier="0.9" id="g25-39-3GA"/>
-                                                </constraints>
-                                            </view>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ysV-6I-nGH" userLabel="位置">
-                                                <rect key="frame" x="160" y="0.0" width="80" height="100"/>
-                                                <subviews>
-                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="KQY-79-SYU" userLabel="square">
-                                                        <rect key="frame" x="7" y="5" width="65" height="90"/>
-                                                        <subviews>
-                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hnt-90-FeU" userLabel="button" customClass="AnimatableButton" customModule="IBAnimatable">
-                                                                <rect key="frame" x="0.0" y="0.0" width="65" height="65"/>
-                                                                <subviews>
-                                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="G5b-Uh-jJi" userLabel="icon" customClass="FontAwesomeView" customModule="FontAwesome_swift">
-                                                                        <rect key="frame" x="1" y="1" width="62" height="61.5"/>
-                                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                                        <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                                                        <userDefinedRuntimeAttributes>
-                                                                            <userDefinedRuntimeAttribute type="string" keyPath="iconCode" value="fa-map-marker"/>
-                                                                        </userDefinedRuntimeAttributes>
-                                                                    </view>
-                                                                </subviews>
-                                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                                <constraints>
-                                                                    <constraint firstItem="G5b-Uh-jJi" firstAttribute="height" secondItem="Hnt-90-FeU" secondAttribute="height" constant="-3" id="Itb-wf-vr3"/>
-                                                                    <constraint firstItem="G5b-Uh-jJi" firstAttribute="width" secondItem="Hnt-90-FeU" secondAttribute="width" constant="-3" id="bb5-FC-Ozt"/>
-                                                                    <constraint firstItem="G5b-Uh-jJi" firstAttribute="centerY" secondItem="Hnt-90-FeU" secondAttribute="centerY" id="keY-2Z-30H"/>
-                                                                    <constraint firstItem="G5b-Uh-jJi" firstAttribute="centerX" secondItem="Hnt-90-FeU" secondAttribute="centerX" id="qDx-Ec-m5j"/>
-                                                                    <constraint firstAttribute="width" secondItem="Hnt-90-FeU" secondAttribute="height" id="vpR-BK-Ihk"/>
-                                                                </constraints>
-                                                                <userDefinedRuntimeAttributes>
-                                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                                        <real key="value" value="5"/>
-                                                                    </userDefinedRuntimeAttribute>
-                                                                    <userDefinedRuntimeAttribute type="color" keyPath="fillColor">
-                                                                        <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                                    </userDefinedRuntimeAttribute>
-                                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                                                        <color key="value" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                                                    </userDefinedRuntimeAttribute>
-                                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                                                        <real key="value" value="1"/>
-                                                                    </userDefinedRuntimeAttribute>
-                                                                </userDefinedRuntimeAttributes>
-                                                            </view>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="最近浏览" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UC1-Bq-Fb0" userLabel="label">
-                                                                <rect key="frame" x="8" y="65" width="48" height="25"/>
-                                                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                                <nil key="highlightedColor"/>
-                                                            </label>
-                                                        </subviews>
-                                                    </stackView>
-                                                </subviews>
-                                                <constraints>
-                                                    <constraint firstItem="KQY-79-SYU" firstAttribute="centerY" secondItem="ysV-6I-nGH" secondAttribute="centerY" id="0HX-yv-q0x"/>
-                                                    <constraint firstItem="KQY-79-SYU" firstAttribute="height" secondItem="ysV-6I-nGH" secondAttribute="height" multiplier="0.9" id="onB-fy-H2y"/>
-                                                    <constraint firstItem="Hnt-90-FeU" firstAttribute="width" secondItem="ysV-6I-nGH" secondAttribute="width" multiplier="0.81" id="pgp-1G-y2M"/>
-                                                    <constraint firstItem="KQY-79-SYU" firstAttribute="centerX" secondItem="ysV-6I-nGH" secondAttribute="centerX" id="sox-SI-5pP"/>
-                                                </constraints>
-                                            </view>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gVq-eE-8Fk" userLabel="空">
-                                                <rect key="frame" x="240" y="0.0" width="80" height="100"/>
-                                            </view>
-                                        </subviews>
-                                    </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uOp-7K-ZmF" userLabel="第二栏">
-                                        <rect key="frame" x="0.0" y="100" width="320" height="100"/>
-                                    </stackView>
-                                </subviews>
-                                <color key="backgroundColor" red="0.93333333330000001" green="0.93333333330000001" blue="0.93333333330000001" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="200" id="lRy-aG-WVl"/>
-                                </constraints>
-                            </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="对方正在输入......" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8vB-vu-yvj" userLabel="正在输入">
-                                <rect key="frame" x="32" y="389" width="256" height="22"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="22" id="NSK-W2-bp4"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" red="0.93333333330000001" green="0.93333333330000001" blue="0.93333333330000001" alpha="1" colorSpace="calibratedRGB"/>
-                        <constraints>
-                            <constraint firstItem="Nro-uK-WwS" firstAttribute="bottom" secondItem="eCi-Qz-RBz" secondAttribute="top" constant="-200" id="4Go-7g-T6K"/>
-                            <constraint firstItem="Nro-uK-WwS" firstAttribute="top" secondItem="Oq2-z7-Sdc" secondAttribute="bottom" constant="22" id="7ch-ID-iJ4"/>
-                            <constraint firstItem="Nro-uK-WwS" firstAttribute="width" secondItem="ASU-0g-qrF" secondAttribute="width" id="9LN-NR-bYM"/>
-                            <constraint firstItem="eCi-Qz-RBz" firstAttribute="centerX" secondItem="ASU-0g-qrF" secondAttribute="centerX" id="9gU-oi-DpW"/>
-                            <constraint firstItem="woK-BQ-AUR" firstAttribute="top" secondItem="Nro-uK-WwS" secondAttribute="bottom" id="CHn-BV-NuX"/>
-                            <constraint firstItem="8vB-vu-yvj" firstAttribute="centerX" secondItem="ASU-0g-qrF" secondAttribute="centerX" id="Drl-rg-zme"/>
-                            <constraint firstItem="Oq2-z7-Sdc" firstAttribute="bottom" secondItem="8vB-vu-yvj" secondAttribute="top" id="KpW-Ea-QAw"/>
-                            <constraint firstItem="Oq2-z7-Sdc" firstAttribute="centerX" secondItem="ASU-0g-qrF" secondAttribute="centerX" id="QEh-Yo-TGr"/>
-                            <constraint firstItem="Oq2-z7-Sdc" firstAttribute="top" secondItem="Tq5-7e-5uf" secondAttribute="bottom" id="XdQ-EA-s7u"/>
-                            <constraint firstItem="eCi-Qz-RBz" firstAttribute="width" secondItem="ASU-0g-qrF" secondAttribute="width" id="ZBu-Uh-9lH"/>
-                            <constraint firstItem="8vB-vu-yvj" firstAttribute="width" secondItem="ASU-0g-qrF" secondAttribute="width" multiplier="0.8" id="aqK-yr-kO4"/>
-                            <constraint firstItem="Nro-uK-WwS" firstAttribute="centerX" secondItem="ASU-0g-qrF" secondAttribute="centerX" id="dof-WG-y02"/>
-                            <constraint firstItem="Oq2-z7-Sdc" firstAttribute="width" secondItem="ASU-0g-qrF" secondAttribute="width" id="loO-LS-a5c"/>
-                        </constraints>
-                    </view>
-                    <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
-                    <navigationItem key="navigationItem" id="rL5-Pp-i9t"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="4e1-RR-npw" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="609" y="1052"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="wBj-Ae-Ljx">

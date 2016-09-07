@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="80" id="KGk-i7-Jjw" customClass="MessageTableViewCell" customModule="LaB_iOS" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="80"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="79.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="XOi-9U-wUE" userLabel="头像">
+                        <rect key="frame" x="8" y="9" width="60" height="60.5"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="XOi-9U-wUE" secondAttribute="height" id="8Yp-Yo-CLZ"/>
+                            <constraint firstAttribute="width" constant="60" id="Naw-PA-otq"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="王大锤" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6xW-F9-L1B" userLabel="名称">
+                        <rect key="frame" x="83" y="19" width="51" height="21"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" text="你好啊，我想要借一个东西。你知道么，我已经下了订单了。" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="66s-K2-I1X" userLabel="最近消息">
+                        <rect key="frame" x="83" y="45" width="171" height="14.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="晚上11:32" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bg4-BG-AXX" userLabel="时间">
+                        <rect key="frame" x="254" y="9" width="58" height="16"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="6xW-F9-L1B" firstAttribute="top" secondItem="XOi-9U-wUE" secondAttribute="top" constant="10" id="1oA-IJ-7Ny"/>
+                    <constraint firstItem="XOi-9U-wUE" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="IBF-5K-ZCk"/>
+                    <constraint firstItem="6xW-F9-L1B" firstAttribute="leading" secondItem="XOi-9U-wUE" secondAttribute="trailing" constant="15" id="Lk4-kZ-PLI"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="bg4-BG-AXX" secondAttribute="trailing" id="Nyd-Ce-Ryx"/>
+                    <constraint firstItem="66s-K2-I1X" firstAttribute="trailing" secondItem="bg4-BG-AXX" secondAttribute="leading" id="RVX-VQ-hp7"/>
+                    <constraint firstItem="XOi-9U-wUE" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="b0M-rV-U9z"/>
+                    <constraint firstItem="66s-K2-I1X" firstAttribute="top" secondItem="6xW-F9-L1B" secondAttribute="bottom" constant="5" id="mS5-eG-bq8"/>
+                    <constraint firstItem="66s-K2-I1X" firstAttribute="leading" secondItem="6xW-F9-L1B" secondAttribute="leading" id="qzK-Ad-CDW"/>
+                    <constraint firstItem="bg4-BG-AXX" firstAttribute="top" secondItem="XOi-9U-wUE" secondAttribute="top" id="zjk-Fd-FTg"/>
+                </constraints>
+            </tableViewCellContentView>
+            <point key="canvasLocation" x="201" y="384"/>
+        </tableViewCell>
+    </objects>
+</document>
