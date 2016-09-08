@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		01C82E24DBD9A205A9201B6F /* Pods_LaB_iOSUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F23FA9A9B69407CD5A28FE8 /* Pods_LaB_iOSUITests.framework */; };
 		50257ED61D810467007D1A8F /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50257ED51D810467007D1A8F /* HomeViewController.swift */; };
+		50257ED81D810DE1007D1A8F /* PosterDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 50257ED71D810DE1007D1A8F /* PosterDetail.storyboard */; };
+		50257EDC1D811414007D1A8F /* PosterDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50257EDB1D811414007D1A8F /* PosterDetailViewController.swift */; };
 		5025A32A1D80617E001C832C /* CommunityTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5025A3281D80617E001C832C /* CommunityTableViewCell.swift */; };
 		5025A32B1D80617E001C832C /* CommunityTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5025A3291D80617E001C832C /* CommunityTableViewCell.xib */; };
 		5025A32F1D806512001C832C /* MessageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5025A32D1D806512001C832C /* MessageTableViewCell.swift */; };
@@ -85,6 +87,8 @@
 		27064518A0F0B59968202D3C /* Pods-LaB-iOSUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LaB-iOSUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LaB-iOSUITests/Pods-LaB-iOSUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		4F23FA9A9B69407CD5A28FE8 /* Pods_LaB_iOSUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LaB_iOSUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		50257ED51D810467007D1A8F /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomeViewController.swift; path = UI/Home/Controllers/HomeViewController.swift; sourceTree = "<group>"; };
+		50257ED71D810DE1007D1A8F /* PosterDetail.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = PosterDetail.storyboard; sourceTree = "<group>"; };
+		50257EDB1D811414007D1A8F /* PosterDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PosterDetailViewController.swift; path = UI/Home/Controllers/PosterDetailViewController.swift; sourceTree = "<group>"; };
 		5025A3281D80617E001C832C /* CommunityTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CommunityTableViewCell.swift; path = UI/Community/Cells/CommunityTableViewCell.swift; sourceTree = "<group>"; };
 		5025A3291D80617E001C832C /* CommunityTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CommunityTableViewCell.xib; path = UI/Community/Cells/CommunityTableViewCell.xib; sourceTree = "<group>"; };
 		5025A32D1D806512001C832C /* MessageTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MessageTableViewCell.swift; path = UI/Message/Cells/MessageTableViewCell.swift; sourceTree = "<group>"; };
@@ -297,6 +301,7 @@
 				756C2C251D6A1FBB00CBD4B8 /* LaunchScreen.storyboard */,
 				753613D21D7AFE530016A277 /* Auth.storyboard */,
 				753613D41D7AFE5C0016A277 /* Home.storyboard */,
+				50257ED71D810DE1007D1A8F /* PosterDetail.storyboard */,
 				753613D61D7AFE8B0016A277 /* Community.storyboard */,
 				753613D81D7AFE980016A277 /* Message.storyboard */,
 				505B64DD1D807CA400EEA214 /* MessageDetail.storyboard */,
@@ -359,6 +364,7 @@
 			children = (
 				50257ED51D810467007D1A8F /* HomeViewController.swift */,
 				753613DF1D7B2DD60016A277 /* SearchViewController.swift */,
+				50257EDB1D811414007D1A8F /* PosterDetailViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -606,6 +612,7 @@
 				5025A3301D806512001C832C /* MessageTableViewCell.xib in Resources */,
 				756C2C701D6AA80C00CBD4B8 /* PosterTableViewCell.xib in Resources */,
 				753613D91D7AFE980016A277 /* Message.storyboard in Resources */,
+				50257ED81D810DE1007D1A8F /* PosterDetail.storyboard in Resources */,
 				753613D51D7AFE5C0016A277 /* Home.storyboard in Resources */,
 				753613D31D7AFE530016A277 /* Auth.storyboard in Resources */,
 				5025A32B1D80617E001C832C /* CommunityTableViewCell.xib in Resources */,
@@ -805,6 +812,7 @@
 				756C2CB11D6C2D7500CBD4B8 /* User.swift in Sources */,
 				756C2C841D6B01F600CBD4B8 /* RegionCode2Name.swift in Sources */,
 				505B64DC1D80784600EEA214 /* MessageViewController.swift in Sources */,
+				50257EDC1D811414007D1A8F /* PosterDetailViewController.swift in Sources */,
 				753613E21D7BCA650016A277 /* AlterAvatarViewController.swift in Sources */,
 				5025A32A1D80617E001C832C /* CommunityTableViewCell.swift in Sources */,
 				753613CF1D7AF20E0016A277 /* ResetPasswordViewController.swift in Sources */,

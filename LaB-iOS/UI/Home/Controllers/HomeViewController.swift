@@ -35,6 +35,8 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        let detail: UIViewController = UIStoryboard(name: "PosterDetail", bundle: nil).instantiateInitialViewController() as! PosterDetailViewController
+        self.navigationController?.pushViewController(detail, animated: true)
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
