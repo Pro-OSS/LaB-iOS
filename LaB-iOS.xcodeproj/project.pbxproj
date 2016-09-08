@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		01C82E24DBD9A205A9201B6F /* Pods_LaB_iOSUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F23FA9A9B69407CD5A28FE8 /* Pods_LaB_iOSUITests.framework */; };
+		50257ED61D810467007D1A8F /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50257ED51D810467007D1A8F /* HomeViewController.swift */; };
 		5025A32A1D80617E001C832C /* CommunityTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5025A3281D80617E001C832C /* CommunityTableViewCell.swift */; };
 		5025A32B1D80617E001C832C /* CommunityTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5025A3291D80617E001C832C /* CommunityTableViewCell.xib */; };
 		5025A32F1D806512001C832C /* MessageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5025A32D1D806512001C832C /* MessageTableViewCell.swift */; };
@@ -83,6 +84,7 @@
 		0E081E1D36BCE8D7373D6D0F /* Pods-LaB-iOSUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LaB-iOSUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-LaB-iOSUITests/Pods-LaB-iOSUITests.release.xcconfig"; sourceTree = "<group>"; };
 		27064518A0F0B59968202D3C /* Pods-LaB-iOSUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LaB-iOSUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LaB-iOSUITests/Pods-LaB-iOSUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		4F23FA9A9B69407CD5A28FE8 /* Pods_LaB_iOSUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LaB_iOSUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		50257ED51D810467007D1A8F /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomeViewController.swift; path = UI/Home/Controllers/HomeViewController.swift; sourceTree = "<group>"; };
 		5025A3281D80617E001C832C /* CommunityTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CommunityTableViewCell.swift; path = UI/Community/Cells/CommunityTableViewCell.swift; sourceTree = "<group>"; };
 		5025A3291D80617E001C832C /* CommunityTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CommunityTableViewCell.xib; path = UI/Community/Cells/CommunityTableViewCell.xib; sourceTree = "<group>"; };
 		5025A32D1D806512001C832C /* MessageTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MessageTableViewCell.swift; path = UI/Message/Cells/MessageTableViewCell.swift; sourceTree = "<group>"; };
@@ -355,6 +357,7 @@
 		756C2C681D6AA3EB00CBD4B8 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				50257ED51D810467007D1A8F /* HomeViewController.swift */,
 				753613DF1D7B2DD60016A277 /* SearchViewController.swift */,
 			);
 			name = Controllers;
@@ -788,6 +791,7 @@
 				756C2C961D6B27FE00CBD4B8 /* PosterType.swift in Sources */,
 				756C2C1F1D6A1FBB00CBD4B8 /* ViewController.swift in Sources */,
 				75F2A6CC1D7BF88C000025C9 /* MeTableViewController.swift in Sources */,
+				50257ED61D810467007D1A8F /* HomeViewController.swift in Sources */,
 				756C2C931D6B275B00CBD4B8 /* Photo.swift in Sources */,
 				753613D11D7AF22D0016A277 /* RegisterViewController.swift in Sources */,
 				756C2C911D6B25DB00CBD4B8 /* Coordinate.swift in Sources */,
