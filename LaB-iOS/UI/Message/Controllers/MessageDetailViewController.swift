@@ -9,7 +9,6 @@
 import UIKit
 import IBAnimatable
 import Spring
-import SnapKit
 
 class MessageDetailViewController: UIViewController {
 
@@ -25,6 +24,9 @@ class MessageDetailViewController: UIViewController {
     
     @IBOutlet weak var functionalView: UIStackView!
     
+    // 功能区是否打开中
+    var isFunctionalViewOpened: Bool = false
+    
     @IBAction func typing(sender: AnyObject) {
         if (typeField.text == "" && functionalButton.hidden) {
             sendButton.zoomOut()
@@ -38,18 +40,10 @@ class MessageDetailViewController: UIViewController {
         }
     }
     
-    var isFunctionalViewOpened: Bool = false
-    
-    var keyboardHeight: CGFloat = 0 {
+    var keyboardHeight: CGFloat = 200 {
         didSet {
-            self.typeView.snp_makeConstraints {
-                make in
-                make.height.equalTo(keyboardHeight + 66)
-            }
-            self.functionalView.snp_makeConstraints {
-                make in
-                make.height.equalTo(keyboardHeight)
-            }
+            let heightConstraint = NSLayoutConstraint(item: functionalView, attribute: NSLayoutAttribute.Height, relatedBy: NSLayoutRelation.Equal, toItem: nil, attribute: NSLayoutAttribute.NotAnAttribute, multiplier: 1, constant: keyboardHeight)
+            view.addConstraint(heightConstraint)
         }
     }
     

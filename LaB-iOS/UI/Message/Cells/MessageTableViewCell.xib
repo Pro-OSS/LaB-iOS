@@ -16,7 +16,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="79.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="XOi-9U-wUE" userLabel="头像">
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="avatar" translatesAutoresizingMaskIntoConstraints="NO" id="XOi-9U-wUE" userLabel="头像">
                         <rect key="frame" x="8" y="9" width="60" height="60.5"/>
                         <constraints>
                             <constraint firstAttribute="width" secondItem="XOi-9U-wUE" secondAttribute="height" id="8Yp-Yo-CLZ"/>
@@ -24,13 +24,13 @@
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="王大锤" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6xW-F9-L1B" userLabel="名称">
-                        <rect key="frame" x="83" y="19" width="51" height="21"/>
+                        <rect key="frame" x="76" y="19" width="51" height="21"/>
                         <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" text="你好啊，我想要借一个东西。你知道么，我已经下了订单了。" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="66s-K2-I1X" userLabel="最近消息">
-                        <rect key="frame" x="83" y="45" width="171" height="14.5"/>
+                        <rect key="frame" x="76" y="45" width="178" height="14.5"/>
                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                         <nil key="highlightedColor"/>
@@ -45,7 +45,7 @@
                 <constraints>
                     <constraint firstItem="6xW-F9-L1B" firstAttribute="top" secondItem="XOi-9U-wUE" secondAttribute="top" constant="10" id="1oA-IJ-7Ny"/>
                     <constraint firstItem="XOi-9U-wUE" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="IBF-5K-ZCk"/>
-                    <constraint firstItem="6xW-F9-L1B" firstAttribute="leading" secondItem="XOi-9U-wUE" secondAttribute="trailing" constant="15" id="Lk4-kZ-PLI"/>
+                    <constraint firstItem="6xW-F9-L1B" firstAttribute="leading" secondItem="XOi-9U-wUE" secondAttribute="trailing" constant="8" id="Lk4-kZ-PLI"/>
                     <constraint firstAttribute="trailingMargin" secondItem="bg4-BG-AXX" secondAttribute="trailing" id="Nyd-Ce-Ryx"/>
                     <constraint firstItem="66s-K2-I1X" firstAttribute="trailing" secondItem="bg4-BG-AXX" secondAttribute="leading" id="RVX-VQ-hp7"/>
                     <constraint firstItem="XOi-9U-wUE" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="b0M-rV-U9z"/>
@@ -57,4 +57,7 @@
             <point key="canvasLocation" x="201" y="384"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="avatar" width="296" height="423"/>
+    </resources>
 </document>
