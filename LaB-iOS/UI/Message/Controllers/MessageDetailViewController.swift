@@ -58,6 +58,13 @@ class MessageDetailViewController: UIViewController {
         })
     }
     
+    @IBAction func sendButtonClicked(sender: AnyObject) {
+        let typeContent = typeField.text
+        self.typeField.text = ""
+        // ToDo: 发送typeContent.
+        typeContent
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

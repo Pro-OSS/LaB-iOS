@@ -60,12 +60,6 @@
                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                     </textView>
-                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z3z-32-ZKA" userLabel="照片列表">
-                        <rect key="frame" x="0.0" y="56" width="320" height="100"/>
-                        <constraints>
-                            <constraint firstAttribute="height" constant="100" id="uQy-Zm-mg9"/>
-                        </constraints>
-                    </scrollView>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NVI-zG-oMb" userLabel="分割线">
                         <rect key="frame" x="8" y="243.5" width="304" height="1"/>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
@@ -203,6 +197,12 @@
                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" alwaysBounceHorizontal="YES" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z3z-32-ZKA" userLabel="照片列表">
+                        <rect key="frame" x="0.0" y="56" width="320" height="100"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="100" id="uQy-Zm-mg9"/>
+                        </constraints>
+                    </scrollView>
                 </subviews>
                 <constraints>
                     <constraint firstItem="pvt-u3-G2m" firstAttribute="top" secondItem="NVI-zG-oMb" secondAttribute="bottom" constant="7" id="2Wt-qY-rd3"/>
@@ -258,6 +258,7 @@
                 <outlet property="communityName" destination="oM3-RH-Els" id="ZBd-JK-X1j"/>
                 <outlet property="createAt" destination="RaX-WP-whO" id="bNS-dO-wf8"/>
                 <outlet property="periodMode" destination="NW3-Nv-Ict" id="LnU-QF-Lvt"/>
+                <outlet property="photosView" destination="z3z-32-ZKA" id="IPg-97-FVM"/>
                 <outlet property="posterType" destination="ckf-w6-Uhl" id="Xpd-eF-qMQ"/>
                 <outlet property="region" destination="Lkg-nX-FWU" id="0o8-4v-OHi"/>
                 <outlet property="reviewCount" destination="BFh-A8-dPU" id="rFy-nP-jDV"/>

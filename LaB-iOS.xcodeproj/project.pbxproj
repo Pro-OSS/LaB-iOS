@@ -191,6 +191,16 @@
 		2836B566C985B31DAD87DC8E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				756C2C811D6AFF9700CBD4B8 /* DateTools.framework */,
+				756C2C631D6A3BCE00CBD4B8 /* Spring.framework */,
+				756C2C4D1D6A327000CBD4B8 /* SnapKit.framework */,
+				756C2C4E1D6A327000CBD4B8 /* AlamofireObjectMapper.framework */,
+				756C2C4F1D6A327000CBD4B8 /* ObjectMapper.framework */,
+				756C2C501D6A327000CBD4B8 /* Kingfisher.framework */,
+				756C2C521D6A327000CBD4B8 /* Dollar.framework */,
+				756C2C531D6A327000CBD4B8 /* Alamofire.framework */,
+				756C2C541D6A327000CBD4B8 /* Realm.framework */,
+				756C2C551D6A327000CBD4B8 /* RealmSwift.framework */,
 				B80061E2F2C224AA8F22343C /* Pods_LaB_iOS.framework */,
 				095A9D2B5477D4069F675B4C /* Pods_LaB_iOSTests.framework */,
 				4F23FA9A9B69407CD5A28FE8 /* Pods_LaB_iOSUITests.framework */,
@@ -243,7 +253,6 @@
 		756C2C101D6A1FBB00CBD4B8 = {
 			isa = PBXGroup;
 			children = (
-				756C2C601D6A327A00CBD4B8 /* Vendor */,
 				756C2C1B1D6A1FBB00CBD4B8 /* LaB-iOS */,
 				756C2C301D6A1FBB00CBD4B8 /* LaB-iOSTests */,
 				756C2C3B1D6A1FBB00CBD4B8 /* LaB-iOSUITests */,
@@ -319,23 +328,6 @@
 				756C2C281D6A1FBB00CBD4B8 /* Info.plist */,
 			);
 			name = "Support Files";
-			sourceTree = "<group>";
-		};
-		756C2C601D6A327A00CBD4B8 /* Vendor */ = {
-			isa = PBXGroup;
-			children = (
-				756C2C811D6AFF9700CBD4B8 /* DateTools.framework */,
-				756C2C631D6A3BCE00CBD4B8 /* Spring.framework */,
-				756C2C4D1D6A327000CBD4B8 /* SnapKit.framework */,
-				756C2C4E1D6A327000CBD4B8 /* AlamofireObjectMapper.framework */,
-				756C2C4F1D6A327000CBD4B8 /* ObjectMapper.framework */,
-				756C2C501D6A327000CBD4B8 /* Kingfisher.framework */,
-				756C2C521D6A327000CBD4B8 /* Dollar.framework */,
-				756C2C531D6A327000CBD4B8 /* Alamofire.framework */,
-				756C2C541D6A327000CBD4B8 /* Realm.framework */,
-				756C2C551D6A327000CBD4B8 /* RealmSwift.framework */,
-			);
-			name = Vendor;
 			sourceTree = "<group>";
 		};
 		756C2C661D6AA3DA00CBD4B8 /* UI */ = {
