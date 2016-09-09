@@ -27,6 +27,9 @@ class MessageDetailViewController: UIViewController {
     // 功能区是否打开中
     var isFunctionalViewOpened: Bool = false
     
+    // 是否已经获取键盘高度
+    var isKnownKeyboardHeight: Bool = false
+    
     @IBAction func typing(sender: AnyObject) {
         if (typeField.text == "" && functionalButton.hidden) {
             sendButton.zoomOut()
@@ -59,6 +62,7 @@ class MessageDetailViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        self.typeField.becomeFirstResponder()
         self.navigationController?.navigationBar.tintColor = UIColor.whiteColor()
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(MessageDetailViewController.dismissKeyboardAndFunctionalView))
         self.messagesTableView.addGestureRecognizer(tap)
@@ -98,6 +102,10 @@ class MessageDetailViewController: UIViewController {
         let userInfo = notification.userInfo!
         // 键盘高度
         self.keyboardHeight = (userInfo[UIKeyboardFrameEndUserInfoKey] as! NSValue).CGRectValue().height
+        if (!isKnownKeyboardHeight) {
+            isKnownKeyboardHeight = true
+            self.view.endEditing(true)
+        }
         // 动画时长
         let duration = (userInfo[UIKeyboardAnimationDurationUserInfoKey] as! NSNumber).doubleValue
         let animations: (() -> Void) = {
