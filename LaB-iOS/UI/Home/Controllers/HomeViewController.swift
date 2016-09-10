@@ -75,7 +75,12 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
 	}
     
     override func viewWillDisappear(animated: Bool) {
-        dismissAddPosterView()
+        if (isAddPosterViewShowing) {
+            self.maskingView.alpha = 0
+            self.addButtonIcon.transform = CGAffineTransformRotate(self.addButtonIcon.transform, CGFloat(M_PI_4))
+            self.addPosterView.alpha = 0
+            isAddPosterViewShowing = false
+        }
     }
 
 	override func didReceiveMemoryWarning() {
