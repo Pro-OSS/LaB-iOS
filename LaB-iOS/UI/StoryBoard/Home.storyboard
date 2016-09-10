@@ -3,6 +3,9 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--主页-->
@@ -21,10 +24,169 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="455"/>
                                 <color key="backgroundColor" red="0.93333333330000001" green="0.93333333330000001" blue="0.93333333330000001" alpha="1" colorSpace="calibratedRGB"/>
                             </tableView>
+                            <view alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="R0g-m1-r7r" userLabel="蒙版">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="455"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="z0W-NK-c1G" userLabel="添加按钮">
+                                <rect key="frame" x="216" y="353" width="60" height="60"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kCb-ci-PIV" userLabel="添加按钮-背景" customClass="AnimatableView" customModule="IBAnimatable">
+                                        <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hQN-sn-Gm2" userLabel="添加按钮-图标" customClass="FontAwesomeView" customModule="FontAwesome_swift">
+                                                <rect key="frame" x="21" y="21" width="18" height="18"/>
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="hQN-sn-Gm2" secondAttribute="height" multiplier="1:1" id="2II-wp-paZ"/>
+                                                </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="iconCode" value="fa-plus"/>
+                                                </userDefinedRuntimeAttributes>
+                                            </view>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.90196078430000004" green="0.086274509799999996" blue="0.1764705882" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstItem="hQN-sn-Gm2" firstAttribute="centerY" secondItem="kCb-ci-PIV" secondAttribute="centerY" id="3jR-ce-dRw"/>
+                                            <constraint firstItem="hQN-sn-Gm2" firstAttribute="height" secondItem="kCb-ci-PIV" secondAttribute="height" multiplier="0.3" id="COf-ah-Bh7"/>
+                                            <constraint firstAttribute="width" secondItem="kCb-ci-PIV" secondAttribute="height" multiplier="1:1" id="YFj-V3-RyL"/>
+                                            <constraint firstItem="hQN-sn-Gm2" firstAttribute="centerX" secondItem="kCb-ci-PIV" secondAttribute="centerX" id="eVg-ES-LLD"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="30"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                                <color key="value" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                                <real key="value" value="4"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                                <real key="value" value="0.20000000000000001"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="point" keyPath="shadowOffset">
+                                                <point key="value" x="4" y="4"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fGr-sS-DIN" userLabel="添加按钮">
+                                        <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="fGr-sS-DIN" secondAttribute="height" multiplier="1:1" id="cdJ-vB-QdI"/>
+                                        </constraints>
+                                        <connections>
+                                            <action selector="addButtonClicked:" destination="ViM-dV-5qi" eventType="touchUpInside" id="ydM-qj-nLH"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="z0W-NK-c1G" secondAttribute="height" id="cfM-T8-aug"/>
+                                    <constraint firstItem="fGr-sS-DIN" firstAttribute="centerX" secondItem="z0W-NK-c1G" secondAttribute="centerX" id="ctg-pv-7yW"/>
+                                    <constraint firstItem="kCb-ci-PIV" firstAttribute="centerX" secondItem="z0W-NK-c1G" secondAttribute="centerX" id="dyr-dq-KUL"/>
+                                    <constraint firstItem="fGr-sS-DIN" firstAttribute="centerY" secondItem="z0W-NK-c1G" secondAttribute="centerY" id="eHy-m6-AaR"/>
+                                    <constraint firstItem="kCb-ci-PIV" firstAttribute="centerY" secondItem="z0W-NK-c1G" secondAttribute="centerY" id="jgZ-LN-IZM"/>
+                                    <constraint firstAttribute="height" constant="60" id="qbh-RT-GqD"/>
+                                    <constraint firstItem="kCb-ci-PIV" firstAttribute="width" secondItem="z0W-NK-c1G" secondAttribute="width" id="vhT-V8-pg7"/>
+                                    <constraint firstItem="fGr-sS-DIN" firstAttribute="width" secondItem="z0W-NK-c1G" secondAttribute="width" id="wiq-6l-E9A"/>
+                                </constraints>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="aJU-uW-IFv" userLabel="添加视图">
+                                <rect key="frame" x="226" y="233" width="40" height="120"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="16i-dy-dnH" userLabel="求借">
+                                        <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3oW-1i-K8c" userLabel="图标" customClass="FontAwesomeView" customModule="FontAwesome_swift">
+                                                <rect key="frame" x="0.0" y="0.0" width="30" height="40"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="iconCode" value="fa-question"/>
+                                                </userDefinedRuntimeAttributes>
+                                            </view>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ENM-0N-cDo" userLabel="按钮">
+                                                <rect key="frame" x="0.0" y="0.0" width="30" height="40"/>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="3oW-1i-K8c" firstAttribute="height" secondItem="16i-dy-dnH" secondAttribute="height" id="1u5-4W-UiU"/>
+                                            <constraint firstItem="ENM-0N-cDo" firstAttribute="height" secondItem="16i-dy-dnH" secondAttribute="height" id="Hbh-Co-ZCB"/>
+                                            <constraint firstItem="ENM-0N-cDo" firstAttribute="centerY" secondItem="16i-dy-dnH" secondAttribute="centerY" id="N92-0n-Dd7"/>
+                                            <constraint firstItem="3oW-1i-K8c" firstAttribute="centerX" secondItem="16i-dy-dnH" secondAttribute="centerX" id="cmb-jK-31D"/>
+                                            <constraint firstItem="ENM-0N-cDo" firstAttribute="centerX" secondItem="16i-dy-dnH" secondAttribute="centerX" id="e1K-YR-n3L"/>
+                                            <constraint firstItem="3oW-1i-K8c" firstAttribute="centerY" secondItem="16i-dy-dnH" secondAttribute="centerY" id="e9F-Bx-r4R"/>
+                                            <constraint firstItem="ENM-0N-cDo" firstAttribute="width" secondItem="16i-dy-dnH" secondAttribute="width" id="lHy-rI-BK1"/>
+                                            <constraint firstItem="3oW-1i-K8c" firstAttribute="width" secondItem="16i-dy-dnH" secondAttribute="width" id="n0p-cg-aS2"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="a1g-Wj-kWo" userLabel="求借">
+                                        <rect key="frame" x="0.0" y="40" width="40" height="40"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iVt-N0-1Rn" userLabel="图标" customClass="FontAwesomeView" customModule="FontAwesome_swift">
+                                                <rect key="frame" x="0.0" y="0.0" width="30" height="40"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="iconCode" value="fa-quote-left"/>
+                                                </userDefinedRuntimeAttributes>
+                                            </view>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Dn-JK-U4a" userLabel="按钮">
+                                                <rect key="frame" x="0.0" y="0.0" width="30" height="40"/>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="6Dn-JK-U4a" firstAttribute="width" secondItem="a1g-Wj-kWo" secondAttribute="width" id="0Fb-2q-sQV"/>
+                                            <constraint firstItem="6Dn-JK-U4a" firstAttribute="centerX" secondItem="a1g-Wj-kWo" secondAttribute="centerX" id="7T5-Sq-INq"/>
+                                            <constraint firstItem="6Dn-JK-U4a" firstAttribute="height" secondItem="a1g-Wj-kWo" secondAttribute="height" id="A87-JY-4XD"/>
+                                            <constraint firstItem="iVt-N0-1Rn" firstAttribute="height" secondItem="a1g-Wj-kWo" secondAttribute="height" id="AAI-m8-10y"/>
+                                            <constraint firstItem="6Dn-JK-U4a" firstAttribute="centerY" secondItem="a1g-Wj-kWo" secondAttribute="centerY" id="QDu-Ab-iGK"/>
+                                            <constraint firstItem="iVt-N0-1Rn" firstAttribute="centerY" secondItem="a1g-Wj-kWo" secondAttribute="centerY" id="fGX-YL-KMN"/>
+                                            <constraint firstItem="iVt-N0-1Rn" firstAttribute="centerX" secondItem="a1g-Wj-kWo" secondAttribute="centerX" id="j2t-UN-ZCq"/>
+                                            <constraint firstItem="iVt-N0-1Rn" firstAttribute="width" secondItem="a1g-Wj-kWo" secondAttribute="width" id="tmr-Cr-9HC"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DfC-hg-qFD" userLabel="求借">
+                                        <rect key="frame" x="0.0" y="80" width="40" height="40"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e5X-Mg-kL6" userLabel="图标" customClass="FontAwesomeView" customModule="FontAwesome_swift">
+                                                <rect key="frame" x="0.0" y="0.0" width="30" height="40"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="iconCode" value="fa-file"/>
+                                                </userDefinedRuntimeAttributes>
+                                            </view>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZZl-Nn-NDc" userLabel="按钮">
+                                                <rect key="frame" x="0.0" y="0.0" width="30" height="40"/>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="e5X-Mg-kL6" firstAttribute="centerY" secondItem="DfC-hg-qFD" secondAttribute="centerY" id="305-p7-oxb"/>
+                                            <constraint firstItem="e5X-Mg-kL6" firstAttribute="centerX" secondItem="DfC-hg-qFD" secondAttribute="centerX" id="GPd-7F-VRd"/>
+                                            <constraint firstItem="ZZl-Nn-NDc" firstAttribute="height" secondItem="DfC-hg-qFD" secondAttribute="height" id="M3G-pR-bRX"/>
+                                            <constraint firstItem="e5X-Mg-kL6" firstAttribute="height" secondItem="DfC-hg-qFD" secondAttribute="height" id="Q86-cq-oOX"/>
+                                            <constraint firstItem="ZZl-Nn-NDc" firstAttribute="centerY" secondItem="DfC-hg-qFD" secondAttribute="centerY" id="Usj-aN-YYY"/>
+                                            <constraint firstItem="e5X-Mg-kL6" firstAttribute="width" secondItem="DfC-hg-qFD" secondAttribute="width" id="ie9-GV-IM9"/>
+                                            <constraint firstItem="ZZl-Nn-NDc" firstAttribute="width" secondItem="DfC-hg-qFD" secondAttribute="width" id="kGZ-ak-Dx5"/>
+                                            <constraint firstItem="ZZl-Nn-NDc" firstAttribute="centerX" secondItem="DfC-hg-qFD" secondAttribute="centerX" id="per-lK-mAV"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="aJU-uW-IFv" secondAttribute="height" multiplier="1:3" id="HS2-Yd-xrq"/>
+                                    <constraint firstAttribute="width" constant="40" id="uhf-Li-sxA"/>
+                                </constraints>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" red="0.93333333330000001" green="0.93333333330000001" blue="0.93333333330000001" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="fGr-sS-DIN" firstAttribute="top" secondItem="aJU-uW-IFv" secondAttribute="bottom" id="5HD-Aw-r4i"/>
+                            <constraint firstItem="R0g-m1-r7r" firstAttribute="centerX" secondItem="PaH-Qs-680" secondAttribute="centerX" id="Ax1-Y2-wss"/>
+                            <constraint firstItem="R0g-m1-r7r" firstAttribute="centerY" secondItem="PaH-Qs-680" secondAttribute="centerY" id="GCN-82-zLS"/>
+                            <constraint firstItem="R0g-m1-r7r" firstAttribute="height" secondItem="PaH-Qs-680" secondAttribute="height" id="I4T-KF-gHq"/>
                             <constraint firstItem="f7r-M2-DPW" firstAttribute="width" secondItem="PaH-Qs-680" secondAttribute="width" id="Nc7-Ic-KeS"/>
+                            <constraint firstItem="VWl-TP-Ts8" firstAttribute="top" secondItem="z0W-NK-c1G" secondAttribute="bottom" multiplier="1.1" id="Opz-Gt-zUu"/>
+                            <constraint firstItem="aJU-uW-IFv" firstAttribute="centerX" secondItem="fGr-sS-DIN" secondAttribute="centerX" id="ibA-yZ-Vm1"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="z0W-NK-c1G" secondAttribute="trailing" multiplier="1.1" id="j4F-Ut-Ats"/>
+                            <constraint firstItem="R0g-m1-r7r" firstAttribute="width" secondItem="PaH-Qs-680" secondAttribute="width" id="n19-8a-VNH"/>
                             <constraint firstItem="f7r-M2-DPW" firstAttribute="centerX" secondItem="PaH-Qs-680" secondAttribute="centerX" id="o56-b3-L5j"/>
                             <constraint firstItem="f7r-M2-DPW" firstAttribute="centerY" secondItem="PaH-Qs-680" secondAttribute="centerY" id="z4e-Mw-ZiX"/>
                             <constraint firstItem="f7r-M2-DPW" firstAttribute="height" secondItem="PaH-Qs-680" secondAttribute="height" id="zm9-TP-vlb"/>
@@ -42,6 +204,9 @@
                     </navigationItem>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="addButtonIcon" destination="hQN-sn-Gm2" id="RLY-5N-r0G"/>
+                        <outlet property="addPosterView" destination="aJU-uW-IFv" id="gCN-tt-MTC"/>
+                        <outlet property="maskingView" destination="R0g-m1-r7r" id="gmr-If-Dqe"/>
                         <outlet property="tableView" destination="f7r-M2-DPW" id="Fk7-hD-LpQ"/>
                     </connections>
                 </viewController>
