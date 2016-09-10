@@ -8,7 +8,6 @@
 
 import UIKit
 import IBAnimatable
-import Spring
 
 class MessageDetailViewController: UIViewController {
 

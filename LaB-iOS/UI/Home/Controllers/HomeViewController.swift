@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Spring
 
 class HomeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
@@ -20,18 +21,28 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
 
 	@IBOutlet weak var addButtonIcon: UIView!
 
-    @IBOutlet weak var addPosterView: UIStackView!
+    @IBOutlet weak var addPosterView: UIView!
+
+    @IBOutlet weak var lendPosterLabelView: UIView!
+    @IBOutlet weak var borrowPosterLabelView: UIView!
+    @IBOutlet weak var showPosterLabelView: UIView!
     
-	@IBAction func addButtonClicked(sender: AnyObject) {
-		self.isAddPosterViewShowing = !self.isAddPosterViewShowing
+    @IBOutlet weak var lendPosterIconView: UIView!
+    @IBOutlet weak var borrowPosterIconView: UIView!
+    @IBOutlet weak var showPosterIconView: UIView!
+    
+    @IBAction func addButtonClicked(sender: AnyObject) {
+        self.isAddPosterViewShowing = !self.isAddPosterViewShowing
 		UIView.animateWithDuration(
 			0.25, animations: {
                 if (self.isAddPosterViewShowing) {
                     self.maskingView.alpha = 0.7
                     self.addButtonIcon.transform = CGAffineTransformRotate(self.addButtonIcon.transform, CGFloat(-M_PI_4))
+                    self.addPosterView.alpha = 1
                 } else {
                     self.maskingView.alpha = 0
                     self.addButtonIcon.transform = CGAffineTransformRotate(self.addButtonIcon.transform, CGFloat(M_PI_4))
+                    self.addPosterView.alpha = 0
 				}
 		})
 	}
@@ -49,12 +60,18 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
 		tableView.rowHeight = UITableViewAutomaticDimension
 
 		// 添加蒙版
-		let tap = UIGestureRecognizer(target: self, action: #selector(HomeViewController.dismissAddPosterView))
+		let tap = UITapGestureRecognizer(target: self, action: #selector(HomeViewController.dismissAddPosterView))
 		maskingView.addGestureRecognizer(tap)
 	}
 
 	func dismissAddPosterView() {
-
+        self.isAddPosterViewShowing = false
+        UIView.animateWithDuration(
+            0.25, animations: {
+                self.maskingView.alpha = 0
+                self.addButtonIcon.transform = CGAffineTransformRotate(self.addButtonIcon.transform, CGFloat(M_PI_4))
+                self.addPosterView.alpha = 0
+        })
 	}
 
 	override func didReceiveMemoryWarning() {
