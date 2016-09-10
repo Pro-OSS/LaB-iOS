@@ -73,6 +73,10 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
                 self.addPosterView.alpha = 0
         })
 	}
+    
+    override func viewWillDisappear(animated: Bool) {
+        dismissAddPosterView()
+    }
 
 	override func didReceiveMemoryWarning() {
 		super.didReceiveMemoryWarning()

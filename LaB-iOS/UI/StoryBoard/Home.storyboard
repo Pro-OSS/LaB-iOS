@@ -336,12 +336,21 @@
                                     </view>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yDj-qe-tcA" userLabel="出借-button">
                                         <rect key="frame" x="10" y="5" width="100" height="40"/>
+                                        <connections>
+                                            <segue destination="RqB-qG-Iob" kind="push" id="W5w-wD-nAO"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uz6-a3-R2o" userLabel="求借-button">
                                         <rect key="frame" x="10" y="55" width="100" height="40"/>
+                                        <connections>
+                                            <segue destination="RqB-qG-Iob" kind="push" id="8zi-Ck-CJl"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bff-au-G9a" userLabel="秀一下-button">
                                         <rect key="frame" x="10" y="105" width="100" height="40"/>
+                                        <connections>
+                                            <segue destination="RqB-qG-Iob" kind="push" id="1Jo-9G-lVL"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -419,6 +428,102 @@
             </objects>
             <point key="canvasLocation" x="746" y="233"/>
         </scene>
+        <!--发布-->
+        <scene sceneID="ENp-z0-E8u">
+            <objects>
+                <tableViewController hidesBottomBarWhenPushed="YES" id="RqB-qG-Iob" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="11U-Nl-WhS">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <sections>
+                            <tableViewSection id="Bmg-fQ-4HM">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="SZq-G0-CJV" userLabel="标题">
+                                        <rect key="frame" x="0.0" y="64" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="SZq-G0-CJV" id="hna-kh-Ms3">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="标题" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="N21-W7-1Mz" userLabel="输入框">
+                                                    <rect key="frame" x="16" y="0.0" width="288" height="43.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                </textField>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="N21-W7-1Mz" firstAttribute="centerY" secondItem="hna-kh-Ms3" secondAttribute="centerY" id="D78-iL-3T6"/>
+                                                <constraint firstItem="N21-W7-1Mz" firstAttribute="height" secondItem="hna-kh-Ms3" secondAttribute="height" id="NR4-ik-9zy"/>
+                                                <constraint firstItem="N21-W7-1Mz" firstAttribute="width" secondItem="hna-kh-Ms3" secondAttribute="width" multiplier="0.9" id="ceP-2A-Hsx"/>
+                                                <constraint firstItem="N21-W7-1Mz" firstAttribute="centerX" secondItem="hna-kh-Ms3" secondAttribute="centerX" id="h1N-aB-eci"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="120" id="h4E-Oi-asf" userLabel="描述">
+                                        <rect key="frame" x="0.0" y="108" width="320" height="120"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="h4E-Oi-asf" id="79j-jr-ajl">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="119.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="P2Q-I4-qea" userLabel="输入框">
+                                                    <rect key="frame" x="16" y="0.0" width="288" height="119.5"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                </textView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="P2Q-I4-qea" firstAttribute="centerY" secondItem="79j-jr-ajl" secondAttribute="centerY" id="53c-61-xf5"/>
+                                                <constraint firstItem="P2Q-I4-qea" firstAttribute="height" secondItem="79j-jr-ajl" secondAttribute="height" id="6Ah-Ds-ErL"/>
+                                                <constraint firstItem="P2Q-I4-qea" firstAttribute="width" secondItem="79j-jr-ajl" secondAttribute="width" multiplier="0.9" id="DhA-Y8-jHa"/>
+                                                <constraint firstItem="P2Q-I4-qea" firstAttribute="centerX" secondItem="79j-jr-ajl" secondAttribute="centerX" id="XVT-wh-oZr"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="66" id="oGF-TZ-dAB" userLabel="图片">
+                                        <rect key="frame" x="0.0" y="228" width="320" height="66"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="oGF-TZ-dAB" id="63y-fQ-wJY">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="65.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="T1d-Vb-UNA" userLabel="照片集">
+                                                    <rect key="frame" x="16" y="0.0" width="288" height="65.5"/>
+                                                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="HFv-xu-IOc">
+                                                        <size key="itemSize" width="66" height="66"/>
+                                                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                    </collectionViewFlowLayout>
+                                                    <cells/>
+                                                </collectionView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="T1d-Vb-UNA" firstAttribute="centerY" secondItem="63y-fQ-wJY" secondAttribute="centerY" id="ArM-Rp-25i"/>
+                                                <constraint firstItem="T1d-Vb-UNA" firstAttribute="height" secondItem="63y-fQ-wJY" secondAttribute="height" id="TXm-68-6Rw"/>
+                                                <constraint firstItem="T1d-Vb-UNA" firstAttribute="width" secondItem="63y-fQ-wJY" secondAttribute="width" multiplier="0.9" id="cJl-Ya-ECx"/>
+                                                <constraint firstItem="T1d-Vb-UNA" firstAttribute="centerX" secondItem="63y-fQ-wJY" secondAttribute="centerX" id="xer-qB-JOs"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="RqB-qG-Iob" id="vyl-hx-BX9"/>
+                            <outlet property="delegate" destination="RqB-qG-Iob" id="a9U-1t-bcw"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="发布" id="wSC-I4-1H2">
+                        <barButtonItem key="backBarButtonItem" title="取消" id="xCR-T0-m0c"/>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8nc-nc-Cz4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1214" y="233"/>
+        </scene>
         <!--搜索-->
         <scene sceneID="jdF-d5-4rq">
             <objects>
@@ -483,5 +588,8 @@
     <resources>
         <image name="tab_bar_home" width="29" height="26"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="W5w-wD-nAO"/>
+    </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.90196078430000004" green="0.086274509799999996" blue="0.1764705882" alpha="1" colorSpace="calibratedRGB"/>
 </document>
