@@ -1,6 +1,6 @@
 //
 //  Created by Jake Lin on 12/4/15.
-//  Copyright © 2015 Jake Lin. All rights reserved.
+//  Copyright © 2015 IBAnimatable. All rights reserved.
 //
 
 import UIKit
@@ -68,6 +68,7 @@ public extension GradientDesignable where Self: UIView {
   private func createGradientLayer() -> CAGradientLayer {
     let gradientLayer: CAGradientLayer = CAGradientLayer()
     gradientLayer.frame = self.bounds
+    gradientLayer.cornerRadius = layer.cornerRadius
     return gradientLayer
   }
   

@@ -1,6 +1,6 @@
 //
 //  Created by Jake Lin on 11/18/15.
-//  Copyright © 2015 Jake Lin. All rights reserved.
+//  Copyright © 2015 IBAnimatable. All rights reserved.
 //
 
 import UIKit
@@ -120,6 +120,7 @@ import UIKit
     didSet {
       configMask()
       configBorder()
+      configMaskShadow()
     }
   }
   
@@ -161,6 +162,7 @@ import UIKit
   private func configAfterLayoutSubviews() {
     configMask()
     configBorder()
+    configMaskShadow()
     configGradient()
   }
 }

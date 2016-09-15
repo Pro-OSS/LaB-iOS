@@ -1,6 +1,6 @@
 //
 //  Created by Jake Lin on 12/13/15.
-//  Copyright © 2015 Jake Lin. All rights reserved.
+//  Copyright © 2015 IBAnimatable. All rights reserved.
 //
 
 import UIKit
@@ -252,7 +252,7 @@ public extension MaskDesignable where Self: UIView {
     layer.mask?.removeFromSuperlayer()
     
     let maskLayer = CAShapeLayer()
-    maskLayer.frame = CGRect(origin: CGPoint.zero, size: bounds.size)
+    maskLayer.frame = CGRect(origin: .zero, size: bounds.size)
     maskLayer.path = path.CGPath
     layer.mask = maskLayer
   }

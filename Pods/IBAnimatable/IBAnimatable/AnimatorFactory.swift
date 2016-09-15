@@ -1,6 +1,6 @@
 //
 //  Created by Jake Lin on 2/24/16.
-//  Copyright © 2016 Jake Lin. All rights reserved.
+//  Copyright © 2016 IBAnimatable. All rights reserved.
 //
 
 import UIKit
@@ -54,5 +54,18 @@ public struct AnimatorFactory {
       return SystemCameraIrisAnimator(hollowState: hollowState, transitionDuration: transitionDuration)
     }
   }
-  
+
+  public static func generateAnimator(presentationAnimationType: PresentationAnimationType, transitionDuration: Duration) -> AnimatedPresenting {
+    switch presentationAnimationType {
+    case let .Cover(direction):
+      return CoverAnimator(from: direction, transitionDuration: transitionDuration)
+    case .Zoom:
+      return ZoomAnimator(transitionDuration: transitionDuration)
+    case .DropDown:
+      return DropDownAnimator(transitionDuration: transitionDuration)
+    case .Flip, .CrossDissolve: // System animation, will never be executed
+      fatalError()
+    }
+  }
+
 }
