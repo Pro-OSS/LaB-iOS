@@ -29,7 +29,7 @@ class MessageDetailViewController: UIViewController {
     // 是否已经获取键盘高度
     var isKnownKeyboardHeight: Bool = false
     
-    @IBAction func typing(sender: AnyObject) {
+    @IBAction func typing(_ sender: AnyObject) {
         if (typeField.text == "" && functionalButton.hidden) {
             sendButton.zoomOut()
             functionalButton.zoomIn()
@@ -44,20 +44,20 @@ class MessageDetailViewController: UIViewController {
     
     var keyboardHeight: CGFloat = 200 {
         didSet {
-            let heightConstraint = NSLayoutConstraint(item: functionalView, attribute: NSLayoutAttribute.Height, relatedBy: NSLayoutRelation.Equal, toItem: nil, attribute: NSLayoutAttribute.NotAnAttribute, multiplier: 1, constant: keyboardHeight)
+            let heightConstraint = NSLayoutConstraint(item: functionalView, attribute: NSLayoutAttribute.height, relatedBy: NSLayoutRelation.equal, toItem: nil, attribute: NSLayoutAttribute.notAnAttribute, multiplier: 1, constant: keyboardHeight)
             view.addConstraint(heightConstraint)
         }
     }
     
-    @IBAction func functionalButtonClicked(sender: AnyObject) {
+    @IBAction func functionalButtonClicked(_ sender: AnyObject) {
         dismissKeyboard()
-        UIView.animateWithDuration(0.25, animations: {
-            self.messagesTableView.transform = CGAffineTransformMakeTranslation(0, -self.keyboardHeight)
-            self.typeView.transform = CGAffineTransformMakeTranslation(0, -self.keyboardHeight)
+        UIView.animate(withDuration: 0.25, animations: {
+            self.messagesTableView.transform = CGAffineTransform(translationX: 0, y: -self.keyboardHeight)
+            self.typeView.transform = CGAffineTransform(translationX: 0, y: -self.keyboardHeight)
         })
     }
     
-    @IBAction func sendButtonClicked(sender: AnyObject) {
+    @IBAction func sendButtonClicked(_ sender: AnyObject) {
         let typeContent = typeField.text
         self.typeField.text = ""
         // ToDo: 发送typeContent.
@@ -69,16 +69,16 @@ class MessageDetailViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         self.typeField.becomeFirstResponder()
-        self.navigationController?.navigationBar.tintColor = UIColor.whiteColor()
+        self.navigationController?.navigationBar.tintColor = UIColor.white
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(MessageDetailViewController.dismissKeyboardAndFunctionalView))
         self.messagesTableView.addGestureRecognizer(tap)
     }
     
     func dismissKeyboardAndFunctionalView() {
         if (isFunctionalViewOpened) {
-            UIView.animateWithDuration(0.25, animations: {
-                self.messagesTableView.transform = CGAffineTransformIdentity
-                self.typeView.transform = CGAffineTransformIdentity
+            UIView.animate(withDuration: 0.25, animations: {
+                self.messagesTableView.transform = CGAffineTransform.identity
+                self.typeView.transform = CGAffineTransform.identity
             })
         }
         isFunctionalViewOpened = false
@@ -95,19 +95,19 @@ class MessageDetailViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    override func viewWillAppear(animated: Bool) {
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(MessageDetailViewController.keyboardWillShow(_:)), name: UIKeyboardWillShowNotification, object: nil)
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(MessageDetailViewController.keyboardWillHide(_:)), name: UIKeyboardWillHideNotification, object: nil)
+    override func viewWillAppear(_ animated: Bool) {
+        NotificationCenter.default.addObserver(self, selector: #selector(MessageDetailViewController.keyboardWillShow(_:)), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(MessageDetailViewController.keyboardWillHide(_:)), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
     }
     
-    override func viewWillDisappear(animated: Bool) {
-        NSNotificationCenter.defaultCenter().removeObserver(self)
+    override func viewWillDisappear(_ animated: Bool) {
+        NotificationCenter.default.removeObserver(self)
     }
   
-    func keyboardWillShow(notification: NSNotification) {
-        let userInfo = notification.userInfo!
+    func keyboardWillShow(_ notification: Notification) {
+        let userInfo = (notification as NSNotification).userInfo!
         // 键盘高度
-        self.keyboardHeight = (userInfo[UIKeyboardFrameEndUserInfoKey] as! NSValue).CGRectValue().height
+        self.keyboardHeight = (userInfo[UIKeyboardFrameEndUserInfoKey] as! NSValue).cgRectValue.height
         if (!isKnownKeyboardHeight) {
             isKnownKeyboardHeight = true
             self.view.endEditing(true)
@@ -115,31 +115,31 @@ class MessageDetailViewController: UIViewController {
         // 动画时长
         let duration = (userInfo[UIKeyboardAnimationDurationUserInfoKey] as! NSNumber).doubleValue
         let animations: (() -> Void) = {
-            self.messagesTableView.transform = CGAffineTransformMakeTranslation(0, -self.keyboardHeight)
-            self.typeView.transform = CGAffineTransformMakeTranslation(0, -self.keyboardHeight)
+            self.messagesTableView.transform = CGAffineTransform(translationX: 0, y: -self.keyboardHeight)
+            self.typeView.transform = CGAffineTransform(translationX: 0, y: -self.keyboardHeight)
         }
         if duration > 0 {
-            let options = UIViewAnimationOptions(rawValue: UInt((userInfo[UIKeyboardAnimationCurveUserInfoKey] as! NSNumber).integerValue << 16))
-            UIView.animateWithDuration(duration, delay: 0, options: options, animations: animations, completion: nil)
+            let options = UIViewAnimationOptions(rawValue: UInt((userInfo[UIKeyboardAnimationCurveUserInfoKey] as! NSNumber).intValue << 16))
+            UIView.animate(withDuration: duration, delay: 0, options: options, animations: animations, completion: nil)
         } else {
             animations()
         }
     }
     
-    func keyboardWillHide(notification: NSNotification) {
+    func keyboardWillHide(_ notification: Notification) {
         if (isFunctionalViewOpened) {
             return
         }
-        let userInfo = notification.userInfo!
+        let userInfo = (notification as NSNotification).userInfo!
         // 动画时长
         let duration = (userInfo[UIKeyboardAnimationDurationUserInfoKey] as! NSNumber).doubleValue
         let animations: (() -> Void) = {
-            self.messagesTableView.transform = CGAffineTransformIdentity
-            self.typeView.transform = CGAffineTransformIdentity
+            self.messagesTableView.transform = CGAffineTransform.identity
+            self.typeView.transform = CGAffineTransform.identity
         }
         if duration > 0 {
-            let options = UIViewAnimationOptions(rawValue: UInt((userInfo[UIKeyboardAnimationCurveUserInfoKey] as! NSNumber).integerValue << 16))
-            UIView.animateWithDuration(duration, delay: 0, options: options, animations: animations, completion: nil)
+            let options = UIViewAnimationOptions(rawValue: UInt((userInfo[UIKeyboardAnimationCurveUserInfoKey] as! NSNumber).intValue << 16))
+            UIView.animate(withDuration: duration, delay: 0, options: options, animations: animations, completion: nil)
         } else {
             animations()
         }

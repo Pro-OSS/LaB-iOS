@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import Spring
 
 class HomeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
@@ -31,17 +30,17 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     @IBOutlet weak var borrowPosterIconView: UIView!
     @IBOutlet weak var showPosterIconView: UIView!
     
-    @IBAction func addButtonClicked(sender: AnyObject) {
+    @IBAction func addButtonClicked(_ sender: AnyObject) {
         self.isAddPosterViewShowing = !self.isAddPosterViewShowing
-		UIView.animateWithDuration(
-			0.25, animations: {
+		UIView.animate(
+			withDuration: 0.25, animations: {
                 if (self.isAddPosterViewShowing) {
                     self.maskingView.alpha = 0.7
-                    self.addButtonIcon.transform = CGAffineTransformRotate(self.addButtonIcon.transform, CGFloat(-M_PI_4))
+                    self.addButtonIcon.transform = self.addButtonIcon.transform.rotated(by: CGFloat(-M_PI_4))
                     self.addPosterView.alpha = 1
                 } else {
                     self.maskingView.alpha = 0
-                    self.addButtonIcon.transform = CGAffineTransformRotate(self.addButtonIcon.transform, CGFloat(M_PI_4))
+                    self.addButtonIcon.transform = self.addButtonIcon.transform.rotated(by: CGFloat(M_PI_4))
                     self.addPosterView.alpha = 0
 				}
 		})
@@ -53,7 +52,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
 		// Do any additional setup after loading the view.
 
 		// 初始化TableView
-		tableView.registerNib(UINib(nibName: "PosterTableViewCell", bundle: nil), forCellReuseIdentifier: cellIdentifier)
+		tableView.register(UINib(nibName: "PosterTableViewCell", bundle: nil), forCellReuseIdentifier: cellIdentifier)
 		tableView.delegate = self
 		tableView.dataSource = self
 		tableView.estimatedRowHeight = 250
@@ -66,18 +65,18 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
 
 	func dismissAddPosterView() {
         self.isAddPosterViewShowing = false
-        UIView.animateWithDuration(
-            0.25, animations: {
+        UIView.animate(
+            withDuration: 0.25, animations: {
                 self.maskingView.alpha = 0
-                self.addButtonIcon.transform = CGAffineTransformRotate(self.addButtonIcon.transform, CGFloat(M_PI_4))
+                self.addButtonIcon.transform = self.addButtonIcon.transform.rotated(by: CGFloat(M_PI_4))
                 self.addPosterView.alpha = 0
         })
 	}
     
-    override func viewWillDisappear(animated: Bool) {
+    override func viewWillDisappear(_ animated: Bool) {
         if (isAddPosterViewShowing) {
             self.maskingView.alpha = 0
-            self.addButtonIcon.transform = CGAffineTransformRotate(self.addButtonIcon.transform, CGFloat(M_PI_4))
+            self.addButtonIcon.transform = self.addButtonIcon.transform.rotated(by: CGFloat(M_PI_4))
             self.addPosterView.alpha = 0
             isAddPosterViewShowing = false
         }
@@ -88,17 +87,17 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
 		// Dispose of any resources that can be recreated.
 	}
 
-	func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+	func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 		return 20
 	}
 
-	func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+	func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 		let detail: UIViewController = UIStoryboard(name: "PosterDetail", bundle: nil).instantiateInitialViewController() as! PosterDetailViewController
 		self.navigationController?.pushViewController(detail, animated: true)
 	}
 
-	func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-		let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier, forIndexPath: indexPath) as! PosterTableViewCell
+	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+		let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! PosterTableViewCell
 		return cell
 	}
 

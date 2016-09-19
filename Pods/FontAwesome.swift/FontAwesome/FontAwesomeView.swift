@@ -55,16 +55,20 @@ import UIKit
         self.iconView = UILabel()
         // Fits icon in the view
         iconView.font = UIFont.fontAwesomeOfSize(bounds.size.width < bounds.size.height ? bounds.size.width : bounds.size.height)
-        iconView.textAlignment = NSTextAlignment.Center
+        iconView.textAlignment = NSTextAlignment.center
         iconView.text = String.fontAwesomeIconWithCode(self.iconCode)
         iconView.textColor = self.tintColor
         self.addSubview(iconView)
     }
     
+    override func tintColorDidChange() {
+        iconView.textColor = self.tintColor
+    }
+    
     override func layoutSubviews() {
         super.layoutSubviews()
         self.clipsToBounds = true
-        iconView.frame = CGRectMake(0, 0, bounds.size.width, bounds.size.height)
+        iconView.frame = CGRect(x: 0, y: 0, width: bounds.size.width, height: bounds.size.height)
     }
     
 }

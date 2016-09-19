@@ -17,13 +17,13 @@ class User: Mappable {
 	var borrowCount: Int!
 	var lendCount: Int!
 	var violationCount: Int!
-	var createAt: NSDate!
-	var updateAt: NSDate!
+	var createAt: Date!
+	var updateAt: Date!
 
 	required init?(_ map: Map) { }
 
 	// Mappable
-	func mapping(map: Map) {
+	func mapping(_ map: Map) {
 		id <- map["id"]
         nickname <- map["nickname"]
         avatar <- map["avatar"]

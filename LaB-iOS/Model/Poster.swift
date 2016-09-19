@@ -15,14 +15,14 @@ class Poster : Mappable {
     var title:      String!
     var thumbnail:  String?
     var coordinate: Coordinate!
-    var createAt:   NSDate!
-    var updateAt:   NSDate!
+    var createAt:   Date!
+    var updateAt:   Date!
     var creator:    User!
 
 	required init?(_ map: Map) { }
 
 	// Mappable
-	func mapping(map: Map) {
+	func mapping(_ map: Map) {
         id         <- map["id"]
         title      <- map["title"]
         thumbnail  <- map["thumbnail"]

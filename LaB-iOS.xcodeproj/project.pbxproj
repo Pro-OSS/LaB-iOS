@@ -45,7 +45,6 @@
 		756C2C5D1D6A327000CBD4B8 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 756C2C531D6A327000CBD4B8 /* Alamofire.framework */; };
 		756C2C5E1D6A327000CBD4B8 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 756C2C541D6A327000CBD4B8 /* Realm.framework */; };
 		756C2C5F1D6A327000CBD4B8 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 756C2C551D6A327000CBD4B8 /* RealmSwift.framework */; };
-		756C2C641D6A3BCE00CBD4B8 /* Spring.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 756C2C631D6A3BCE00CBD4B8 /* Spring.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 		756C2C6F1D6AA80C00CBD4B8 /* PosterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 756C2C6D1D6AA80C00CBD4B8 /* PosterTableViewCell.swift */; };
 		756C2C701D6AA80C00CBD4B8 /* PosterTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 756C2C6E1D6AA80C00CBD4B8 /* PosterTableViewCell.xib */; };
 		756C2C821D6AFF9700CBD4B8 /* DateTools.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 756C2C811D6AFF9700CBD4B8 /* DateTools.framework */; };
@@ -156,7 +155,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				756C2C821D6AFF9700CBD4B8 /* DateTools.framework in Frameworks */,
-				756C2C641D6A3BCE00CBD4B8 /* Spring.framework in Frameworks */,
 				756C2C571D6A327000CBD4B8 /* SnapKit.framework in Frameworks */,
 				756C2C581D6A327000CBD4B8 /* AlamofireObjectMapper.framework in Frameworks */,
 				756C2C591D6A327000CBD4B8 /* ObjectMapper.framework in Frameworks */,
@@ -564,13 +562,16 @@
 					756C2C181D6A1FBB00CBD4B8 = {
 						CreatedOnToolsVersion = 7.3.1;
 						DevelopmentTeam = 9RLDW3XFDK;
+						LastSwiftMigration = 0800;
 					};
 					756C2C2C1D6A1FBB00CBD4B8 = {
 						CreatedOnToolsVersion = 7.3.1;
+						LastSwiftMigration = 0800;
 						TestTargetID = 756C2C181D6A1FBB00CBD4B8;
 					};
 					756C2C371D6A1FBB00CBD4B8 = {
 						CreatedOnToolsVersion = 7.3.1;
+						LastSwiftMigration = 0800;
 						TestTargetID = 756C2C181D6A1FBB00CBD4B8;
 					};
 				};
@@ -731,7 +732,6 @@
 			files = (
 			);
 			inputPaths = (
-				"$(SRCROOT)/Carthage/Build/iOS/Spring.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/SnapKit.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/AlamofireObjectMapper.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/ObjectMapper.framework",
@@ -977,6 +977,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "top.lhzbxx.LaB-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -995,6 +996,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "top.lhzbxx.LaB-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
@@ -1008,6 +1010,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "top.lhzbxx.LaB-iOSTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LaB-iOS.app/LaB-iOS";
 			};
 			name = Debug;
@@ -1021,6 +1024,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "top.lhzbxx.LaB-iOSTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LaB-iOS.app/LaB-iOS";
 			};
 			name = Release;
@@ -1033,6 +1037,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "top.lhzbxx.LaB-iOSUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = "LaB-iOS";
 			};
 			name = Debug;
@@ -1045,6 +1050,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "top.lhzbxx.LaB-iOSUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = "LaB-iOS";
 			};
 			name = Release;

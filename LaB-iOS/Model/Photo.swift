@@ -13,12 +13,12 @@ class Photo : Mappable {
 
 	var id: Int!
 	var url: Int!
-	var createAt: NSDate!
+	var createAt: Date!
 
 	required init?(_ map: Map) { }
 
 	// Mappable
-	func mapping(map: Map) {
+	func mapping(_ map: Map) {
 		id <- map["id"]
 		url <- map["url"]
 		createAt <- (map["createAt"], DateTransform())

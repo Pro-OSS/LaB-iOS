@@ -8,8 +8,8 @@ target 'LaB-iOS' do
   # Pods for LaB-iOS
   pod 'IBAnimatable'
   pod 'FontAwesome.swift'
-  pod 'XLPagerTabStrip', '~> 5.0'
-
+  pod 'XLPagerTabStrip'
+  
   target 'LaB-iOSTests' do
     inherit! :search_paths
     # Pods for testing
@@ -20,4 +20,12 @@ target 'LaB-iOS' do
     # Pods for testing
   end
 
+end
+
+post_install do |installer|
+  installer.pods_project.targets.each do |target|
+    target.build_configurations.each do |config|
+      config.build_settings['SWIFT_VERSION'] = '3.0'
+    end
+  end
 end

@@ -1,4 +1,4 @@
-Dollar [![Build Status](https://travis-ci.org/ankurp/Dollar.svg?branch=master)](https://travis-ci.org/ankurp/Dollar) ![CocoaPods](https://img.shields.io/cocoapods/v/Dollar.svg) [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
+Dollar [![Build Status](https://travis-ci.org/ankurp/Dollar.svg)](https://travis-ci.org/ankurp/Dollar) ![CocoaPods](https://img.shields.io/cocoapods/v/Dollar.svg) [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 ===========
 [![Gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/ankurp/Dollar?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
@@ -44,8 +44,10 @@ Add the following dependency `.Package(url: "https://github.com/ankurp/Dollar", 
 
 Still stuck. Then checkout this screencast on [how to import](http://recordit.co/0gQiCSEREF)
 
-## Support for Older Xcode and Swift
+## Support for Xcode and Swift
 
+* For Xcode 8 (Swift 3) user version `6.0.0`
+* For Xcode 7 (Swift 2) use version `4.1.0` or `5.2.0`
 * For Xcode 6.3 (Swift 1.2) use version `3.0.3`
 * For Xcode 6.1 and 6.2 (Swift 1.1) use version `2.2.0`
 

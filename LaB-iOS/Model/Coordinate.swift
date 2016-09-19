@@ -18,7 +18,7 @@ struct Coordinate : Mappable {
 
 	}
 
-	mutating func mapping(map: Map) {
+	mutating func mapping(_ map: Map) {
         latitude  <- map["latitude"]
         longitude <- map["longitude"]
 	}

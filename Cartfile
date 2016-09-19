@@ -1,9 +1,8 @@
-github "Alamofire/Alamofire" ~> 3.4
-github "Hearst-DD/ObjectMapper" ~> 1.3
-github "tristanhimmelman/AlamofireObjectMapper" ~> 3.0
-github "realm/realm-cocoa"
-github "onevcat/Kingfisher" ~> 2.4
-github "SnapKit/SnapKit" >= 0.15.0
-github "ankurp/Dollar" ~> 5.2.0
-github "MengTo/Spring" "swift2"
-github "MatthewYork/DateTools"
+git "git@github.com:Alamofire/Alamofire" 
+git "git@github.com:Hearst-DD/ObjectMapper"
+git "git@github.com:tristanhimmelman/AlamofireObjectMapper"
+git "git@github.com:realm/realm-cocoa"
+git "git@github.com:onevcat/Kingfisher"
+git "git@github.com:SnapKit/SnapKit"
+git "git@github.com:ankurp/Dollar"
+git "git@github.com:MatthewYork/DateTools"

@@ -34,7 +34,7 @@ class PosterTableViewCell: UITableViewCell {
         self.photosView.alwaysBounceHorizontal = true
         var last = UIImageView()
         photosView.addSubview(last)
-        last.contentMode = .ScaleAspectFill
+        last.contentMode = .scaleAspectFill
         last.snp_makeConstraints {
             make in
             make.left.equalTo(photosView.snp_left)
@@ -42,11 +42,11 @@ class PosterTableViewCell: UITableViewCell {
             make.height.equalTo(photosView.snp_height)
             make.width.equalTo(photosView.snp_height)
         }
-        last.kf_setImageWithURL(NSURL(string: photos[0]), placeholderImage: UIImage(named: "avatar"))
+        last.kf_setImageWithURL(URL(string: photos[0]), placeholderImage: UIImage(named: "avatar"))
         for p in photos.dropFirst() {
             let photo = UIImageView()
             photosView.addSubview(photo)
-            photo.contentMode = .ScaleAspectFill
+            photo.contentMode = .scaleAspectFill
             photo.snp_makeConstraints {
                 make in
                 make.left.equalTo(last.snp_right)
@@ -54,14 +54,14 @@ class PosterTableViewCell: UITableViewCell {
                 make.height.equalTo(photosView.snp_height)
                 make.width.equalTo(photosView.snp_height)
             }
-            photo.kf_setImageWithURL(NSURL(string: p), placeholderImage: UIImage(named: "avatar"))
+            photo.kf_setImageWithURL(URL(string: p), placeholderImage: UIImage(named: "avatar"))
             last = photo
         }
         let width = CGFloat(Float(photos.count + 1) * Float(self.photosView.frame.height))
-        self.photosView.contentSize = CGSizeMake(width, self.photosView.frame.height)
+        self.photosView.contentSize = CGSize(width: width, height: self.photosView.frame.height)
     }
 
-    override func setSelected(selected: Bool, animated: Bool) {
+    override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state

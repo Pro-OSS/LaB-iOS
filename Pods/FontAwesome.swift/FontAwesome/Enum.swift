@@ -1,6 +1,6 @@
 // Enum.swift
 //
-// Copyright (c) 2014-2015 Thi Doan
+// Copyright (c) 2014-present FontAwesome.swift contributors
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal
@@ -721,8 +721,8 @@ public enum FontAwesome: String {
     ///
     /// - parameter code: The preferred icon name.
     /// - returns: FontAwesome icon.
-    public static func fromCode(code: String) -> FontAwesome? {
-        guard let raw = FontAwesomeIcons[code], icon = FontAwesome(rawValue: raw) else {
+    public static func fromCode(_ code: String) -> FontAwesome? {
+        guard let raw = FontAwesomeIcons[code], let icon = FontAwesome(rawValue: raw) else {
             return nil
         }
         
