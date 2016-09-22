@@ -7,9 +7,9 @@ target 'LaB-iOS' do
 
   # Pods for LaB-iOS
   pod 'IBAnimatable'
-  pod 'FontAwesome.swift'
+  pod 'FontAwesome.swift', :git => 'https://github.com/thii/FontAwesome.swift'
   pod 'XLPagerTabStrip'
-  
+
   target 'LaB-iOSTests' do
     inherit! :search_paths
     # Pods for testing

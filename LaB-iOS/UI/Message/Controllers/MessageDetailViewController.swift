@@ -30,15 +30,15 @@ class MessageDetailViewController: UIViewController {
     var isKnownKeyboardHeight: Bool = false
     
     @IBAction func typing(_ sender: AnyObject) {
-        if (typeField.text == "" && functionalButton.hidden) {
-            sendButton.zoomOut()
-            functionalButton.zoomIn()
-            functionalButton.hidden = false
+        if (typeField.text == "" && functionalButton.isHidden) {
+            sendButton.zoom(.out)
+            functionalButton.zoom(.in)
+            functionalButton.isHidden = false
         }
-        if (typeField.text != "" && !functionalButton.hidden){
-            sendButton.zoomIn()
-            functionalButton.zoomOut()
-            functionalButton.hidden = true
+        if (typeField.text != "" && !functionalButton.isHidden){
+            sendButton.zoom(.in)
+            functionalButton.zoom(.out)
+            functionalButton.isHidden = true
         }
     }
     

@@ -1,28 +1,27 @@
 PODS:
   - FontAwesome.swift (0.11.1)
-  - IBAnimatable (2.8.1)
-  - XLPagerTabStrip (5.1.0)
+  - IBAnimatable (3.0)
+  - XLPagerTabStrip (6.0.0)
 
 DEPENDENCIES:
-  - FontAwesome.swift (from `https://github.com/thii/FontAwesome.swift`, tag `0.11.1`)
+  - FontAwesome.swift (from `https://github.com/thii/FontAwesome.swift`)
   - IBAnimatable
   - XLPagerTabStrip
 
 EXTERNAL SOURCES:
   FontAwesome.swift:
     :git: https://github.com/thii/FontAwesome.swift
-    :tag: 0.11.1
 
 CHECKOUT OPTIONS:
   FontAwesome.swift:
+    :commit: fd641b95728e566e5b4f2d37ed94486162ea5a65
     :git: https://github.com/thii/FontAwesome.swift
-    :tag: 0.11.1
 
 SPEC CHECKSUMS:
   FontAwesome.swift: 9879cd6a1462bf160662d519f7b7474d73bdd1c3
-  IBAnimatable: 80dc37d2a2e68cda357298bdbd8590d13702fdb8
-  XLPagerTabStrip: 9191deaa2336735b7c47beb21e42be537fa4242a
+  IBAnimatable: 5ac8e4c9f879e1840041362e41f7728bbbf16b35
+  XLPagerTabStrip: c46e802a8dcac29edbcea573de8fe920e052455b
 
-PODFILE CHECKSUM: b4bb2d1c2cfad66b03e6502e71a09ee423f435ec
+PODFILE CHECKSUM: b3476bd4fdd5efec27f6e6e724f50b6b5e60e1bd
 
 COCOAPODS: 1.1.0.rc.2

@@ -35,26 +35,26 @@ class PosterTableViewCell: UITableViewCell {
         var last = UIImageView()
         photosView.addSubview(last)
         last.contentMode = .scaleAspectFill
-        last.snp_makeConstraints {
-            make in
-            make.left.equalTo(photosView.snp_left)
-            make.centerY.equalTo(photosView.snp_centerY)
-            make.height.equalTo(photosView.snp_height)
-            make.width.equalTo(photosView.snp_height)
+        last.snp.makeConstraints {
+            (make) -> Void in
+            make.left.equalTo(photosView.snp.left)
+            make.centerY.equalTo(photosView.snp.centerY)
+            make.height.equalTo(photosView.snp.height)
+            make.width.equalTo(photosView.snp.height)
         }
-        last.kf_setImageWithURL(URL(string: photos[0]), placeholderImage: UIImage(named: "avatar"))
+        last.kf_setImage(with: URL(string: photos[0]), placeholder: UIImage(named: "avatar"))
         for p in photos.dropFirst() {
             let photo = UIImageView()
             photosView.addSubview(photo)
             photo.contentMode = .scaleAspectFill
-            photo.snp_makeConstraints {
+            photo.snp.makeConstraints {
                 make in
-                make.left.equalTo(last.snp_right)
-                make.centerY.equalTo(photosView.snp_centerY)
-                make.height.equalTo(photosView.snp_height)
-                make.width.equalTo(photosView.snp_height)
+                make.left.equalTo(last.snp.right)
+                make.centerY.equalTo(photosView.snp.centerY)
+                make.height.equalTo(photosView.snp.height)
+                make.width.equalTo(photosView.snp.height)
             }
-            photo.kf_setImageWithURL(URL(string: p), placeholderImage: UIImage(named: "avatar"))
+            photo.kf_setImage(with: URL(string: p), placeholder: UIImage(named: "avatar"))
             last = photo
         }
         let width = CGFloat(Float(photos.count + 1) * Float(self.photosView.frame.height))

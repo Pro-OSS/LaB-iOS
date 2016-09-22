@@ -6,7 +6,7 @@ Design and prototype customized UI, interaction, navigation, transition and anim
 
 [![BuddyBuild](https://dashboard.buddybuild.com/api/statusImage?appID=56abf6d42c882e010057b182&branch=master&build=latest)](https://dashboard.buddybuild.com/apps/56abf6d42c882e010057b182/build/latest)
 [![Build Status](https://travis-ci.org/IBAnimatable/IBAnimatable.svg?branch=master)](https://travis-ci.org/IBAnimatable/IBAnimatable)
-[![Language](https://img.shields.io/badge/language-Swift%202.3-orange.svg)](https://swift.org)
+[![Language](https://img.shields.io/badge/language-Swift%203.0-orange.svg)](https://swift.org)
 [![CocoaPods](https://img.shields.io/cocoapods/v/IBAnimatable.svg?style=flat)](http://cocoadocs.org/docsets/IBAnimatable/)
 [![Carthage Compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 [![License](https://img.shields.io/github/license/IBAnimatable/IBAnimatable.svg?style=flat)](https://github.com/IBAnimatable/IBAnimatable/blob/master/LICENSE)
@@ -23,18 +23,22 @@ Design and prototype customized UI, interaction, navigation, transition and anim
 * **Presentation design in IB**: flip, cover, zoom, dropdown etc.
 * **Activity indicator design in IB**: ball beat, ball rotate, cube transition, Pacman etc.  
 
+
 ![StoryboardPreview](https://raw.githubusercontent.com/IBAnimatable/IBAnimatable-Misc/master/IBAnimatable/Storyboard.jpg)
 
-This is the full design in a Storyboard in Interface Builder.
+Here is the full design in a Storyboard in Interface Builder.
 
 With `IBAnimatable`, we can design a UI in Interface Builder like what we can do in Sketch, and prototype animations in a Swift playground like what we can do in Framer. Also, we can use the output of the design directly in the production ready App.
 
 As a designer, we love Sketch, which is a simple but yet super powerful tool to create UI. However, Sketch can't design interaction, navigation, transition and animation, and we may need another tool like Framer to design some of them. Moreover, to make an App Store ready App, we need to use Xcode and Interface Builder to implement the UI and animations. To speed up the process and minimize the waste, we create `IBAnimatable` to make Interface Builder designable and animatable.   
 
-## Swift 2.3
-This branch (swift2) is used for Swift 2.2 / 2.3. Main features will be added in master branch (supports Swift 3). If you have fixed bugs for Swift 2.3, please pull request to this branch.
+## Swift 3
+IBAnimatable 3.0 is the latest major release of IBAnimatable. This version follows Swift 3 [API Design Guidelines](https://swift.org/documentation/api-design-guidelines/) and contains a lot of breaking changes from version 2.x. Please check out [IBAnimatable 3.0 Migration Guide](Documentation/IBAnimatable 3.0 Migration Guide.md) for more information about how to migrate your project to 3.0. 
 
-You can also check out [swift2.3 branch](https://github.com/IBAnimatable/IBAnimatable/tree/swift2.3) for Swift 2.3 support.
+If you are using Xcode 8 with Swift 3, please use the latest tagged 3.x release.
+
+## Swift 2.2 or 2.3?
+If you are using Xcode 7.3.1 with Swift 2.2 please use IBAnimatable 2.7. If you are using Xcode 8 with Swift 2.3, please use the latest tagged 2.x release (version 2.8.1). If you find any issue and create a PR for Swift 2.3, please PR to `swift2` branch.
 
 ## Languages
 [中文](Documentation/README.zh.md)
@@ -54,9 +58,7 @@ You can also check out [swift2.3 branch](https://github.com/IBAnimatable/IBAnima
 
 ## Documentations
 * [<del>Fully</del> Mostly documented API Reference](Documentation/APIs.md) 
-* [Activity indicator animations](Documentation/ActivityIndicators.md)
 * [How to design and prototype custom transition animation and gesture interaction in Interface Builder with IBAnimatable](Documentation/Transitions.md)
-* [How to design and prototype custom presentation animation in Interface Builder with IBAnimatable](Documentation/Presentations.md)
 
 ## How to run the example App
 The easy way to learn and understand how powerful of `IBAnimatable`is to run the example App and play around the settings in Interface Builder. Just a few steps we can run the App as below, to see more features, we can tap on "Forget Password" button to unlock them. 😉
@@ -71,7 +73,7 @@ $ git clone https://github.com/IBAnimatable/IBAnimatable.git
 
 ```bash
 $ cd IBAnimatable
-$ open IBAnimatableApp.xcodeproj
+$ open IBAnimatable.xcodeproj
 ```
 
 3) Compile and run the app on your simulator or iOS device
@@ -92,7 +94,7 @@ To use `IBAnimatable` to design the UI and animations in Interface Builder, just
 
 We can configure the animation settings in Attribute inspector. However, Interface Builder doesn't support previewing Animations, but we can still prototype animations in Swift playground. There are three sample pages to demonstrate how to design animation in Swift playground. You can find them in [IBAnimatable.playground](IBAnimatable.playground). 
 
-1. Open IBAnimatableApp.xcodeproj
+1. Open IBAnimatable.xcodeproj
 2. Select IBAnimatable Framework scheme and build it with `Command + b`
 3. Select IBAnimatable.playground, choose one page in Swift playground, then click on "Assistant editor" button to split the playground. After that, select "Timeline" on the top of right-hand side to preview the animation. We can use Xcode menu "Editor" -> "Execute" to re-run the playground.
 
@@ -100,8 +102,8 @@ We can configure the animation settings in Attribute inspector. However, Interfa
 As you saw above, we can prototype an App fully in Interface Builder without a single line of code, but `IBAnimatable` also provides APIs to let us fully control the UI and animations. `IBAnimatable` provides simple APIs like `pop()`. We can easily call them in one line.
 
 ```swift
-view.pop() // pop animation for the view
-view.squeezeFadeInLeft() // squeeze and fade in from left animation
+view.pop(repeatCount: 1) // pop animation for the view
+view.squeezeFade(.in, direction:.left) // squeeze and fade in from left animation
 ```  
 
 You can play around with all these predefined animations in the [Swift playground Page - Predefined Animations](IBAnimatable.playground/Pages/Predefined%20Animations.xcplaygroundpage)
@@ -111,7 +113,7 @@ There are some properties we can change to customize the animation. What we need
 
 ```swift
 // Setup the animation
-view.animationType = "SqueezeInLeft"
+view.animationType = .squeeze(way: .in, direction: .left)
 view.delay = 0.5
 view.damping = 0.5
 view.velocity = 2
@@ -128,11 +130,26 @@ Sometimes, we need to run another animation after the previous one. With `IBAnim
 
 ```swift
 // Simply put the next animation within `{}` closure as below. It is an example to pop the view after the squeeze in from the top effect.
-view.squeezeInDown{ view.pop() }
+view.squeeze(.in, direction: .down) { view.pop(repeatCount: 1) }
 
-// Heaps of animations have been chained together, it is the source code of animated GIF in "Animate in Swift playground" section
-view.squeezeInDown{ view.pop { view.shake{ view.squeeze{ view.wobble{ view.flipX { view.flash{ view.flipY { view.fadeOutDown() } } } } } } } }
+// We can chain the animations together, it is the source code of animated GIF in "Animate in Swift playground" section
+view.squeezeFade(.in, direction: .down) {
+  view.pop(repeatCount: 1) {
+    view.shake(repeatCount: 1) {
+      view.squeeze(repeatCount: 1) {
+        view.wobble(repeatCount: 1) {
+          view.flip(axis: .x) {
+            view.flip(axis: .y) {
+              view.slideFade(.out, direction: .down)
+            }
+          }
+        }
+      }
+    }
+  }
+}
 ```
+The syntax is not nice, if you would like help us improve it, please checkout [Issue #14 - Chain-able animations](https://github.com/IBAnimatable/IBAnimatable/issues/14) and contact us, thanks.
 
 ## How to install
 ### Manually install
@@ -141,7 +158,7 @@ Copy and paste `IBAnimatable` folder in your Xcode project.
 
 ### [Swift package manager](https://swift.org/package-manager)
 
-Add `.Package(url: "https://github.com/IBanimatable/IBanimatable.git", majorVersion: 2)` to your `Package.swift`
+Add `.Package(url: "https://github.com/IBanimatable/IBanimatable.git", majorVersion: 3)` to your `Package.swift`
 
 ### [CocoaPods](https://cocoapods.org)
 
@@ -149,7 +166,7 @@ Add `pod 'IBAnimatable'` to your Podfile.
 
 ### [Carthage](https://github.com/Carthage/Carthage)
 
-Add `github "IBAnimatable/IBAnimatable" ~> 2` to your Cartfile.
+Add `github "IBanimatable/IBAnimatable"` to your Cartfile.
 
 Please Notice, there is [a limitation of a built framework for `@IBDesignable` and `@IBInspectable`](https://github.com/Carthage/Carthage/issues/335), that will impact on `IBAnimatable` when you use Carthage.
 
@@ -168,7 +185,7 @@ All of us can contribute to this project. Fewer overheads mean less time to buil
 
 * If you like the project, please share it with the other designers and developers, and star 🌟 the project. 🤗
 
-Many thanks to [all contributors](https://github.com/IBAnimatable/IBAnimatable/graphs/contributors) 🤗 especially to [@tbaranes](https://github.com/tbaranes) who develops a lot of features and maintains the project.
+Many thanks to [all contributors](graphs/contributors) 🤗 especially to [@tbaranes](https://github.com/tbaranes) who develops a lot of features and maintains the project.
 
 ## Roadmap
 [Vision, Technical Considerations and Roadmap](Documentation/Roadmap.md)
@@ -179,7 +196,6 @@ Many thanks to [all contributors](https://github.com/IBAnimatable/IBAnimatable/g
 * Framer Studio - Design and preview animations in one place.
 * [Spring by Meng To](https://github.com/MengTo/Spring) - steal a lot of animation parameters from this project.
 * [VCTransitionsLibrary by Colin Eberhardt](https://github.com/ColinEberhardt/VCTransitionsLibrary) - port all transition animations from this project, and add parameters support and fix bugs.
-* [NVActivityIndicatorView by Vinh Nguyen](https://github.com/ninjaprox/NVActivityIndicatorView) - port all activity indicator animations from this project.
 * [Invision ToDo App UI Kit](http://www.invisionapp.com/do), The demo App's original design is from this UI Kit and redone in Interface Builder. We also added interaction, navigation and animations.
 
 ## Change Log
