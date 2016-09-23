@@ -14,7 +14,7 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   FontAwesome.swift:
-    :commit: fd641b95728e566e5b4f2d37ed94486162ea5a65
+    :commit: 22b67f9c8a77a6ebcddedaa7640a62cb8292547f
     :git: https://github.com/thii/FontAwesome.swift
 
 SPEC CHECKSUMS:
