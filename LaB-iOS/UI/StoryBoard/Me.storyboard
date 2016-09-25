@@ -38,23 +38,11 @@
                                         <constraint firstAttribute="width" secondItem="Kst-Sl-NCn" secondAttribute="height" multiplier="1:1" id="iCI-Pu-Q0e"/>
                                     </constraints>
                                     <userDefinedRuntimeAttributes>
-                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                            <real key="value" value="30"/>
-                                        </userDefinedRuntimeAttribute>
                                         <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
                                             <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </userDefinedRuntimeAttribute>
                                         <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
                                             <real key="value" value="2"/>
-                                        </userDefinedRuntimeAttribute>
-                                        <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
-                                            <color key="value" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        </userDefinedRuntimeAttribute>
-                                        <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
-                                            <real key="value" value="0.20000000000000001"/>
-                                        </userDefinedRuntimeAttribute>
-                                        <userDefinedRuntimeAttribute type="point" keyPath="shadowOffset">
-                                            <point key="value" x="3" y="3"/>
                                         </userDefinedRuntimeAttribute>
                                         <userDefinedRuntimeAttribute type="string" keyPath="_maskType" value="Circle"/>
                                     </userDefinedRuntimeAttributes>
@@ -76,7 +64,7 @@
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BFj-Qa-1qt" userLabel="等级" customClass="AnimatableButton" customModule="IBAnimatable">
                                     <fontDescription key="fontDescription" name="PingFangSC-Regular" family="PingFang SC" pointSize="13"/>
-                                    <inset key="contentEdgeInsets" minX="5" minY="2" maxX="5" maxY="2"/>
+                                    <inset key="contentEdgeInsets" minX="5" minY="0.0" maxX="5" maxY="1"/>
                                     <inset key="titleEdgeInsets" minX="-2" minY="-1" maxX="-2" maxY="-1"/>
                                     <state key="normal" title="白银会员"/>
                                     <userDefinedRuntimeAttributes>
@@ -105,7 +93,7 @@
                                 <constraint firstItem="0o6-Ab-006" firstAttribute="centerY" secondItem="WWS-VP-JUb" secondAttribute="centerY" id="Ugn-Nl-DXR"/>
                                 <constraint firstItem="9tJ-nd-5cn" firstAttribute="height" secondItem="WWS-VP-JUb" secondAttribute="height" id="WIx-bM-FMp"/>
                                 <constraint firstItem="Kst-Sl-NCn" firstAttribute="leading" secondItem="WWS-VP-JUb" secondAttribute="leading" constant="25" id="XIr-LB-hz2"/>
-                                <constraint firstItem="hhy-u3-v2f" firstAttribute="top" secondItem="Kst-Sl-NCn" secondAttribute="top" id="YcT-kn-op8"/>
+                                <constraint firstItem="hhy-u3-v2f" firstAttribute="top" secondItem="Kst-Sl-NCn" secondAttribute="top" constant="5" id="YcT-kn-op8"/>
                                 <constraint firstItem="hhy-u3-v2f" firstAttribute="leading" secondItem="Kst-Sl-NCn" secondAttribute="trailing" constant="12" id="ZWL-Y6-5eh"/>
                                 <constraint firstItem="9tJ-nd-5cn" firstAttribute="centerY" secondItem="WWS-VP-JUb" secondAttribute="centerY" id="dDP-I0-RFf"/>
                                 <constraint firstItem="Kst-Sl-NCn" firstAttribute="centerY" secondItem="WWS-VP-JUb" secondAttribute="centerY" id="jul-7X-vaE"/>
