@@ -18,6 +18,7 @@
 		5025A3341D80652A001C832C /* MessageDetailTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5025A3321D80652A001C832C /* MessageDetailTableViewCell.xib */; };
 		505B64DC1D80784600EEA214 /* MessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 505B64DB1D80784600EEA214 /* MessageViewController.swift */; };
 		505B64DE1D807CA400EEA214 /* MessageDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 505B64DD1D807CA400EEA214 /* MessageDetail.storyboard */; };
+		50898FAD1D976F08004CDFC5 /* PublishTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50898FAC1D976F08004CDFC5 /* PublishTableViewController.swift */; };
 		50ACFE671D7F10C30070C623 /* MessageDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50ACFE661D7F10C30070C623 /* MessageDetailViewController.swift */; };
 		753613CD1D7AD1F20016A277 /* PhoneLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 753613CC1D7AD1F20016A277 /* PhoneLoginViewController.swift */; };
 		753613CF1D7AF20E0016A277 /* ResetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 753613CE1D7AF20E0016A277 /* ResetPasswordViewController.swift */; };
@@ -94,6 +95,7 @@
 		5025A3321D80652A001C832C /* MessageDetailTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MessageDetailTableViewCell.xib; path = UI/Message/Cells/MessageDetailTableViewCell.xib; sourceTree = "<group>"; };
 		505B64DB1D80784600EEA214 /* MessageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MessageViewController.swift; path = UI/Message/Controllers/MessageViewController.swift; sourceTree = "<group>"; };
 		505B64DD1D807CA400EEA214 /* MessageDetail.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = MessageDetail.storyboard; path = UI/StoryBoard/MessageDetail.storyboard; sourceTree = "<group>"; };
+		50898FAC1D976F08004CDFC5 /* PublishTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PublishTableViewController.swift; path = UI/Home/Controllers/PublishTableViewController.swift; sourceTree = "<group>"; };
 		50ACFE661D7F10C30070C623 /* MessageDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MessageDetailViewController.swift; path = UI/Message/Controllers/MessageDetailViewController.swift; sourceTree = "<group>"; };
 		68E4D62FB2381AC8B6EA933B /* Pods-LaB-iOSUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LaB-iOSUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LaB-iOSUITests/Pods-LaB-iOSUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		72651FE8B9878C348C7F3E22 /* Pods-LaB-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LaB-iOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LaB-iOS/Pods-LaB-iOS.debug.xcconfig"; sourceTree = "<group>"; };
@@ -355,6 +357,7 @@
 				50257ED51D810467007D1A8F /* HomeViewController.swift */,
 				753613DF1D7B2DD60016A277 /* SearchViewController.swift */,
 				50257EDB1D811414007D1A8F /* PosterDetailViewController.swift */,
+				50898FAC1D976F08004CDFC5 /* PublishTableViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -811,6 +814,7 @@
 				753613D11D7AF22D0016A277 /* RegisterViewController.swift in Sources */,
 				756C2C911D6B25DB00CBD4B8 /* Coordinate.swift in Sources */,
 				756C2C1D1D6A1FBB00CBD4B8 /* AppDelegate.swift in Sources */,
+				50898FAD1D976F08004CDFC5 /* PublishTableViewController.swift in Sources */,
 				756C2C8F1D6B250500CBD4B8 /* Poster.swift in Sources */,
 				50ACFE671D7F10C30070C623 /* MessageDetailViewController.swift in Sources */,
 				5025A3331D80652A001C832C /* MessageDetailTableViewCell.swift in Sources */,

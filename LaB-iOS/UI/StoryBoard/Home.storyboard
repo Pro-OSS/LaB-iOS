@@ -410,7 +410,7 @@
         <!--发布-->
         <scene sceneID="ENp-z0-E8u">
             <objects>
-                <tableViewController hidesBottomBarWhenPushed="YES" id="RqB-qG-Iob" sceneMemberID="viewController">
+                <tableViewController hidesBottomBarWhenPushed="YES" id="RqB-qG-Iob" customClass="PublishTableViewController" customModule="LaB_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="11U-Nl-WhS">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -531,7 +531,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="78h-O2-rBT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="746" y="962"/>
+            <point key="canvasLocation" x="746" y="1007"/>
         </scene>
         <!--Animatable Navigation Controller-->
         <scene sceneID="zef-GS-arX">
